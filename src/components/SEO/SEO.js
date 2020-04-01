@@ -11,9 +11,10 @@ const SEO = ({ title, description, ogTitle, ogDescription, twitterTitle, twitter
   const languages = ['ru', 'de'];
 
   const canonicalTags = languages.map(lang => {
-    const path = pathname.slice('3'); // length of '/en' is 3 characters
+    const path = pathname.slice(lang.length + 1); // /en/signup becomes /signup
     return {
       rel: 'alternate',
+      hrefLang: lang,
       href: `${config.DOMAIN}/${lang}${path}`,
     };
   });
@@ -24,8 +25,8 @@ const SEO = ({ title, description, ogTitle, ogDescription, twitterTitle, twitter
         lang: i18n.language,
       }}
       title={title}
-      //  Comment: There can be some pages where title template is not
-      //  required (for example homepage), in that case we add fullTitle props to SEO component
+      //  Comment: There can be some pages where title template is not required
+      //  (for example homepage), in that case we add fullTitle props to SEO component
       titleTemplate={fullTitle ? title : `%s | n.exchange`}
       meta={[
         {
@@ -52,7 +53,7 @@ const SEO = ({ title, description, ogTitle, ogDescription, twitterTitle, twitter
       link={[
         {
           rel: 'canonical',
-          href: `${config.DOMAIN}/en/${pathname.slice(3)}`,
+          href: `${config.DOMAIN}/en${pathname.slice(i18n.language.length + 1)}`,
         },
       ].concat(canonicalTags)}
     />
