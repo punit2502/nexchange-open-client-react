@@ -1349,8 +1349,6 @@ ShallowWrapper {
     "context": Object {
       "storeSubscription": undefined,
     },
-    Symbol(enzyme.__providerValues__): Map {},
   },
-  Symbol(enzyme.__providerValues__): Map {},
 }
 `;

@@ -1,14 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { HeaderStuff } from './Header';
-
+import Header from './Header';
 
 describe('Header', () => {
   let wrapShallow;
 
   beforeEach(() => {
     window.ga = jest.fn();
-    wrapShallow = shallow(<HeaderStuff isHomeHeader={true} />);
+    wrapShallow = shallow(<Header />);
   });
 
   it('renders correctly', () => {
@@ -31,7 +30,8 @@ describe('Header', () => {
   });
 
   it('correct class and image is shown on non-home pages', () => {
-    wrapShallow = shallow(<HeaderStuff isHomeHeader={false} />);
+    window.history.pushState('', '', '/order/ASDAD');
+    wrapShallow = shallow(<Header />);
 
     expect(
       wrapShallow

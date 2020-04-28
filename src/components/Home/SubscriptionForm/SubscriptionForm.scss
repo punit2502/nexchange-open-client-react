@@ -1,17 +1,17 @@
 .container {
   padding: 40px 0 35px;
-  background-color: #01031e;
-  background-image: url('Img/ellipse.svg');
-  background-position: 50% 50%;
-  background-size: 90%;
+  background-image: url('/img/Newsletter_background.png');
+  background-position: 0 20%;
   background-repeat: no-repeat;
   color: #fff;
 
   @media (min-width: $screen-sm-min) {
+    background-size: 300%;
     padding-bottom: 50px;
   }
 
   @media (min-width: $screen-md-min) {
+    background-size: 100%;
     padding-bottom: 60px;
   }
 
@@ -32,6 +32,11 @@
       font-size: 18px;
     }
   }
+
+  .subtitle {
+    font-size: 16px;
+    font-weight: bold;
+  }
 }
 
 .input.input.input.input {
@@ -39,6 +44,7 @@
   padding: 0 0 15px 0;
   font-size: 12px;
   color: #fff;
+  background-color: transparent !important;
 
   @media (min-width: $screen-sm-min) {
     margin-top: 75px;
@@ -46,24 +52,46 @@
 
   &::-webkit-input-placeholder {
     color: #fff;
+    font-weight: bold;
     font-size: 12px;
+    background-color: transparent !important;
   }
 
   &::-moz-placeholder {
     color: #fff;
+    font-weight: bold;
     font-size: 12px;
+    background-color: transparent !important;
   }
 
   &:-ms-input-placeholder {
     color: #fff;
+    font-weight: bold;
     font-size: 12px;
+    background-color: transparent !important;
   }
 
   &:-moz-placeholder {
     color: #fff;
+    font-weight: bold;
     font-size: 12px;
+    background-color: transparent !important;
   }
 }
+
+form {
+  background-color: transparent !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+   -webkit-transition-delay: 9999s;
+   transition-delay: 9999s;
+}
+
+
 
 .btn.btn.btn {
   @media (min-width: $screen-sm-min) {

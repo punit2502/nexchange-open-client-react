@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="84" height="84" style=""><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none" class="" style=""/>
+  <defs>
+    <filter id="Rectangle_264" x="0" y="0" width="129" height="129" filterUnits="userSpaceOnUse">
+      <feOffset dy="7" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood flood-color="#6a9dbc" flood-opacity="0.204"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  
+<g class="currentLayer" style=""><title>Layer 1</title><g id="Group_1018" data-name="Group 1018" class="">
+    <g filter="url(#Rectangle_264)" id="svg_1">
+      <rect id="Rectangle_264-2" data-name="Rectangle 264" width="84" height="84" rx="8" transform="matrix(1,0,0,1,469,3498) " fill="#0070dd" y="-3498.2058820277452" x="-468.72548930346966" stroke-width="0"/>
+    </g>
+    <g id="eye">
+      <path id="Path_504" data-name="Path 504" d="M42.69949775707721,30.194166800379662 c-7.244,0 -13.813,3.963 -18.66,10.4 a1.5,1.5 0 0 0 0,1.792 c4.847,6.445 11.416,10.408 18.66,10.408 s13.813,-3.963 18.66,-10.4 a1.5,1.5 0 0 0 0,-1.792 C56.5124977570772,34.157166800379855 49.942497757077206,30.194166800379662 42.69949775707721,30.194166800379662 zm0.52,19.257 a7.974,7.974 0 1 1 7.438,-7.438 A7.979,7.979 0 0 1 43.218497757077216,49.451166800379724 zm-0.24000000000000013,-3.676 a4.2940000000000005,4.2940000000000005 0 1 1 4.01,-4.01 A4.287,4.287 0 0 1 42.97849775707721,45.77516680037979 z" fill="#fff"/>
+    </g>
+  </g></g></svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" viewBox="0 0 84 84">
+  <g id="Group_1017" data-name="Group 1017" transform="translate(-818 -3498)">
+    <rect id="Rectangle_265" data-name="Rectangle 265" width="84" height="84" rx="8" transform="translate(818 3498)" fill="#0070dd"/>
+    <g id="good-mood-emoticon" transform="translate(842.125 3522.125)">
+      <g id="mood">
+        <path id="Path_544" data-name="Path 544" d="M17.875,0A17.875,17.875,0,1,0,35.751,17.875,17.928,17.928,0,0,0,17.875,0Zm6.256,10.725a2.681,2.681,0,1,1,0,5.363,2.749,2.749,0,0,1-2.681-2.681A2.749,2.749,0,0,1,24.132,10.725Zm-12.513,0a2.681,2.681,0,0,1,0,5.363,2.749,2.749,0,0,1-2.681-2.681A2.749,2.749,0,0,1,11.619,10.725ZM17.875,28.6a10.648,10.648,0,0,1-10.01-7.15H27.886A10.648,10.648,0,0,1,17.875,28.6Z" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

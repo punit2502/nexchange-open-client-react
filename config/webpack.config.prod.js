@@ -9,7 +9,7 @@ const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
-const TerserPlugin = require('terser-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const paths = require('./paths');
 const getClientEnvironment = require('./env');
 
@@ -372,12 +372,27 @@ module.exports = {
   ],
   // Minify the code.
   optimization: {
-    minimize: true,
     minimizer: [
-      new TerserPlugin({
-        test: /\.js(\?.*)?$/i,
-      }),
-    ],
+      // we specify a custom UglifyJsPlugin here to get source maps in production
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          warnings: false,
+          comparisons: false,
+          cache: true,
+          parallel: true,
+          compress: false,
+          ecma: 6,
+          mangle: true,
+          output: {
+            comments: false,
+            // Turned on because emoji and regex is not minified properly using default
+            // https://github.com/facebookincubator/create-react-app/issues/2488
+            ascii_only: true,
+          },
+        },
+        sourceMap: shouldUseSourceMap
+      })
+    ]
   },
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.
@@ -388,5 +403,4 @@ module.exports = {
     tls: 'empty',
     child_process: 'empty',
   },
-  performance: { hints: false }
 };

@@ -1,19 +1,14 @@
 language: node_js
 node_js:
-  - 10
-addons:
-  apt:
-    packages:
-      # Ubuntu 16+ does not install this dependency by default, so we need to install it ourselves
-      - libgconf-2-4
+  - 6
 cache:
   directories:
     - ~/.npm
     - node_modules
 install:
-  - yarn install
+  - npm install
 before_script:
-  - yarn start -- --silent &
+  - npm start -- --silent &
 script:
-  - yarn run test -- -u
-  - yarn run build
+  - npm run test -- -u
+  - npm run cypress:run

@@ -190,7 +190,6 @@ class OrderBookWidget extends Component {
           localStorage.setItem('token', response.data.token);
         }
 
-        // bindCrispEmail(this.props.store);
 
         window.gtag('event', 'Place order', {event_category: 'Order Book', event_label: `${response.data.unique_reference}`});
 

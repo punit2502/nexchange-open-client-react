@@ -46,8 +46,8 @@
 
   &.done h4,
   &.done svg {
-    color: $green;
-    fill: $green;
+    color: $blue;
+    fill: $blue;
   }
 }
 
@@ -58,7 +58,7 @@
 }
 
 .bar-info.bar-info.bar-info {
-  background: $green;
+  background: $blue;
 }
 
 .line-info.line-info {
@@ -72,7 +72,7 @@
     fill: #9c9c9c;
   }
   to {
-    color: $green;
-    fill: $green;
+    color: $blue;
+    fill: $blue;
   }
 }

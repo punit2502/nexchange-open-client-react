@@ -665,8 +665,6 @@ ShallowWrapper {
       },
     },
     "context": Object {},
-    Symbol(enzyme.__providerValues__): Map {},
   },
-  Symbol(enzyme.__providerValues__): Map {},
 }
 `;

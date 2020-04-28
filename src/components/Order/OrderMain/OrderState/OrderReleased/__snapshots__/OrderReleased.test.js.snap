@@ -603,9 +603,7 @@ ShallowWrapper {
       },
     },
     "context": Object {},
-    Symbol(enzyme.__providerValues__): Map {},
   },
-  Symbol(enzyme.__providerValues__): Map {},
 }
 `;
 
@@ -652,7 +650,6 @@ ShallowWrapper {
           <a
             className="text-green"
             href="https://etherscan.io/tx/0x9cc066410f55d62e826aff67c317b36b39d23e4d6d92b8f0606e95eea57c9402"
-            rel="noopener noreferrer"
             target="_blank"
           >
             0x9cc066410f55d62e826aff67c317b36b39d23e4d6d92b8f0606e95eea57c9402
@@ -834,7 +831,6 @@ ShallowWrapper {
             <a
               className="text-green"
               href="https://etherscan.io/tx/0x9cc066410f55d62e826aff67c317b36b39d23e4d6d92b8f0606e95eea57c9402"
-              rel="noopener noreferrer"
               target="_blank"
             >
               0x9cc066410f55d62e826aff67c317b36b39d23e4d6d92b8f0606e95eea57c9402
@@ -855,7 +851,6 @@ ShallowWrapper {
               "children": "0x9cc066410f55d62e826aff67c317b36b39d23e4d6d92b8f0606e95eea57c9402",
               "className": "text-green",
               "href": "https://etherscan.io/tx/0x9cc066410f55d62e826aff67c317b36b39d23e4d6d92b8f0606e95eea57c9402",
-              "rel": "noopener noreferrer",
               "target": "_blank",
             },
             "ref": null,
@@ -1025,7 +1020,6 @@ ShallowWrapper {
             <a
               className="text-green"
               href="https://etherscan.io/tx/0x9cc066410f55d62e826aff67c317b36b39d23e4d6d92b8f0606e95eea57c9402"
-              rel="noopener noreferrer"
               target="_blank"
             >
               0x9cc066410f55d62e826aff67c317b36b39d23e4d6d92b8f0606e95eea57c9402
@@ -1207,7 +1201,6 @@ ShallowWrapper {
               <a
                 className="text-green"
                 href="https://etherscan.io/tx/0x9cc066410f55d62e826aff67c317b36b39d23e4d6d92b8f0606e95eea57c9402"
-                rel="noopener noreferrer"
                 target="_blank"
               >
                 0x9cc066410f55d62e826aff67c317b36b39d23e4d6d92b8f0606e95eea57c9402
@@ -1228,7 +1221,6 @@ ShallowWrapper {
                 "children": "0x9cc066410f55d62e826aff67c317b36b39d23e4d6d92b8f0606e95eea57c9402",
                 "className": "text-green",
                 "href": "https://etherscan.io/tx/0x9cc066410f55d62e826aff67c317b36b39d23e4d6d92b8f0606e95eea57c9402",
-                "rel": "noopener noreferrer",
                 "target": "_blank",
               },
               "ref": null,
@@ -1396,8 +1388,6 @@ ShallowWrapper {
       },
     },
     "context": Object {},
-    Symbol(enzyme.__providerValues__): Map {},
   },
-  Symbol(enzyme.__providerValues__): Map {},
 }
 `;

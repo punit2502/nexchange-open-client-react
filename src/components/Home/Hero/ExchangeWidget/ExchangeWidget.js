@@ -8,11 +8,11 @@ import axios from 'axios';
 import config from 'Config';
 
 import { setWallet, errorAlert, setOrder, setDestinationTag, setPaymentId, setMemo } from 'Actions/index.js';
-// import { bindCrispEmail } from 'Utils/crispEmailBinding';
 
 import CoinInput from './CoinInput/CoinInput';
 import CoinSwitch from './CoinSwitch/CoinSwitch';
 import WalletAddress from './WalletAddress/WalletAddress';
+import OrderModeSwitch from '../OrderModeSwitch/OrderModeSwitch';
 import DestinationTag from './WalletAddress/DestinationTag';
 import PaymentId from './WalletAddress/PaymentId';
 import Memo from './WalletAddress/Memo';
@@ -43,7 +43,7 @@ class ExchangeWidget extends Component {
   placeOrder() {
     if (!this.props.wallet.valid) {
       if (this.props.selectedCoin.receive && this.props.wallet.address === '') {
-        window.gtag('event', 'Place order with empty wallet address', {event_category: 'Order', event_label: ``});
+        window.gtag('event', 'Place order with empty wallet address', { event_category: 'Order', event_label: `` });
       }
 
       this.props.errorAlert({
@@ -70,7 +70,6 @@ class ExchangeWidget extends Component {
       },
     };
 
-    
     if (this.props.price.lastEdited === 'receive') data['amount_base'] = parseFloat(this.props.price.receive);
     else if (this.props.price.lastEdited === 'deposit') data['amount_quote'] = parseFloat(this.props.price.deposit);
 
@@ -88,26 +87,23 @@ class ExchangeWidget extends Component {
           localStorage.setItem('token', response.data.token);
         }
 
-        // bindCrispEmail(this.props.store);
-
-        window.gtag('event', 'Place order', {event_category: 'Order', event_label: `${response.data.unique_reference}`});
+        window.gtag('event', 'Place order', { event_category: 'Order', event_label: `${response.data.unique_reference}` });
 
         //Store order history in local storage
         let newOrder = {
-            id: response.data.unique_reference,
-            mode: 'INSTANT',
-            base: this.props.selectedCoin.deposit,
-            amount_base: parseFloat(this.props.price.deposit),
-            quote: this.props.selectedCoin.receive,
-            amount_quote: parseFloat(this.props.price.receive),
-            withdraw_address: this.props.wallet.address,
-            created_at: new Date()
-        }
+          id: response.data.unique_reference,
+          mode: 'INSTANT',
+          base: this.props.selectedCoin.deposit,
+          amount_base: parseFloat(this.props.price.deposit),
+          quote: this.props.selectedCoin.receive,
+          amount_quote: parseFloat(this.props.price.receive),
+          withdraw_address: this.props.wallet.address,
+          created_at: new Date(),
+        };
         let orderHistory = localStorage['orderHistory'];
-        if(!orderHistory){
+        if (!orderHistory) {
           orderHistory = [newOrder];
-        }
-        else {
+        } else {
           orderHistory = JSON.parse(orderHistory);
           orderHistory.push(newOrder);
         }
@@ -117,7 +113,10 @@ class ExchangeWidget extends Component {
         console.log('Error:', error);
 
         /* eslint max-len: ["error", { "code": 200 }] */
-        let message = error.response && error.response.data.non_field_errors && error.response.data.non_field_errors.length ? error.response.data.non_field_errors[0] : `${i18n.t('subscription.5')}`;
+        let message =
+          error.response && error.response.data.non_field_errors && error.response.data.non_field_errors.length
+            ? error.response.data.non_field_errors[0]
+            : `${i18n.t('subscription.5')}`;
 
         this.props.errorAlert({
           message: message,
@@ -130,7 +129,7 @@ class ExchangeWidget extends Component {
   }
 
   focusWalletAddress() {
-    if(this.walletInputEl) {
+    if (this.walletInputEl) {
       this.walletInputEl.focus();
     }
   }
@@ -148,9 +147,13 @@ class ExchangeWidget extends Component {
   }
 
   render() {
-    const lang = i18n.language ? i18n.language : 'en'
+    const depositCoin = _.find(this.props.coinsInfo, elem => elem.code === this.props.selectedCoin.deposit);
 
-    if (this.state.orderPlaced) return <Redirect to={`/${lang}/order/${this.state.orderRef}`} />;
+    if (this.state.orderPlaced) {
+      if (depositCoin.is_crypto === false) return <Redirect to={`/transitioning/${this.state.orderRef}`} />;
+
+      return <Redirect to={`/order/${this.state.orderRef}`} />;
+    }
 
     return (
       <I18n ns="translations">
@@ -160,31 +163,49 @@ class ExchangeWidget extends Component {
               <div className="row">
                 <div className="col-xs-12">
                   <div className={styles.widget}>
+                    <OrderModeSwitch orderMode={this.props.orderMode} changeOrderMode={this.props.changeOrderMode} />
                     <CoinInput type="deposit" onSubmit={this.showWalletAddress} walletInput={this.walletInputEl} />
                     <CoinSwitch />
                     <CoinInput type="receive" onSubmit={this.showWalletAddress} walletInput={this.walletInputEl} />
 
-                    <WalletAddress 
-                      withdraw_coin="receive" 
-                      onSubmit={this.placeOrder} 
-                      inputRef={el => (this.walletInputEl = el)} 
-                      button={this.button} 
-                      focusWalletAddress={this.focusWalletAddress}/>
-                    { this.props.selectedCoin.receive === 'XRP' ? <DestinationTag onSubmit={this.placeOrder} inputRef={el => (this.destinationTagInputEl = el)} />  : null }
-                    { this.props.selectedCoin.receive === 'XMR' ? <PaymentId onSubmit={this.placeOrder} inputRef={el => (this.paymentIdInputEl = el)} /> : null }
-                    { this.props.selectedCoin.receive === 'XLM' ? <Memo onSubmit={this.placeOrder} inputRef={el => (this.memoInputEl = el)} /> : null }
+                    <WalletAddress
+                      withdraw_coin="receive"
+                      onSubmit={this.placeOrder}
+                      inputRef={el => (this.walletInputEl = el)}
+                      button={this.button}
+                      focusWalletAddress={this.focusWalletAddress}
+                    />
+                    {this.props.selectedCoin.receive === 'XRP' ? (
+                      <DestinationTag onSubmit={this.placeOrder} inputRef={el => (this.destinationTagInputEl = el)} />
+                    ) : null}
+                    {this.props.selectedCoin.receive === 'XMR' ? (
+                      <PaymentId onSubmit={this.placeOrder} inputRef={el => (this.paymentIdInputEl = el)} />
+                    ) : null}
+                    {this.props.selectedCoin.receive === 'XLM' ? (
+                      <Memo onSubmit={this.placeOrder} inputRef={el => (this.memoInputEl = el)} />
+                    ) : null}
                     <div className={styles.submit}>
                       <p className={styles.info}>{t('order.feeinfo')}</p>
 
                       {/* eslint max-len: ["error", { "code": 200 }] */}
-                      <button className={`${styles.btn} ${this.props.wallet.valid && !this.state.loading ? null : 'disabled'} btn btn-block btn-primary proceed `}
-                      onClick={this.placeOrder} ref={(el) => { this.button = el; }} >
+                      <button
+                        className={`${styles.btn} ${
+                          this.props.wallet.valid && !this.state.loading ? null : 'disabled'
+                        } btn btn-block btn-primary proceed `}
+                        onClick={this.placeOrder}
+                        ref={el => {
+                          this.button = el;
+                        }}
+                      >
                         {t('exchangewidget.2')}
                         {this.state.loading ? <i className="fab fa-spinner fa-spin" style={{ marginLeft: '10px' }} /> : null}
                       </button>
-                        <p className={styles.infotc} dangerouslySetInnerHTML={{__html: t('order.byclickTC', {'buttonName':t('exchangewidget.2')})}}/>
+                      <p
+                        className={styles.infotc}
+                        dangerouslySetInnerHTML={{ __html: t('order.byclickTC', { buttonName: t('exchangewidget.2') }) }}
+                      />
                     </div>
-                    <Integrations/>
+                    <Integrations />
                   </div>
                 </div>
               </div>
@@ -196,8 +217,17 @@ class ExchangeWidget extends Component {
   }
 }
 
-const mapStateToProps = ({ selectedCoin, price, error, wallet, destinationTag, paymentId, memo }) => ({ selectedCoin, price, error, wallet, destinationTag, paymentId, memo });
-const mapDispatchToProps = dispatch => bindActionCreators({ setWallet, setOrder, errorAlert, setDestinationTag, setPaymentId, setMemo }, dispatch);
+const mapStateToProps = ({ selectedCoin, price, error, wallet, destinationTag, paymentId, memo }) => ({
+  selectedCoin,
+  price,
+  error,
+  wallet,
+  destinationTag,
+  paymentId,
+  memo,
+});
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ setWallet, setOrder, errorAlert, setDestinationTag, setPaymentId, setMemo }, dispatch);
 
 export default connect(
   mapStateToProps,

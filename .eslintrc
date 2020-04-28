@@ -1,20 +1,13 @@
 {
   "extends": "react-app",
-  "parser": "babel-eslint",
-  "plugins": ["prettier", "react"],
+  "plugins": ["prettier"],
   "env": {
     "browser": true
   },
   "rules": {
-    "strict": 0,
     "no-undef": 0,
     "import/no-webpack-loader-syntax": 0,
     "max-len": [2, 140, 4, { "ignoreUrls": true }],
     "no-script-url": 0
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
+  }
 }

@@ -49,8 +49,9 @@ ShallowWrapper {
               className="icon-bar"
             />
           </button>
-          <ForwardRef
-            to="/en"
+          <Link
+            replace={false}
+            to="/"
           >
             <div
               className="logo-container"
@@ -61,7 +62,7 @@ ShallowWrapper {
                 src="/img/logo-white.svg"
               />
             </div>
-          </ForwardRef>
+          </Link>
         </div>
         <div
           className="collapse navbar-collapse"
@@ -71,223 +72,43 @@ ShallowWrapper {
             className="nav navbar-nav navbar-right"
           >
             <li>
-              <ForwardRef
+              <Link
                 className="link"
                 onClick={[Function]}
-                to="/en/about"
+                replace={false}
+                to="/#about"
               >
                 header.about
-              </ForwardRef>
+              </Link>
             </li>
             <li>
-              <ForwardRef
+              <Link
                 className="link"
                 data-test="faq-btn"
                 onClick={[Function]}
-                to="/en/faqs"
+                replace={false}
+                to="/faqs"
               >
                 header.faq
-              </ForwardRef>
+              </Link>
             </li>
             <li>
-              <ForwardRef
-                className="link"
-                data-test="pricecomparsion-btn"
-                onClick={[Function]}
-                to="/pricecomparsion"
-              >
-                header.pricecomparsion
-              </ForwardRef>
-            </li>
-            <li>
-              <ForwardRef
-                className="link"
-                data-test="pricecomparison-btn"
-                onClick={[Function]}
-                to="/team"
-              >
-                header.team
-              </ForwardRef>
-            </li>
-            <li>
-              <a
-                className="link hidden-sm hidden-md"
-                data-test="api-link"
-                href="http://docs.nexchange2.apiary.io/"
-                onClick={[Function]}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                header.apidocs
-              </a>
-            </li>
-            <li>
-              <ForwardRef
+              <Link
                 className="link"
                 data-test="support-btn"
                 onClick={[Function]}
+                replace={false}
                 to="#"
               >
                 header.support
-              </ForwardRef>
+              </Link>
             </li>
-            <li
-              className="ico-link"
-            >
-              <a
-                className="btn btn btn-block btn-primary"
-                data-test="ico-link"
-                href="https://n.exchange/ico"
-                onClick={[Function]}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                header.ico
-              </a>
-            </li>
-            <React.Fragment>
-              <li>
-                <ForwardRef
-                  className="link"
-                  to="/en/signup"
-                >
-                  accounts.signup
-                </ForwardRef>
-              </li>
-              <li>
-                <ForwardRef
-                  className="link"
-                  to="/en/signin"
-                >
-                  accounts.signin
-                </ForwardRef>
-              </li>
-            </React.Fragment>
             <LanguagePicker />
-            <li
-              id="social-mobile"
-            >
-              <a
-                className="social btn btn-simple btn-just-icon visible-xs"
-                href="/twitter"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <i
-                  aria-hidden="true"
-                  className="fab fa-twitter"
-                />
-              </a>
-              <a
-                className="social btn btn-simple btn-just-icon visible-xs"
-                href="/fb"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <i
-                  aria-hidden="true"
-                  className="fab fa-facebook-f"
-                />
-              </a>
-              <a
-                className="social btn btn-simple btn-just-icon visible-xs"
-                href="/slack"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <i
-                  aria-hidden="true"
-                  className="fab fa-slack-hash"
-                />
-              </a>
-              <a
-                className="social btn btn-simple btn-just-icon visible-xs"
-                href="/telegram"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <i
-                  aria-hidden="true"
-                  className="fab fa-telegram"
-                />
-              </a>
-            </li>
-            <li
-              className="visible-md visible-lg social-desktop"
-            >
-              <a
-                className="social btn btn-simple btn-just-icon"
-                data-placement="bottom"
-                data-toggle="tooltip"
-                href="/twitter"
-                rel="noopener noreferrer"
-                target="_blank"
-                title="header.twitter"
-              >
-                <i
-                  aria-hidden="true"
-                  className="fab fa-twitter"
-                />
-              </a>
-            </li>
-            <li
-              className="visible-md visible-lg social-desktop"
-            >
-              <a
-                className="social btn btn-simple btn-just-icon"
-                data-placement="bottom"
-                data-toggle="tooltip"
-                href="/fb"
-                rel="noopener noreferrer"
-                target="_blank"
-                title="header.facebook"
-              >
-                <i
-                  aria-hidden="true"
-                  className="fab fa-facebook-f"
-                />
-              </a>
-            </li>
-            <li
-              className="visible-md visible-lg social-desktop"
-            >
-              <a
-                className="social btn btn-simple btn-just-icon"
-                data-placement="bottom"
-                data-toggle="tooltip"
-                href="/slack"
-                rel="noopener noreferrer"
-                target="_blank"
-                title="header.slack"
-              >
-                <i
-                  aria-hidden="true"
-                  className="fab fa-slack-hash"
-                />
-              </a>
-            </li>
-            <li
-              className="visible-md visible-lg social-desktop"
-            >
-              <a
-                className="social btn btn-simple btn-just-icon"
-                data-placement="bottom"
-                data-toggle="tooltip"
-                href="/telegram"
-                rel="noopener noreferrer"
-                target="_blank"
-                title="header.telegram"
-              >
-                <i
-                  aria-hidden="true"
-                  className="fab fa-telegram"
-                />
-              </a>
-            </li>
           </ul>
         </div>
         <Connect(Support)
           onClose={[Function]}
+          show={false}
         />
       </div>,
       "className": "header home",
@@ -324,8 +145,9 @@ ShallowWrapper {
                 className="icon-bar"
               />
             </button>
-            <ForwardRef
-              to="/en"
+            <Link
+              replace={false}
+              to="/"
             >
               <div
                 className="logo-container"
@@ -336,7 +158,7 @@ ShallowWrapper {
                   src="/img/logo-white.svg"
                 />
               </div>
-            </ForwardRef>
+            </Link>
           </div>,
           <div
             className="collapse navbar-collapse"
@@ -346,223 +168,43 @@ ShallowWrapper {
               className="nav navbar-nav navbar-right"
             >
               <li>
-                <ForwardRef
+                <Link
                   className="link"
                   onClick={[Function]}
-                  to="/en/about"
+                  replace={false}
+                  to="/#about"
                 >
                   header.about
-                </ForwardRef>
+                </Link>
               </li>
               <li>
-                <ForwardRef
+                <Link
                   className="link"
                   data-test="faq-btn"
                   onClick={[Function]}
-                  to="/en/faqs"
+                  replace={false}
+                  to="/faqs"
                 >
                   header.faq
-                </ForwardRef>
+                </Link>
               </li>
               <li>
-                <ForwardRef
-                  className="link"
-                  data-test="pricecomparsion-btn"
-                  onClick={[Function]}
-                  to="/pricecomparsion"
-                >
-                  header.pricecomparsion
-                </ForwardRef>
-              </li>
-              <li>
-                <ForwardRef
-                  className="link"
-                  data-test="pricecomparison-btn"
-                  onClick={[Function]}
-                  to="/team"
-                >
-                  header.team
-                </ForwardRef>
-              </li>
-              <li>
-                <a
-                  className="link hidden-sm hidden-md"
-                  data-test="api-link"
-                  href="http://docs.nexchange2.apiary.io/"
-                  onClick={[Function]}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  header.apidocs
-                </a>
-              </li>
-              <li>
-                <ForwardRef
+                <Link
                   className="link"
                   data-test="support-btn"
                   onClick={[Function]}
+                  replace={false}
                   to="#"
                 >
                   header.support
-                </ForwardRef>
+                </Link>
               </li>
-              <li
-                className="ico-link"
-              >
-                <a
-                  className="btn btn btn-block btn-primary"
-                  data-test="ico-link"
-                  href="https://n.exchange/ico"
-                  onClick={[Function]}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  header.ico
-                </a>
-              </li>
-              <React.Fragment>
-                <li>
-                  <ForwardRef
-                    className="link"
-                    to="/en/signup"
-                  >
-                    accounts.signup
-                  </ForwardRef>
-                </li>
-                <li>
-                  <ForwardRef
-                    className="link"
-                    to="/en/signin"
-                  >
-                    accounts.signin
-                  </ForwardRef>
-                </li>
-              </React.Fragment>
               <LanguagePicker />
-              <li
-                id="social-mobile"
-              >
-                <a
-                  className="social btn btn-simple btn-just-icon visible-xs"
-                  href="/twitter"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-twitter"
-                  />
-                </a>
-                <a
-                  className="social btn btn-simple btn-just-icon visible-xs"
-                  href="/fb"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-facebook-f"
-                  />
-                </a>
-                <a
-                  className="social btn btn-simple btn-just-icon visible-xs"
-                  href="/slack"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-slack-hash"
-                  />
-                </a>
-                <a
-                  className="social btn btn-simple btn-just-icon visible-xs"
-                  href="/telegram"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-telegram"
-                  />
-                </a>
-              </li>
-              <li
-                className="visible-md visible-lg social-desktop"
-              >
-                <a
-                  className="social btn btn-simple btn-just-icon"
-                  data-placement="bottom"
-                  data-toggle="tooltip"
-                  href="/twitter"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="header.twitter"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-twitter"
-                  />
-                </a>
-              </li>
-              <li
-                className="visible-md visible-lg social-desktop"
-              >
-                <a
-                  className="social btn btn-simple btn-just-icon"
-                  data-placement="bottom"
-                  data-toggle="tooltip"
-                  href="/fb"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="header.facebook"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-facebook-f"
-                  />
-                </a>
-              </li>
-              <li
-                className="visible-md visible-lg social-desktop"
-              >
-                <a
-                  className="social btn btn-simple btn-just-icon"
-                  data-placement="bottom"
-                  data-toggle="tooltip"
-                  href="/slack"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="header.slack"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-slack-hash"
-                  />
-                </a>
-              </li>
-              <li
-                className="visible-md visible-lg social-desktop"
-              >
-                <a
-                  className="social btn btn-simple btn-just-icon"
-                  data-placement="bottom"
-                  data-toggle="tooltip"
-                  href="/telegram"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="header.telegram"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-telegram"
-                  />
-                </a>
-              </li>
             </ul>
           </div>,
           <Connect(Support)
             onClose={[Function]}
+            show={false}
           />,
         ],
         "className": "container",
@@ -596,8 +238,9 @@ ShallowWrapper {
                   className="icon-bar"
                 />
               </button>,
-              <ForwardRef
-                to="/en"
+              <Link
+                replace={false}
+                to="/"
               >
                 <div
                   className="logo-container"
@@ -608,7 +251,7 @@ ShallowWrapper {
                     src="/img/logo-white.svg"
                   />
                 </div>
-              </ForwardRef>,
+              </Link>,
             ],
             "className": "navbar-header",
           },
@@ -693,7 +336,7 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "class",
               "props": Object {
                 "children": <div
                   className="logo-container"
@@ -704,7 +347,8 @@ ShallowWrapper {
                     src="/img/logo-white.svg"
                   />
                 </div>,
-                "to": "/en",
+                "replace": false,
+                "to": "/",
               },
               "ref": null,
               "rendered": Object {
@@ -735,18 +379,7 @@ ShallowWrapper {
                 },
                 "type": "div",
               },
-              "type": Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "displayName": "Link",
-                "propTypes": Object {
-                  "innerRef": [Function],
-                  "onClick": [Function],
-                  "replace": [Function],
-                  "target": [Function],
-                  "to": [Function],
-                },
-                "render": [Function],
-              },
+              "type": [Function],
             },
           ],
           "type": "div",
@@ -760,219 +393,38 @@ ShallowWrapper {
               className="nav navbar-nav navbar-right"
             >
               <li>
-                <ForwardRef
+                <Link
                   className="link"
                   onClick={[Function]}
-                  to="/en/about"
+                  replace={false}
+                  to="/#about"
                 >
                   header.about
-                </ForwardRef>
+                </Link>
               </li>
               <li>
-                <ForwardRef
+                <Link
                   className="link"
                   data-test="faq-btn"
                   onClick={[Function]}
-                  to="/en/faqs"
+                  replace={false}
+                  to="/faqs"
                 >
                   header.faq
-                </ForwardRef>
+                </Link>
               </li>
               <li>
-                <ForwardRef
-                  className="link"
-                  data-test="pricecomparsion-btn"
-                  onClick={[Function]}
-                  to="/pricecomparsion"
-                >
-                  header.pricecomparsion
-                </ForwardRef>
-              </li>
-              <li>
-                <ForwardRef
-                  className="link"
-                  data-test="pricecomparison-btn"
-                  onClick={[Function]}
-                  to="/team"
-                >
-                  header.team
-                </ForwardRef>
-              </li>
-              <li>
-                <a
-                  className="link hidden-sm hidden-md"
-                  data-test="api-link"
-                  href="http://docs.nexchange2.apiary.io/"
-                  onClick={[Function]}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  header.apidocs
-                </a>
-              </li>
-              <li>
-                <ForwardRef
+                <Link
                   className="link"
                   data-test="support-btn"
                   onClick={[Function]}
+                  replace={false}
                   to="#"
                 >
                   header.support
-                </ForwardRef>
+                </Link>
               </li>
-              <li
-                className="ico-link"
-              >
-                <a
-                  className="btn btn btn-block btn-primary"
-                  data-test="ico-link"
-                  href="https://n.exchange/ico"
-                  onClick={[Function]}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  header.ico
-                </a>
-              </li>
-              <React.Fragment>
-                <li>
-                  <ForwardRef
-                    className="link"
-                    to="/en/signup"
-                  >
-                    accounts.signup
-                  </ForwardRef>
-                </li>
-                <li>
-                  <ForwardRef
-                    className="link"
-                    to="/en/signin"
-                  >
-                    accounts.signin
-                  </ForwardRef>
-                </li>
-              </React.Fragment>
               <LanguagePicker />
-              <li
-                id="social-mobile"
-              >
-                <a
-                  className="social btn btn-simple btn-just-icon visible-xs"
-                  href="/twitter"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-twitter"
-                  />
-                </a>
-                <a
-                  className="social btn btn-simple btn-just-icon visible-xs"
-                  href="/fb"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-facebook-f"
-                  />
-                </a>
-                <a
-                  className="social btn btn-simple btn-just-icon visible-xs"
-                  href="/slack"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-slack-hash"
-                  />
-                </a>
-                <a
-                  className="social btn btn-simple btn-just-icon visible-xs"
-                  href="/telegram"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-telegram"
-                  />
-                </a>
-              </li>
-              <li
-                className="visible-md visible-lg social-desktop"
-              >
-                <a
-                  className="social btn btn-simple btn-just-icon"
-                  data-placement="bottom"
-                  data-toggle="tooltip"
-                  href="/twitter"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="header.twitter"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-twitter"
-                  />
-                </a>
-              </li>
-              <li
-                className="visible-md visible-lg social-desktop"
-              >
-                <a
-                  className="social btn btn-simple btn-just-icon"
-                  data-placement="bottom"
-                  data-toggle="tooltip"
-                  href="/fb"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="header.facebook"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-facebook-f"
-                  />
-                </a>
-              </li>
-              <li
-                className="visible-md visible-lg social-desktop"
-              >
-                <a
-                  className="social btn btn-simple btn-just-icon"
-                  data-placement="bottom"
-                  data-toggle="tooltip"
-                  href="/slack"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="header.slack"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-slack-hash"
-                  />
-                </a>
-              </li>
-              <li
-                className="visible-md visible-lg social-desktop"
-              >
-                <a
-                  className="social btn btn-simple btn-just-icon"
-                  data-placement="bottom"
-                  data-toggle="tooltip"
-                  href="/telegram"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="header.telegram"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-telegram"
-                  />
-                </a>
-              </li>
             </ul>,
             "className": "collapse navbar-collapse",
             "id": "navigation-index",
@@ -985,219 +437,38 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <li>
-                  <ForwardRef
+                  <Link
                     className="link"
                     onClick={[Function]}
-                    to="/en/about"
+                    replace={false}
+                    to="/#about"
                   >
                     header.about
-                  </ForwardRef>
+                  </Link>
                 </li>,
                 <li>
-                  <ForwardRef
+                  <Link
                     className="link"
                     data-test="faq-btn"
                     onClick={[Function]}
-                    to="/en/faqs"
+                    replace={false}
+                    to="/faqs"
                   >
                     header.faq
-                  </ForwardRef>
+                  </Link>
                 </li>,
                 <li>
-                  <ForwardRef
-                    className="link"
-                    data-test="pricecomparsion-btn"
-                    onClick={[Function]}
-                    to="/pricecomparsion"
-                  >
-                    header.pricecomparsion
-                  </ForwardRef>
-                </li>,
-                <li>
-                  <ForwardRef
-                    className="link"
-                    data-test="pricecomparison-btn"
-                    onClick={[Function]}
-                    to="/team"
-                  >
-                    header.team
-                  </ForwardRef>
-                </li>,
-                <li>
-                  <a
-                    className="link hidden-sm hidden-md"
-                    data-test="api-link"
-                    href="http://docs.nexchange2.apiary.io/"
-                    onClick={[Function]}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    header.apidocs
-                  </a>
-                </li>,
-                <li>
-                  <ForwardRef
+                  <Link
                     className="link"
                     data-test="support-btn"
                     onClick={[Function]}
+                    replace={false}
                     to="#"
                   >
                     header.support
-                  </ForwardRef>
+                  </Link>
                 </li>,
-                <li
-                  className="ico-link"
-                >
-                  <a
-                    className="btn btn btn-block btn-primary"
-                    data-test="ico-link"
-                    href="https://n.exchange/ico"
-                    onClick={[Function]}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    header.ico
-                  </a>
-                </li>,
-                <React.Fragment>
-                  <li>
-                    <ForwardRef
-                      className="link"
-                      to="/en/signup"
-                    >
-                      accounts.signup
-                    </ForwardRef>
-                  </li>
-                  <li>
-                    <ForwardRef
-                      className="link"
-                      to="/en/signin"
-                    >
-                      accounts.signin
-                    </ForwardRef>
-                  </li>
-                </React.Fragment>,
                 <LanguagePicker />,
-                <li
-                  id="social-mobile"
-                >
-                  <a
-                    className="social btn btn-simple btn-just-icon visible-xs"
-                    href="/twitter"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-twitter"
-                    />
-                  </a>
-                  <a
-                    className="social btn btn-simple btn-just-icon visible-xs"
-                    href="/fb"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-facebook-f"
-                    />
-                  </a>
-                  <a
-                    className="social btn btn-simple btn-just-icon visible-xs"
-                    href="/slack"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-slack-hash"
-                    />
-                  </a>
-                  <a
-                    className="social btn btn-simple btn-just-icon visible-xs"
-                    href="/telegram"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-telegram"
-                    />
-                  </a>
-                </li>,
-                <li
-                  className="visible-md visible-lg social-desktop"
-                >
-                  <a
-                    className="social btn btn-simple btn-just-icon"
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    href="/twitter"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="header.twitter"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-twitter"
-                    />
-                  </a>
-                </li>,
-                <li
-                  className="visible-md visible-lg social-desktop"
-                >
-                  <a
-                    className="social btn btn-simple btn-just-icon"
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    href="/fb"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="header.facebook"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-facebook-f"
-                    />
-                  </a>
-                </li>,
-                <li
-                  className="visible-md visible-lg social-desktop"
-                >
-                  <a
-                    className="social btn btn-simple btn-just-icon"
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    href="/slack"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="header.slack"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-slack-hash"
-                    />
-                  </a>
-                </li>,
-                <li
-                  className="visible-md visible-lg social-desktop"
-                >
-                  <a
-                    className="social btn btn-simple btn-just-icon"
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    href="/telegram"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="header.telegram"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-telegram"
-                    />
-                  </a>
-                </li>,
               ],
               "className": "nav navbar-nav navbar-right",
             },
@@ -1208,39 +479,30 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <ForwardRef
+                  "children": <Link
                     className="link"
                     onClick={[Function]}
-                    to="/en/about"
+                    replace={false}
+                    to="/#about"
                   >
                     header.about
-                  </ForwardRef>,
+                  </Link>,
                 },
                 "ref": null,
                 "rendered": Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "class",
                   "props": Object {
                     "children": "header.about",
                     "className": "link",
                     "onClick": [Function],
-                    "to": "/en/about",
+                    "replace": false,
+                    "to": "/#about",
                   },
                   "ref": null,
                   "rendered": "header.about",
-                  "type": Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "displayName": "Link",
-                    "propTypes": Object {
-                      "innerRef": [Function],
-                      "onClick": [Function],
-                      "replace": [Function],
-                      "target": [Function],
-                      "to": [Function],
-                    },
-                    "render": [Function],
-                  },
+                  "type": [Function],
                 },
                 "type": "li",
               },
@@ -1249,41 +511,32 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <ForwardRef
+                  "children": <Link
                     className="link"
                     data-test="faq-btn"
                     onClick={[Function]}
-                    to="/en/faqs"
+                    replace={false}
+                    to="/faqs"
                   >
                     header.faq
-                  </ForwardRef>,
+                  </Link>,
                 },
                 "ref": null,
                 "rendered": Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "class",
                   "props": Object {
                     "children": "header.faq",
                     "className": "link",
                     "data-test": "faq-btn",
                     "onClick": [Function],
-                    "to": "/en/faqs",
+                    "replace": false,
+                    "to": "/faqs",
                   },
                   "ref": null,
                   "rendered": "header.faq",
-                  "type": Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "displayName": "Link",
-                    "propTypes": Object {
-                      "innerRef": [Function],
-                      "onClick": [Function],
-                      "replace": [Function],
-                      "target": [Function],
-                      "to": [Function],
-                    },
-                    "render": [Function],
-                  },
+                  "type": [Function],
                 },
                 "type": "li",
               },
@@ -1292,309 +545,34 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <ForwardRef
-                    className="link"
-                    data-test="pricecomparsion-btn"
-                    onClick={[Function]}
-                    to="/pricecomparsion"
-                  >
-                    header.pricecomparsion
-                  </ForwardRef>,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "children": "header.pricecomparsion",
-                    "className": "link",
-                    "data-test": "pricecomparsion-btn",
-                    "onClick": [Function],
-                    "to": "/pricecomparsion",
-                  },
-                  "ref": null,
-                  "rendered": "header.pricecomparsion",
-                  "type": Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "displayName": "Link",
-                    "propTypes": Object {
-                      "innerRef": [Function],
-                      "onClick": [Function],
-                      "replace": [Function],
-                      "target": [Function],
-                      "to": [Function],
-                    },
-                    "render": [Function],
-                  },
-                },
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <ForwardRef
-                    className="link"
-                    data-test="pricecomparison-btn"
-                    onClick={[Function]}
-                    to="/team"
-                  >
-                    header.team
-                  </ForwardRef>,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "children": "header.team",
-                    "className": "link",
-                    "data-test": "pricecomparison-btn",
-                    "onClick": [Function],
-                    "to": "/team",
-                  },
-                  "ref": null,
-                  "rendered": "header.team",
-                  "type": Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "displayName": "Link",
-                    "propTypes": Object {
-                      "innerRef": [Function],
-                      "onClick": [Function],
-                      "replace": [Function],
-                      "target": [Function],
-                      "to": [Function],
-                    },
-                    "render": [Function],
-                  },
-                },
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <a
-                    className="link hidden-sm hidden-md"
-                    data-test="api-link"
-                    href="http://docs.nexchange2.apiary.io/"
-                    onClick={[Function]}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    header.apidocs
-                  </a>,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "header.apidocs",
-                    "className": "link hidden-sm hidden-md",
-                    "data-test": "api-link",
-                    "href": "http://docs.nexchange2.apiary.io/",
-                    "onClick": [Function],
-                    "rel": "noopener noreferrer",
-                    "target": "_blank",
-                  },
-                  "ref": null,
-                  "rendered": "header.apidocs",
-                  "type": "a",
-                },
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <ForwardRef
+                  "children": <Link
                     className="link"
                     data-test="support-btn"
                     onClick={[Function]}
+                    replace={false}
                     to="#"
                   >
                     header.support
-                  </ForwardRef>,
+                  </Link>,
                 },
                 "ref": null,
                 "rendered": Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "class",
                   "props": Object {
                     "children": "header.support",
                     "className": "link",
                     "data-test": "support-btn",
                     "onClick": [Function],
+                    "replace": false,
                     "to": "#",
                   },
                   "ref": null,
                   "rendered": "header.support",
-                  "type": Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "displayName": "Link",
-                    "propTypes": Object {
-                      "innerRef": [Function],
-                      "onClick": [Function],
-                      "replace": [Function],
-                      "target": [Function],
-                      "to": [Function],
-                    },
-                    "render": [Function],
-                  },
+                  "type": [Function],
                 },
                 "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <a
-                    className="btn btn btn-block btn-primary"
-                    data-test="ico-link"
-                    href="https://n.exchange/ico"
-                    onClick={[Function]}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    header.ico
-                  </a>,
-                  "className": "ico-link",
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "header.ico",
-                    "className": "btn btn btn-block btn-primary",
-                    "data-test": "ico-link",
-                    "href": "https://n.exchange/ico",
-                    "onClick": [Function],
-                    "rel": "noopener noreferrer",
-                    "target": "_blank",
-                  },
-                  "ref": null,
-                  "rendered": "header.ico",
-                  "type": "a",
-                },
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": Array [
-                    <li>
-                      <ForwardRef
-                        className="link"
-                        to="/en/signup"
-                      >
-                        accounts.signup
-                      </ForwardRef>
-                    </li>,
-                    <li>
-                      <ForwardRef
-                        className="link"
-                        to="/en/signin"
-                      >
-                        accounts.signin
-                      </ForwardRef>
-                    </li>,
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <ForwardRef
-                        className="link"
-                        to="/en/signup"
-                      >
-                        accounts.signup
-                      </ForwardRef>,
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "children": "accounts.signup",
-                        "className": "link",
-                        "to": "/en/signup",
-                      },
-                      "ref": null,
-                      "rendered": "accounts.signup",
-                      "type": Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "displayName": "Link",
-                        "propTypes": Object {
-                          "innerRef": [Function],
-                          "onClick": [Function],
-                          "replace": [Function],
-                          "target": [Function],
-                          "to": [Function],
-                        },
-                        "render": [Function],
-                      },
-                    },
-                    "type": "li",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <ForwardRef
-                        className="link"
-                        to="/en/signin"
-                      >
-                        accounts.signin
-                      </ForwardRef>,
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "children": "accounts.signin",
-                        "className": "link",
-                        "to": "/en/signin",
-                      },
-                      "ref": null,
-                      "rendered": "accounts.signin",
-                      "type": Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "displayName": "Link",
-                        "propTypes": Object {
-                          "innerRef": [Function],
-                          "onClick": [Function],
-                          "replace": [Function],
-                          "target": [Function],
-                          "to": [Function],
-                        },
-                        "render": [Function],
-                      },
-                    },
-                    "type": "li",
-                  },
-                ],
-                "type": Symbol(react.fragment),
               },
               Object {
                 "instance": null,
@@ -1604,404 +582,6 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": null,
                 "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <a
-                      className="social btn btn-simple btn-just-icon visible-xs"
-                      href="/twitter"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-twitter"
-                      />
-                    </a>,
-                    <a
-                      className="social btn btn-simple btn-just-icon visible-xs"
-                      href="/fb"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-facebook-f"
-                      />
-                    </a>,
-                    <a
-                      className="social btn btn-simple btn-just-icon visible-xs"
-                      href="/slack"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-slack-hash"
-                      />
-                    </a>,
-                    <a
-                      className="social btn btn-simple btn-just-icon visible-xs"
-                      href="/telegram"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-telegram"
-                      />
-                    </a>,
-                  ],
-                  "id": "social-mobile",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <i
-                        aria-hidden="true"
-                        className="fab fa-twitter"
-                      />,
-                      "className": "social btn btn-simple btn-just-icon visible-xs",
-                      "href": "/twitter",
-                      "rel": "noopener noreferrer",
-                      "target": "_blank",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "aria-hidden": "true",
-                        "className": "fab fa-twitter",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "i",
-                    },
-                    "type": "a",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <i
-                        aria-hidden="true"
-                        className="fab fa-facebook-f"
-                      />,
-                      "className": "social btn btn-simple btn-just-icon visible-xs",
-                      "href": "/fb",
-                      "rel": "noopener noreferrer",
-                      "target": "_blank",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "aria-hidden": "true",
-                        "className": "fab fa-facebook-f",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "i",
-                    },
-                    "type": "a",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <i
-                        aria-hidden="true"
-                        className="fab fa-slack-hash"
-                      />,
-                      "className": "social btn btn-simple btn-just-icon visible-xs",
-                      "href": "/slack",
-                      "rel": "noopener noreferrer",
-                      "target": "_blank",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "aria-hidden": "true",
-                        "className": "fab fa-slack-hash",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "i",
-                    },
-                    "type": "a",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <i
-                        aria-hidden="true"
-                        className="fab fa-telegram"
-                      />,
-                      "className": "social btn btn-simple btn-just-icon visible-xs",
-                      "href": "/telegram",
-                      "rel": "noopener noreferrer",
-                      "target": "_blank",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "aria-hidden": "true",
-                        "className": "fab fa-telegram",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "i",
-                    },
-                    "type": "a",
-                  },
-                ],
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <a
-                    className="social btn btn-simple btn-just-icon"
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    href="/twitter"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="header.twitter"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-twitter"
-                    />
-                  </a>,
-                  "className": "visible-md visible-lg social-desktop",
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <i
-                      aria-hidden="true"
-                      className="fab fa-twitter"
-                    />,
-                    "className": "social btn btn-simple btn-just-icon",
-                    "data-placement": "bottom",
-                    "data-toggle": "tooltip",
-                    "href": "/twitter",
-                    "rel": "noopener noreferrer",
-                    "target": "_blank",
-                    "title": "header.twitter",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "aria-hidden": "true",
-                      "className": "fab fa-twitter",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "i",
-                  },
-                  "type": "a",
-                },
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <a
-                    className="social btn btn-simple btn-just-icon"
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    href="/fb"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="header.facebook"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-facebook-f"
-                    />
-                  </a>,
-                  "className": "visible-md visible-lg social-desktop",
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <i
-                      aria-hidden="true"
-                      className="fab fa-facebook-f"
-                    />,
-                    "className": "social btn btn-simple btn-just-icon",
-                    "data-placement": "bottom",
-                    "data-toggle": "tooltip",
-                    "href": "/fb",
-                    "rel": "noopener noreferrer",
-                    "target": "_blank",
-                    "title": "header.facebook",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "aria-hidden": "true",
-                      "className": "fab fa-facebook-f",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "i",
-                  },
-                  "type": "a",
-                },
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <a
-                    className="social btn btn-simple btn-just-icon"
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    href="/slack"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="header.slack"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-slack-hash"
-                    />
-                  </a>,
-                  "className": "visible-md visible-lg social-desktop",
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <i
-                      aria-hidden="true"
-                      className="fab fa-slack-hash"
-                    />,
-                    "className": "social btn btn-simple btn-just-icon",
-                    "data-placement": "bottom",
-                    "data-toggle": "tooltip",
-                    "href": "/slack",
-                    "rel": "noopener noreferrer",
-                    "target": "_blank",
-                    "title": "header.slack",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "aria-hidden": "true",
-                      "className": "fab fa-slack-hash",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "i",
-                  },
-                  "type": "a",
-                },
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <a
-                    className="social btn btn-simple btn-just-icon"
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    href="/telegram"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="header.telegram"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-telegram"
-                    />
-                  </a>,
-                  "className": "visible-md visible-lg social-desktop",
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <i
-                      aria-hidden="true"
-                      className="fab fa-telegram"
-                    />,
-                    "className": "social btn btn-simple btn-just-icon",
-                    "data-placement": "bottom",
-                    "data-toggle": "tooltip",
-                    "href": "/telegram",
-                    "rel": "noopener noreferrer",
-                    "target": "_blank",
-                    "title": "header.telegram",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "aria-hidden": "true",
-                      "className": "fab fa-telegram",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "i",
-                  },
-                  "type": "a",
-                },
-                "type": "li",
               },
             ],
             "type": "ul",
@@ -2014,7 +594,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "onClose": [Function],
-            "show": undefined,
+            "show": false,
           },
           "ref": null,
           "rendered": null,
@@ -2058,8 +638,9 @@ ShallowWrapper {
                 className="icon-bar"
               />
             </button>
-            <ForwardRef
-              to="/en"
+            <Link
+              replace={false}
+              to="/"
             >
               <div
                 className="logo-container"
@@ -2070,7 +651,7 @@ ShallowWrapper {
                   src="/img/logo-white.svg"
                 />
               </div>
-            </ForwardRef>
+            </Link>
           </div>
           <div
             className="collapse navbar-collapse"
@@ -2080,223 +661,43 @@ ShallowWrapper {
               className="nav navbar-nav navbar-right"
             >
               <li>
-                <ForwardRef
+                <Link
                   className="link"
                   onClick={[Function]}
-                  to="/en/about"
+                  replace={false}
+                  to="/#about"
                 >
                   header.about
-                </ForwardRef>
+                </Link>
               </li>
               <li>
-                <ForwardRef
+                <Link
                   className="link"
                   data-test="faq-btn"
                   onClick={[Function]}
-                  to="/en/faqs"
+                  replace={false}
+                  to="/faqs"
                 >
                   header.faq
-                </ForwardRef>
+                </Link>
               </li>
               <li>
-                <ForwardRef
-                  className="link"
-                  data-test="pricecomparsion-btn"
-                  onClick={[Function]}
-                  to="/pricecomparsion"
-                >
-                  header.pricecomparsion
-                </ForwardRef>
-              </li>
-              <li>
-                <ForwardRef
-                  className="link"
-                  data-test="pricecomparison-btn"
-                  onClick={[Function]}
-                  to="/team"
-                >
-                  header.team
-                </ForwardRef>
-              </li>
-              <li>
-                <a
-                  className="link hidden-sm hidden-md"
-                  data-test="api-link"
-                  href="http://docs.nexchange2.apiary.io/"
-                  onClick={[Function]}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  header.apidocs
-                </a>
-              </li>
-              <li>
-                <ForwardRef
+                <Link
                   className="link"
                   data-test="support-btn"
                   onClick={[Function]}
+                  replace={false}
                   to="#"
                 >
                   header.support
-                </ForwardRef>
+                </Link>
               </li>
-              <li
-                className="ico-link"
-              >
-                <a
-                  className="btn btn btn-block btn-primary"
-                  data-test="ico-link"
-                  href="https://n.exchange/ico"
-                  onClick={[Function]}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  header.ico
-                </a>
-              </li>
-              <React.Fragment>
-                <li>
-                  <ForwardRef
-                    className="link"
-                    to="/en/signup"
-                  >
-                    accounts.signup
-                  </ForwardRef>
-                </li>
-                <li>
-                  <ForwardRef
-                    className="link"
-                    to="/en/signin"
-                  >
-                    accounts.signin
-                  </ForwardRef>
-                </li>
-              </React.Fragment>
               <LanguagePicker />
-              <li
-                id="social-mobile"
-              >
-                <a
-                  className="social btn btn-simple btn-just-icon visible-xs"
-                  href="/twitter"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-twitter"
-                  />
-                </a>
-                <a
-                  className="social btn btn-simple btn-just-icon visible-xs"
-                  href="/fb"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-facebook-f"
-                  />
-                </a>
-                <a
-                  className="social btn btn-simple btn-just-icon visible-xs"
-                  href="/slack"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-slack-hash"
-                  />
-                </a>
-                <a
-                  className="social btn btn-simple btn-just-icon visible-xs"
-                  href="/telegram"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-telegram"
-                  />
-                </a>
-              </li>
-              <li
-                className="visible-md visible-lg social-desktop"
-              >
-                <a
-                  className="social btn btn-simple btn-just-icon"
-                  data-placement="bottom"
-                  data-toggle="tooltip"
-                  href="/twitter"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="header.twitter"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-twitter"
-                  />
-                </a>
-              </li>
-              <li
-                className="visible-md visible-lg social-desktop"
-              >
-                <a
-                  className="social btn btn-simple btn-just-icon"
-                  data-placement="bottom"
-                  data-toggle="tooltip"
-                  href="/fb"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="header.facebook"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-facebook-f"
-                  />
-                </a>
-              </li>
-              <li
-                className="visible-md visible-lg social-desktop"
-              >
-                <a
-                  className="social btn btn-simple btn-just-icon"
-                  data-placement="bottom"
-                  data-toggle="tooltip"
-                  href="/slack"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="header.slack"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-slack-hash"
-                  />
-                </a>
-              </li>
-              <li
-                className="visible-md visible-lg social-desktop"
-              >
-                <a
-                  className="social btn btn-simple btn-just-icon"
-                  data-placement="bottom"
-                  data-toggle="tooltip"
-                  href="/telegram"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="header.telegram"
-                >
-                  <i
-                    aria-hidden="true"
-                    className="fab fa-telegram"
-                  />
-                </a>
-              </li>
             </ul>
           </div>
           <Connect(Support)
             onClose={[Function]}
+            show={false}
           />
         </div>,
         "className": "header home",
@@ -2333,8 +734,9 @@ ShallowWrapper {
                   className="icon-bar"
                 />
               </button>
-              <ForwardRef
-                to="/en"
+              <Link
+                replace={false}
+                to="/"
               >
                 <div
                   className="logo-container"
@@ -2345,7 +747,7 @@ ShallowWrapper {
                     src="/img/logo-white.svg"
                   />
                 </div>
-              </ForwardRef>
+              </Link>
             </div>,
             <div
               className="collapse navbar-collapse"
@@ -2355,223 +757,43 @@ ShallowWrapper {
                 className="nav navbar-nav navbar-right"
               >
                 <li>
-                  <ForwardRef
+                  <Link
                     className="link"
                     onClick={[Function]}
-                    to="/en/about"
+                    replace={false}
+                    to="/#about"
                   >
                     header.about
-                  </ForwardRef>
+                  </Link>
                 </li>
                 <li>
-                  <ForwardRef
+                  <Link
                     className="link"
                     data-test="faq-btn"
                     onClick={[Function]}
-                    to="/en/faqs"
+                    replace={false}
+                    to="/faqs"
                   >
                     header.faq
-                  </ForwardRef>
+                  </Link>
                 </li>
                 <li>
-                  <ForwardRef
-                    className="link"
-                    data-test="pricecomparsion-btn"
-                    onClick={[Function]}
-                    to="/pricecomparsion"
-                  >
-                    header.pricecomparsion
-                  </ForwardRef>
-                </li>
-                <li>
-                  <ForwardRef
-                    className="link"
-                    data-test="pricecomparison-btn"
-                    onClick={[Function]}
-                    to="/team"
-                  >
-                    header.team
-                  </ForwardRef>
-                </li>
-                <li>
-                  <a
-                    className="link hidden-sm hidden-md"
-                    data-test="api-link"
-                    href="http://docs.nexchange2.apiary.io/"
-                    onClick={[Function]}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    header.apidocs
-                  </a>
-                </li>
-                <li>
-                  <ForwardRef
+                  <Link
                     className="link"
                     data-test="support-btn"
                     onClick={[Function]}
+                    replace={false}
                     to="#"
                   >
                     header.support
-                  </ForwardRef>
+                  </Link>
                 </li>
-                <li
-                  className="ico-link"
-                >
-                  <a
-                    className="btn btn btn-block btn-primary"
-                    data-test="ico-link"
-                    href="https://n.exchange/ico"
-                    onClick={[Function]}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    header.ico
-                  </a>
-                </li>
-                <React.Fragment>
-                  <li>
-                    <ForwardRef
-                      className="link"
-                      to="/en/signup"
-                    >
-                      accounts.signup
-                    </ForwardRef>
-                  </li>
-                  <li>
-                    <ForwardRef
-                      className="link"
-                      to="/en/signin"
-                    >
-                      accounts.signin
-                    </ForwardRef>
-                  </li>
-                </React.Fragment>
                 <LanguagePicker />
-                <li
-                  id="social-mobile"
-                >
-                  <a
-                    className="social btn btn-simple btn-just-icon visible-xs"
-                    href="/twitter"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-twitter"
-                    />
-                  </a>
-                  <a
-                    className="social btn btn-simple btn-just-icon visible-xs"
-                    href="/fb"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-facebook-f"
-                    />
-                  </a>
-                  <a
-                    className="social btn btn-simple btn-just-icon visible-xs"
-                    href="/slack"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-slack-hash"
-                    />
-                  </a>
-                  <a
-                    className="social btn btn-simple btn-just-icon visible-xs"
-                    href="/telegram"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-telegram"
-                    />
-                  </a>
-                </li>
-                <li
-                  className="visible-md visible-lg social-desktop"
-                >
-                  <a
-                    className="social btn btn-simple btn-just-icon"
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    href="/twitter"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="header.twitter"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-twitter"
-                    />
-                  </a>
-                </li>
-                <li
-                  className="visible-md visible-lg social-desktop"
-                >
-                  <a
-                    className="social btn btn-simple btn-just-icon"
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    href="/fb"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="header.facebook"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-facebook-f"
-                    />
-                  </a>
-                </li>
-                <li
-                  className="visible-md visible-lg social-desktop"
-                >
-                  <a
-                    className="social btn btn-simple btn-just-icon"
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    href="/slack"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="header.slack"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-slack-hash"
-                    />
-                  </a>
-                </li>
-                <li
-                  className="visible-md visible-lg social-desktop"
-                >
-                  <a
-                    className="social btn btn-simple btn-just-icon"
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    href="/telegram"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="header.telegram"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-telegram"
-                    />
-                  </a>
-                </li>
               </ul>
             </div>,
             <Connect(Support)
               onClose={[Function]}
+              show={false}
             />,
           ],
           "className": "container",
@@ -2605,8 +827,9 @@ ShallowWrapper {
                     className="icon-bar"
                   />
                 </button>,
-                <ForwardRef
-                  to="/en"
+                <Link
+                  replace={false}
+                  to="/"
                 >
                   <div
                     className="logo-container"
@@ -2617,7 +840,7 @@ ShallowWrapper {
                       src="/img/logo-white.svg"
                     />
                   </div>
-                </ForwardRef>,
+                </Link>,
               ],
               "className": "navbar-header",
             },
@@ -2702,7 +925,7 @@ ShallowWrapper {
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "function",
+                "nodeType": "class",
                 "props": Object {
                   "children": <div
                     className="logo-container"
@@ -2713,7 +936,8 @@ ShallowWrapper {
                       src="/img/logo-white.svg"
                     />
                   </div>,
-                  "to": "/en",
+                  "replace": false,
+                  "to": "/",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -2744,18 +968,7 @@ ShallowWrapper {
                   },
                   "type": "div",
                 },
-                "type": Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "displayName": "Link",
-                  "propTypes": Object {
-                    "innerRef": [Function],
-                    "onClick": [Function],
-                    "replace": [Function],
-                    "target": [Function],
-                    "to": [Function],
-                  },
-                  "render": [Function],
-                },
+                "type": [Function],
               },
             ],
             "type": "div",
@@ -2769,219 +982,38 @@ ShallowWrapper {
                 className="nav navbar-nav navbar-right"
               >
                 <li>
-                  <ForwardRef
+                  <Link
                     className="link"
                     onClick={[Function]}
-                    to="/en/about"
+                    replace={false}
+                    to="/#about"
                   >
                     header.about
-                  </ForwardRef>
+                  </Link>
                 </li>
                 <li>
-                  <ForwardRef
+                  <Link
                     className="link"
                     data-test="faq-btn"
                     onClick={[Function]}
-                    to="/en/faqs"
+                    replace={false}
+                    to="/faqs"
                   >
                     header.faq
-                  </ForwardRef>
+                  </Link>
                 </li>
                 <li>
-                  <ForwardRef
-                    className="link"
-                    data-test="pricecomparsion-btn"
-                    onClick={[Function]}
-                    to="/pricecomparsion"
-                  >
-                    header.pricecomparsion
-                  </ForwardRef>
-                </li>
-                <li>
-                  <ForwardRef
-                    className="link"
-                    data-test="pricecomparison-btn"
-                    onClick={[Function]}
-                    to="/team"
-                  >
-                    header.team
-                  </ForwardRef>
-                </li>
-                <li>
-                  <a
-                    className="link hidden-sm hidden-md"
-                    data-test="api-link"
-                    href="http://docs.nexchange2.apiary.io/"
-                    onClick={[Function]}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    header.apidocs
-                  </a>
-                </li>
-                <li>
-                  <ForwardRef
+                  <Link
                     className="link"
                     data-test="support-btn"
                     onClick={[Function]}
+                    replace={false}
                     to="#"
                   >
                     header.support
-                  </ForwardRef>
+                  </Link>
                 </li>
-                <li
-                  className="ico-link"
-                >
-                  <a
-                    className="btn btn btn-block btn-primary"
-                    data-test="ico-link"
-                    href="https://n.exchange/ico"
-                    onClick={[Function]}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    header.ico
-                  </a>
-                </li>
-                <React.Fragment>
-                  <li>
-                    <ForwardRef
-                      className="link"
-                      to="/en/signup"
-                    >
-                      accounts.signup
-                    </ForwardRef>
-                  </li>
-                  <li>
-                    <ForwardRef
-                      className="link"
-                      to="/en/signin"
-                    >
-                      accounts.signin
-                    </ForwardRef>
-                  </li>
-                </React.Fragment>
                 <LanguagePicker />
-                <li
-                  id="social-mobile"
-                >
-                  <a
-                    className="social btn btn-simple btn-just-icon visible-xs"
-                    href="/twitter"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-twitter"
-                    />
-                  </a>
-                  <a
-                    className="social btn btn-simple btn-just-icon visible-xs"
-                    href="/fb"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-facebook-f"
-                    />
-                  </a>
-                  <a
-                    className="social btn btn-simple btn-just-icon visible-xs"
-                    href="/slack"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-slack-hash"
-                    />
-                  </a>
-                  <a
-                    className="social btn btn-simple btn-just-icon visible-xs"
-                    href="/telegram"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-telegram"
-                    />
-                  </a>
-                </li>
-                <li
-                  className="visible-md visible-lg social-desktop"
-                >
-                  <a
-                    className="social btn btn-simple btn-just-icon"
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    href="/twitter"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="header.twitter"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-twitter"
-                    />
-                  </a>
-                </li>
-                <li
-                  className="visible-md visible-lg social-desktop"
-                >
-                  <a
-                    className="social btn btn-simple btn-just-icon"
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    href="/fb"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="header.facebook"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-facebook-f"
-                    />
-                  </a>
-                </li>
-                <li
-                  className="visible-md visible-lg social-desktop"
-                >
-                  <a
-                    className="social btn btn-simple btn-just-icon"
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    href="/slack"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="header.slack"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-slack-hash"
-                    />
-                  </a>
-                </li>
-                <li
-                  className="visible-md visible-lg social-desktop"
-                >
-                  <a
-                    className="social btn btn-simple btn-just-icon"
-                    data-placement="bottom"
-                    data-toggle="tooltip"
-                    href="/telegram"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="header.telegram"
-                  >
-                    <i
-                      aria-hidden="true"
-                      className="fab fa-telegram"
-                    />
-                  </a>
-                </li>
               </ul>,
               "className": "collapse navbar-collapse",
               "id": "navigation-index",
@@ -2994,219 +1026,38 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <li>
-                    <ForwardRef
+                    <Link
                       className="link"
                       onClick={[Function]}
-                      to="/en/about"
+                      replace={false}
+                      to="/#about"
                     >
                       header.about
-                    </ForwardRef>
+                    </Link>
                   </li>,
                   <li>
-                    <ForwardRef
+                    <Link
                       className="link"
                       data-test="faq-btn"
                       onClick={[Function]}
-                      to="/en/faqs"
+                      replace={false}
+                      to="/faqs"
                     >
                       header.faq
-                    </ForwardRef>
+                    </Link>
                   </li>,
                   <li>
-                    <ForwardRef
-                      className="link"
-                      data-test="pricecomparsion-btn"
-                      onClick={[Function]}
-                      to="/pricecomparsion"
-                    >
-                      header.pricecomparsion
-                    </ForwardRef>
-                  </li>,
-                  <li>
-                    <ForwardRef
-                      className="link"
-                      data-test="pricecomparison-btn"
-                      onClick={[Function]}
-                      to="/team"
-                    >
-                      header.team
-                    </ForwardRef>
-                  </li>,
-                  <li>
-                    <a
-                      className="link hidden-sm hidden-md"
-                      data-test="api-link"
-                      href="http://docs.nexchange2.apiary.io/"
-                      onClick={[Function]}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      header.apidocs
-                    </a>
-                  </li>,
-                  <li>
-                    <ForwardRef
+                    <Link
                       className="link"
                       data-test="support-btn"
                       onClick={[Function]}
+                      replace={false}
                       to="#"
                     >
                       header.support
-                    </ForwardRef>
+                    </Link>
                   </li>,
-                  <li
-                    className="ico-link"
-                  >
-                    <a
-                      className="btn btn btn-block btn-primary"
-                      data-test="ico-link"
-                      href="https://n.exchange/ico"
-                      onClick={[Function]}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      header.ico
-                    </a>
-                  </li>,
-                  <React.Fragment>
-                    <li>
-                      <ForwardRef
-                        className="link"
-                        to="/en/signup"
-                      >
-                        accounts.signup
-                      </ForwardRef>
-                    </li>
-                    <li>
-                      <ForwardRef
-                        className="link"
-                        to="/en/signin"
-                      >
-                        accounts.signin
-                      </ForwardRef>
-                    </li>
-                  </React.Fragment>,
                   <LanguagePicker />,
-                  <li
-                    id="social-mobile"
-                  >
-                    <a
-                      className="social btn btn-simple btn-just-icon visible-xs"
-                      href="/twitter"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-twitter"
-                      />
-                    </a>
-                    <a
-                      className="social btn btn-simple btn-just-icon visible-xs"
-                      href="/fb"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-facebook-f"
-                      />
-                    </a>
-                    <a
-                      className="social btn btn-simple btn-just-icon visible-xs"
-                      href="/slack"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-slack-hash"
-                      />
-                    </a>
-                    <a
-                      className="social btn btn-simple btn-just-icon visible-xs"
-                      href="/telegram"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-telegram"
-                      />
-                    </a>
-                  </li>,
-                  <li
-                    className="visible-md visible-lg social-desktop"
-                  >
-                    <a
-                      className="social btn btn-simple btn-just-icon"
-                      data-placement="bottom"
-                      data-toggle="tooltip"
-                      href="/twitter"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      title="header.twitter"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-twitter"
-                      />
-                    </a>
-                  </li>,
-                  <li
-                    className="visible-md visible-lg social-desktop"
-                  >
-                    <a
-                      className="social btn btn-simple btn-just-icon"
-                      data-placement="bottom"
-                      data-toggle="tooltip"
-                      href="/fb"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      title="header.facebook"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-facebook-f"
-                      />
-                    </a>
-                  </li>,
-                  <li
-                    className="visible-md visible-lg social-desktop"
-                  >
-                    <a
-                      className="social btn btn-simple btn-just-icon"
-                      data-placement="bottom"
-                      data-toggle="tooltip"
-                      href="/slack"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      title="header.slack"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-slack-hash"
-                      />
-                    </a>
-                  </li>,
-                  <li
-                    className="visible-md visible-lg social-desktop"
-                  >
-                    <a
-                      className="social btn btn-simple btn-just-icon"
-                      data-placement="bottom"
-                      data-toggle="tooltip"
-                      href="/telegram"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      title="header.telegram"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-telegram"
-                      />
-                    </a>
-                  </li>,
                 ],
                 "className": "nav navbar-nav navbar-right",
               },
@@ -3217,39 +1068,30 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <ForwardRef
+                    "children": <Link
                       className="link"
                       onClick={[Function]}
-                      to="/en/about"
+                      replace={false}
+                      to="/#about"
                     >
                       header.about
-                    </ForwardRef>,
+                    </Link>,
                   },
                   "ref": null,
                   "rendered": Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "function",
+                    "nodeType": "class",
                     "props": Object {
                       "children": "header.about",
                       "className": "link",
                       "onClick": [Function],
-                      "to": "/en/about",
+                      "replace": false,
+                      "to": "/#about",
                     },
                     "ref": null,
                     "rendered": "header.about",
-                    "type": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "displayName": "Link",
-                      "propTypes": Object {
-                        "innerRef": [Function],
-                        "onClick": [Function],
-                        "replace": [Function],
-                        "target": [Function],
-                        "to": [Function],
-                      },
-                      "render": [Function],
-                    },
+                    "type": [Function],
                   },
                   "type": "li",
                 },
@@ -3258,41 +1100,32 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <ForwardRef
+                    "children": <Link
                       className="link"
                       data-test="faq-btn"
                       onClick={[Function]}
-                      to="/en/faqs"
+                      replace={false}
+                      to="/faqs"
                     >
                       header.faq
-                    </ForwardRef>,
+                    </Link>,
                   },
                   "ref": null,
                   "rendered": Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "function",
+                    "nodeType": "class",
                     "props": Object {
                       "children": "header.faq",
                       "className": "link",
                       "data-test": "faq-btn",
                       "onClick": [Function],
-                      "to": "/en/faqs",
+                      "replace": false,
+                      "to": "/faqs",
                     },
                     "ref": null,
                     "rendered": "header.faq",
-                    "type": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "displayName": "Link",
-                      "propTypes": Object {
-                        "innerRef": [Function],
-                        "onClick": [Function],
-                        "replace": [Function],
-                        "target": [Function],
-                        "to": [Function],
-                      },
-                      "render": [Function],
-                    },
+                    "type": [Function],
                   },
                   "type": "li",
                 },
@@ -3301,309 +1134,34 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <ForwardRef
-                      className="link"
-                      data-test="pricecomparsion-btn"
-                      onClick={[Function]}
-                      to="/pricecomparsion"
-                    >
-                      header.pricecomparsion
-                    </ForwardRef>,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "children": "header.pricecomparsion",
-                      "className": "link",
-                      "data-test": "pricecomparsion-btn",
-                      "onClick": [Function],
-                      "to": "/pricecomparsion",
-                    },
-                    "ref": null,
-                    "rendered": "header.pricecomparsion",
-                    "type": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "displayName": "Link",
-                      "propTypes": Object {
-                        "innerRef": [Function],
-                        "onClick": [Function],
-                        "replace": [Function],
-                        "target": [Function],
-                        "to": [Function],
-                      },
-                      "render": [Function],
-                    },
-                  },
-                  "type": "li",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <ForwardRef
-                      className="link"
-                      data-test="pricecomparison-btn"
-                      onClick={[Function]}
-                      to="/team"
-                    >
-                      header.team
-                    </ForwardRef>,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "children": "header.team",
-                      "className": "link",
-                      "data-test": "pricecomparison-btn",
-                      "onClick": [Function],
-                      "to": "/team",
-                    },
-                    "ref": null,
-                    "rendered": "header.team",
-                    "type": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "displayName": "Link",
-                      "propTypes": Object {
-                        "innerRef": [Function],
-                        "onClick": [Function],
-                        "replace": [Function],
-                        "target": [Function],
-                        "to": [Function],
-                      },
-                      "render": [Function],
-                    },
-                  },
-                  "type": "li",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <a
-                      className="link hidden-sm hidden-md"
-                      data-test="api-link"
-                      href="http://docs.nexchange2.apiary.io/"
-                      onClick={[Function]}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      header.apidocs
-                    </a>,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "header.apidocs",
-                      "className": "link hidden-sm hidden-md",
-                      "data-test": "api-link",
-                      "href": "http://docs.nexchange2.apiary.io/",
-                      "onClick": [Function],
-                      "rel": "noopener noreferrer",
-                      "target": "_blank",
-                    },
-                    "ref": null,
-                    "rendered": "header.apidocs",
-                    "type": "a",
-                  },
-                  "type": "li",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <ForwardRef
+                    "children": <Link
                       className="link"
                       data-test="support-btn"
                       onClick={[Function]}
+                      replace={false}
                       to="#"
                     >
                       header.support
-                    </ForwardRef>,
+                    </Link>,
                   },
                   "ref": null,
                   "rendered": Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "function",
+                    "nodeType": "class",
                     "props": Object {
                       "children": "header.support",
                       "className": "link",
                       "data-test": "support-btn",
                       "onClick": [Function],
+                      "replace": false,
                       "to": "#",
                     },
                     "ref": null,
                     "rendered": "header.support",
-                    "type": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "displayName": "Link",
-                      "propTypes": Object {
-                        "innerRef": [Function],
-                        "onClick": [Function],
-                        "replace": [Function],
-                        "target": [Function],
-                        "to": [Function],
-                      },
-                      "render": [Function],
-                    },
+                    "type": [Function],
                   },
                   "type": "li",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <a
-                      className="btn btn btn-block btn-primary"
-                      data-test="ico-link"
-                      href="https://n.exchange/ico"
-                      onClick={[Function]}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      header.ico
-                    </a>,
-                    "className": "ico-link",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "header.ico",
-                      "className": "btn btn btn-block btn-primary",
-                      "data-test": "ico-link",
-                      "href": "https://n.exchange/ico",
-                      "onClick": [Function],
-                      "rel": "noopener noreferrer",
-                      "target": "_blank",
-                    },
-                    "ref": null,
-                    "rendered": "header.ico",
-                    "type": "a",
-                  },
-                  "type": "li",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "children": Array [
-                      <li>
-                        <ForwardRef
-                          className="link"
-                          to="/en/signup"
-                        >
-                          accounts.signup
-                        </ForwardRef>
-                      </li>,
-                      <li>
-                        <ForwardRef
-                          className="link"
-                          to="/en/signin"
-                        >
-                          accounts.signin
-                        </ForwardRef>
-                      </li>,
-                    ],
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <ForwardRef
-                          className="link"
-                          to="/en/signup"
-                        >
-                          accounts.signup
-                        </ForwardRef>,
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "function",
-                        "props": Object {
-                          "children": "accounts.signup",
-                          "className": "link",
-                          "to": "/en/signup",
-                        },
-                        "ref": null,
-                        "rendered": "accounts.signup",
-                        "type": Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "displayName": "Link",
-                          "propTypes": Object {
-                            "innerRef": [Function],
-                            "onClick": [Function],
-                            "replace": [Function],
-                            "target": [Function],
-                            "to": [Function],
-                          },
-                          "render": [Function],
-                        },
-                      },
-                      "type": "li",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <ForwardRef
-                          className="link"
-                          to="/en/signin"
-                        >
-                          accounts.signin
-                        </ForwardRef>,
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "function",
-                        "props": Object {
-                          "children": "accounts.signin",
-                          "className": "link",
-                          "to": "/en/signin",
-                        },
-                        "ref": null,
-                        "rendered": "accounts.signin",
-                        "type": Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "displayName": "Link",
-                          "propTypes": Object {
-                            "innerRef": [Function],
-                            "onClick": [Function],
-                            "replace": [Function],
-                            "target": [Function],
-                            "to": [Function],
-                          },
-                          "render": [Function],
-                        },
-                      },
-                      "type": "li",
-                    },
-                  ],
-                  "type": Symbol(react.fragment),
                 },
                 Object {
                   "instance": null,
@@ -3613,404 +1171,6 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": null,
                   "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      <a
-                        className="social btn btn-simple btn-just-icon visible-xs"
-                        href="/twitter"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <i
-                          aria-hidden="true"
-                          className="fab fa-twitter"
-                        />
-                      </a>,
-                      <a
-                        className="social btn btn-simple btn-just-icon visible-xs"
-                        href="/fb"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <i
-                          aria-hidden="true"
-                          className="fab fa-facebook-f"
-                        />
-                      </a>,
-                      <a
-                        className="social btn btn-simple btn-just-icon visible-xs"
-                        href="/slack"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <i
-                          aria-hidden="true"
-                          className="fab fa-slack-hash"
-                        />
-                      </a>,
-                      <a
-                        className="social btn btn-simple btn-just-icon visible-xs"
-                        href="/telegram"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <i
-                          aria-hidden="true"
-                          className="fab fa-telegram"
-                        />
-                      </a>,
-                    ],
-                    "id": "social-mobile",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <i
-                          aria-hidden="true"
-                          className="fab fa-twitter"
-                        />,
-                        "className": "social btn btn-simple btn-just-icon visible-xs",
-                        "href": "/twitter",
-                        "rel": "noopener noreferrer",
-                        "target": "_blank",
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "aria-hidden": "true",
-                          "className": "fab fa-twitter",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "i",
-                      },
-                      "type": "a",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <i
-                          aria-hidden="true"
-                          className="fab fa-facebook-f"
-                        />,
-                        "className": "social btn btn-simple btn-just-icon visible-xs",
-                        "href": "/fb",
-                        "rel": "noopener noreferrer",
-                        "target": "_blank",
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "aria-hidden": "true",
-                          "className": "fab fa-facebook-f",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "i",
-                      },
-                      "type": "a",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <i
-                          aria-hidden="true"
-                          className="fab fa-slack-hash"
-                        />,
-                        "className": "social btn btn-simple btn-just-icon visible-xs",
-                        "href": "/slack",
-                        "rel": "noopener noreferrer",
-                        "target": "_blank",
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "aria-hidden": "true",
-                          "className": "fab fa-slack-hash",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "i",
-                      },
-                      "type": "a",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <i
-                          aria-hidden="true"
-                          className="fab fa-telegram"
-                        />,
-                        "className": "social btn btn-simple btn-just-icon visible-xs",
-                        "href": "/telegram",
-                        "rel": "noopener noreferrer",
-                        "target": "_blank",
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "aria-hidden": "true",
-                          "className": "fab fa-telegram",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "i",
-                      },
-                      "type": "a",
-                    },
-                  ],
-                  "type": "li",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <a
-                      className="social btn btn-simple btn-just-icon"
-                      data-placement="bottom"
-                      data-toggle="tooltip"
-                      href="/twitter"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      title="header.twitter"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-twitter"
-                      />
-                    </a>,
-                    "className": "visible-md visible-lg social-desktop",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <i
-                        aria-hidden="true"
-                        className="fab fa-twitter"
-                      />,
-                      "className": "social btn btn-simple btn-just-icon",
-                      "data-placement": "bottom",
-                      "data-toggle": "tooltip",
-                      "href": "/twitter",
-                      "rel": "noopener noreferrer",
-                      "target": "_blank",
-                      "title": "header.twitter",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "aria-hidden": "true",
-                        "className": "fab fa-twitter",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "i",
-                    },
-                    "type": "a",
-                  },
-                  "type": "li",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <a
-                      className="social btn btn-simple btn-just-icon"
-                      data-placement="bottom"
-                      data-toggle="tooltip"
-                      href="/fb"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      title="header.facebook"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-facebook-f"
-                      />
-                    </a>,
-                    "className": "visible-md visible-lg social-desktop",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <i
-                        aria-hidden="true"
-                        className="fab fa-facebook-f"
-                      />,
-                      "className": "social btn btn-simple btn-just-icon",
-                      "data-placement": "bottom",
-                      "data-toggle": "tooltip",
-                      "href": "/fb",
-                      "rel": "noopener noreferrer",
-                      "target": "_blank",
-                      "title": "header.facebook",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "aria-hidden": "true",
-                        "className": "fab fa-facebook-f",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "i",
-                    },
-                    "type": "a",
-                  },
-                  "type": "li",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <a
-                      className="social btn btn-simple btn-just-icon"
-                      data-placement="bottom"
-                      data-toggle="tooltip"
-                      href="/slack"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      title="header.slack"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-slack-hash"
-                      />
-                    </a>,
-                    "className": "visible-md visible-lg social-desktop",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <i
-                        aria-hidden="true"
-                        className="fab fa-slack-hash"
-                      />,
-                      "className": "social btn btn-simple btn-just-icon",
-                      "data-placement": "bottom",
-                      "data-toggle": "tooltip",
-                      "href": "/slack",
-                      "rel": "noopener noreferrer",
-                      "target": "_blank",
-                      "title": "header.slack",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "aria-hidden": "true",
-                        "className": "fab fa-slack-hash",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "i",
-                    },
-                    "type": "a",
-                  },
-                  "type": "li",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <a
-                      className="social btn btn-simple btn-just-icon"
-                      data-placement="bottom"
-                      data-toggle="tooltip"
-                      href="/telegram"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      title="header.telegram"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-telegram"
-                      />
-                    </a>,
-                    "className": "visible-md visible-lg social-desktop",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <i
-                        aria-hidden="true"
-                        className="fab fa-telegram"
-                      />,
-                      "className": "social btn btn-simple btn-just-icon",
-                      "data-placement": "bottom",
-                      "data-toggle": "tooltip",
-                      "href": "/telegram",
-                      "rel": "noopener noreferrer",
-                      "target": "_blank",
-                      "title": "header.telegram",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "aria-hidden": "true",
-                        "className": "fab fa-telegram",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "i",
-                    },
-                    "type": "a",
-                  },
-                  "type": "li",
                 },
               ],
               "type": "ul",
@@ -4023,7 +1183,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "onClose": [Function],
-              "show": undefined,
+              "show": false,
             },
             "ref": null,
             "rendered": null,
@@ -4059,8 +1219,6 @@ ShallowWrapper {
       },
     },
     "context": Object {},
-    Symbol(enzyme.__providerValues__): Map {},
   },
-  Symbol(enzyme.__providerValues__): Map {},
 }
 `;

@@ -1,7 +1,7 @@
 .btn.btn.btn {
-  color: $green;
+  color: $blue;
   background-color: #fff;
-  border: 1px solid $green;
+  border: 1px solid $blue;
   padding: 8px 10px;
   margin: 10px 0;
   font-size: 14px;
@@ -15,9 +15,9 @@
   &:focus,
   &:hover,
   &:active {
-    color: $green;
+    color: $blue;
     background-color: #fff;
-    border: 1px solid $green;
+    border: 1px solid $blue;
   }
 
   @media (min-width: $screen-sm-min) {

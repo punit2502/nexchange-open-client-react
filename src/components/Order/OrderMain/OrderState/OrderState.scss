@@ -18,44 +18,44 @@
   margin: 12px 0;
   font-size: 14px;
   font-weight: 400;
-  color: $blue;
+  color: $black;
 
   a {
     font-weight: 500;
-    color: $blue;
+    color: $black;
 
     &:hover {
-      color: $blue;
+      color: $black;
     }
   }
 }
 
 .warning {
   margin: 15px 0 0 0;
-  color: $green;
+  color: $blue;
   font-weight: 500;
   cursor: pointer;
 }
 
 .another-order.another-order {
   display: inline-block;
-  color: $green;
+  color: $blue;
   font-weight: 500;
   margin: 15px 0 8px 0;
 
   &:hover {
-    color: $green;
+    color: $blue;
     text-decoration: none;
   }
 }
 
 .new-order-link.new-order-link {
-  color: $green;
+  color: $blue;
 
   &:hover,
   &:active,
   &:focus {
-    color: $green;
+    color: $blue;
     text-decoration: none;
   }
 }
@@ -65,19 +65,19 @@
     margin: 0;
     font-size: 15px;
     font-weight: 400;
-    color: $blue;
+    color: $black;
 
     b {
       font-weight: 500;
-      color: $blue;
+      color: $black;
     }
   }
 }
 
 .btn.btn.btn {
-  color: $green;
+  color: $blue;
   background-color: #fff;
-  border: 1px solid $green;
+  border: 1px solid $blue;
   padding: 8px 10px;
   margin: 10px 0;
   font-size: 14px;
@@ -91,9 +91,9 @@
   &:focus,
   &:hover,
   &:active {
-    color: $green;
+    color: $blue;
     background-color: #fff;
-    border: 1px solid $green;
+    border: 1px solid $blue;
   }
 
   @media (min-width: $screen-sm-min) {

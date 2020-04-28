@@ -51,13 +51,13 @@
               }
             }
             .positive {
-              color: $green;
-              border: solid 2px $green;
+              color: $blue;
+              border: solid 2px $blue;
               @media (min-width: $screen-md-min) {
                 margin-left: 20px;
               }
               &.active {
-                background-color: $green !important;
+                background-color: $blue !important;
                 color: white !important;
               }
             }

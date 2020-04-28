@@ -30,8 +30,7 @@ ShallowWrapper {
           order.payment1
         </h2>,
         <a
-          href="https://api.n.exchange/en/api/v1/orders/OV2O6C"
-          rel="noopener noreferrer"
+          href="https://api.nexchange.io/en/api/v1/orders/OV2O6C"
           target="_blank"
         >
           <h4
@@ -86,8 +85,7 @@ ShallowWrapper {
           >
             order.api
           </h4>,
-          "href": "https://api.n.exchange/en/api/v1/orders/OV2O6C",
-          "rel": "noopener noreferrer",
+          "href": "https://api.nexchange.io/en/api/v1/orders/OV2O6C",
           "target": "_blank",
         },
         "ref": null,
@@ -125,8 +123,7 @@ ShallowWrapper {
             order.payment1
           </h2>,
           <a
-            href="https://api.n.exchange/en/api/v1/orders/OV2O6C"
-            rel="noopener noreferrer"
+            href="https://api.nexchange.io/en/api/v1/orders/OV2O6C"
             target="_blank"
           >
             <h4
@@ -181,8 +178,7 @@ ShallowWrapper {
             >
               order.api
             </h4>,
-            "href": "https://api.n.exchange/en/api/v1/orders/OV2O6C",
-            "rel": "noopener noreferrer",
+            "href": "https://api.nexchange.io/en/api/v1/orders/OV2O6C",
             "target": "_blank",
           },
           "ref": null,
@@ -231,9 +227,7 @@ ShallowWrapper {
       },
     },
     "context": Object {},
-    Symbol(enzyme.__providerValues__): Map {},
   },
-  Symbol(enzyme.__providerValues__): Map {},
 }
 `;
 
@@ -282,7 +276,6 @@ ShallowWrapper {
            
           <a
             href="https://etherscan.io/tx/0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da"
-            rel="noopener noreferrer"
             target="_blank"
           >
             0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da
@@ -485,7 +478,6 @@ ShallowWrapper {
             " ",
             <a
               href="https://etherscan.io/tx/0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da"
-              rel="noopener noreferrer"
               target="_blank"
             >
               0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da
@@ -505,7 +497,6 @@ ShallowWrapper {
             "props": Object {
               "children": "0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da",
               "href": "https://etherscan.io/tx/0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da",
-              "rel": "noopener noreferrer",
               "target": "_blank",
             },
             "ref": null,
@@ -677,7 +668,6 @@ ShallowWrapper {
              
             <a
               href="https://etherscan.io/tx/0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da"
-              rel="noopener noreferrer"
               target="_blank"
             >
               0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da
@@ -880,7 +870,6 @@ ShallowWrapper {
               " ",
               <a
                 href="https://etherscan.io/tx/0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da"
-                rel="noopener noreferrer"
                 target="_blank"
               >
                 0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da
@@ -900,7 +889,6 @@ ShallowWrapper {
               "props": Object {
                 "children": "0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da",
                 "href": "https://etherscan.io/tx/0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da",
-                "rel": "noopener noreferrer",
                 "target": "_blank",
               },
               "ref": null,
@@ -1068,8 +1056,6 @@ ShallowWrapper {
       },
     },
     "context": Object {},
-    Symbol(enzyme.__providerValues__): Map {},
   },
-  Symbol(enzyme.__providerValues__): Map {},
 }
 `;

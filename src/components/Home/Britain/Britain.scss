@@ -1,0 +1,64 @@
+.container {
+    background: -moz-linear-gradient(45deg, #fff 0%,#fff 44%, rgba(26, 157, 139, 1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(
+      linear,
+      left bottom,
+      right top,
+      color-stop(0%, #fff),
+      color-stop(44%, #fff),
+      color-stop(100%, rgba(26, 157, 139, 1))
+    ); 
+    background: -o-linear-gradient(-45deg,  #000 0%,#3C2248 44%, #152376 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(-45deg,  #000 0%,#3C2248 44%, #152376 100%); /* ie10+ */
+    background: linear-gradient(-45deg,  #000 0%,#3C2248 44%, #152376 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1A9D8B', endColorstr='#02031f',GradientType=1 ); /* ie6-9 */
+    @media (min-width: $screen-lg-min) {
+        background-image: url('/img/Britain_background.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 60px 0 80px 0;
+
+    .subcontainer {
+        margin-top: 20px;
+        @media (min-width: $screen-md-min) {
+            padding-left: 60px;
+        }
+    }
+
+    h1 {
+        color: #fff;
+    }
+
+    span {
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .cardlist {
+        padding: 0 60px;
+        .cardouter {
+            margin-top: 40px;
+            .card {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 20px;
+                background-color: #fff;
+
+                .icon {
+                    min-width: 30px;
+                }
+
+                span {
+                    margin-left: 20px;
+                    color: #000;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

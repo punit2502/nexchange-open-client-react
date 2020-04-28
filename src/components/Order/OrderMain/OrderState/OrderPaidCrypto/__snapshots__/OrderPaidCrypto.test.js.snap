@@ -43,7 +43,6 @@ ShallowWrapper {
           <a
             className="text-green"
             href="https://etherscan.io/tx/0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da"
-            rel="noopener noreferrer"
             target="_blank"
           >
             0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da
@@ -223,7 +222,6 @@ ShallowWrapper {
             <a
               className="text-green"
               href="https://etherscan.io/tx/0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da"
-              rel="noopener noreferrer"
               target="_blank"
             >
               0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da
@@ -244,7 +242,6 @@ ShallowWrapper {
               "children": "0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da",
               "className": "text-green",
               "href": "https://etherscan.io/tx/0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da",
-              "rel": "noopener noreferrer",
               "target": "_blank",
             },
             "ref": null,
@@ -414,7 +411,6 @@ ShallowWrapper {
             <a
               className="text-green"
               href="https://etherscan.io/tx/0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da"
-              rel="noopener noreferrer"
               target="_blank"
             >
               0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da
@@ -594,7 +590,6 @@ ShallowWrapper {
               <a
                 className="text-green"
                 href="https://etherscan.io/tx/0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da"
-                rel="noopener noreferrer"
                 target="_blank"
               >
                 0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da
@@ -615,7 +610,6 @@ ShallowWrapper {
                 "children": "0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da",
                 "className": "text-green",
                 "href": "https://etherscan.io/tx/0xebb9bec93e1f1e9268193c468483f59a668f3cbc25d9aea3fcd38472c670d4da",
-                "rel": "noopener noreferrer",
                 "target": "_blank",
               },
               "ref": null,
@@ -783,9 +777,7 @@ ShallowWrapper {
       },
     },
     "context": Object {},
-    Symbol(enzyme.__providerValues__): Map {},
   },
-  Symbol(enzyme.__providerValues__): Map {},
 }
 `;
 
@@ -1406,8 +1398,6 @@ ShallowWrapper {
       },
     },
     "context": Object {},
-    Symbol(enzyme.__providerValues__): Map {},
   },
-  Symbol(enzyme.__providerValues__): Map {},
 }
 `;

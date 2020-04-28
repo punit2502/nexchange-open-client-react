@@ -1,5 +1,3 @@
 User-agent: *
-Allow: /
-Disallow: /order/
 
-Sitemap: https://n.exchange/sitemap.xml
+Sitemap: https://thegbdex.com/sitemap.xml

@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0;
+    @media (min-width: $screen-lg-min) {
+        padding: 100px;
+    }
+    background: -moz-linear-gradient(45deg, #fff 0%,#fff 44%, rgba(26, 157, 139, 1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(
+      linear,
+      left bottom,
+      right top,
+      color-stop(0%, #fff),
+      color-stop(44%, #fff),
+      color-stop(100%, rgba(26, 157, 139, 1))
+    ); /* safari4+,chrome */
+    background: -webkit-linear-gradient(
+      45deg,
+      rgba(2, 3, 31, 1) 0%,
+      rgba(2, 3, 31, 1) 44%,
+      rgba(26, 157, 139, 1) 100%
+    ); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(-45deg,  #000 0%,#3C2248 44%, #152376 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(-45deg,  #000 0%,#3C2248 44%, #152376 100%); /* ie10+ */
+    background: linear-gradient(-45deg,  #000 0%,#3C2248 44%, #152376 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1A9D8B', endColorstr='#02031f',GradientType=1 ); /* ie6-9 */
+    @media (min-width: $screen-md-min) {
+        background-image: url('/img/Wepromise_background.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    width: 100% !important;
+    margin: 0 !important;
+    color: #fff;
+
+    h1 {
+        margin-bottom: 40px;
+    }
+
+    .promisse {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px 0;
+        border-bottom: 1px solid gray;
+        span {
+            font-size: 18px;
+            margin-left: 10px;
+        }
+    }
+}
+
+

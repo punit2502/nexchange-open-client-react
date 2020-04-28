@@ -401,7 +401,6 @@
 
       &:hover,
       &:focus {
-        color: $navbar-default-link-hover-color;
         background-color: $navbar-default-link-hover-bg;
       }
     }
@@ -458,7 +457,6 @@
           color: $navbar-default-link-color;
           &:hover,
           &:focus {
-            color: $navbar-default-link-hover-color;
             background-color: $navbar-default-link-hover-bg;
           }
         }
@@ -488,17 +486,11 @@
 
   .navbar-link {
     color: $navbar-default-link-color;
-    &:hover {
-      color: $navbar-default-link-hover-color;
-    }
   }
 
   .btn-link {
     color: $navbar-default-link-color;
-    &:hover,
-    &:focus {
-      color: $navbar-default-link-hover-color;
-    }
+    
     &[disabled],
     fieldset[disabled] & {
       &:hover,
@@ -534,7 +526,6 @@
 
       &:hover,
       &:focus {
-        color: $navbar-inverse-link-hover-color;
         background-color: $navbar-inverse-link-hover-bg;
       }
     }
@@ -624,7 +615,6 @@
   .navbar-link {
     color: $navbar-inverse-link-color;
     &:hover {
-      color: $navbar-inverse-link-hover-color;
     }
   }
 

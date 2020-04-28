@@ -14,7 +14,7 @@ const RefundCancellation = props => {
               <p>{t('refund.2')}</p>
               <p>{t('refund.3')}</p>
               <p>
-                {t('refund.4')} <a href="mailto:support@n.exchange">support@n.exchange</a>
+                {t('refund.4')} <a href="mailto:support@thegbdex.com">support@thegbdex.com</a>
               </p>
             </div>
           </div>

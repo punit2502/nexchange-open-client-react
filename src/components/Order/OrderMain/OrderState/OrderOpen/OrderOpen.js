@@ -10,7 +10,7 @@ import OrderDepth from '../../../../Home/Hero/OrderBookWidget/OrderDepth/OrderDe
 import MyOrders from '../../../../Home/Hero/OrderBookWidget/MyOrders/MyOrders';
 
 class OrderOpen extends Component {
-  UNSAFE_componentWillMount() {
+    UNSAFE_componentWillMount() {
         this.props.fetchPairs();
     }
 
@@ -25,6 +25,7 @@ class OrderOpen extends Component {
                 deposit: order.pair.quote.code,
                 receive: order.pair.base.code,
                 selectedByUser: false,
+                orderByAddress: false,
               }, this.props.pairs);
         }
     }

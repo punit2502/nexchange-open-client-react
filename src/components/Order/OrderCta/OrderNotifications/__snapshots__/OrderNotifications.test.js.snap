@@ -81,7 +81,7 @@ ShallowWrapper {
           </div>
         </div>
       </div>,
-      "className": "col-xs-12 col-sm-12 col-md-8 col-lg-8",
+      "className": "col-xs-12",
     },
     "ref": null,
     "rendered": Object {
@@ -499,7 +499,7 @@ ShallowWrapper {
             </div>
           </div>
         </div>,
-        "className": "col-xs-12 col-sm-12 col-md-8 col-lg-8",
+        "className": "col-xs-12",
       },
       "ref": null,
       "rendered": Object {
@@ -877,8 +877,6 @@ ShallowWrapper {
       },
     },
     "context": Object {},
-    Symbol(enzyme.__providerValues__): Map {},
   },
-  Symbol(enzyme.__providerValues__): Map {},
 }
 `;

@@ -4,7 +4,7 @@ import styles from './SubscriptionForm.scss';
 import { I18n } from 'react-i18next';
 
 const getAjaxUrl = url => url.replace('/post?', '/post-json?');
-const subscribeUrl = 'https://nexchange.us16.list-manage.com/subscribe/post?u=918b60ce5b05d82384c293db0&amp;id=b2af978303';
+const subscribeUrl = 'https://thegbdex.us4.list-manage.com/subscribe/post?u=879eb7b783892f16e5fe1c8cf&amp;id=1b6a4a75ee';
 
 class SubscriptionForm extends React.Component {
   constructor(props, ...args) {
@@ -37,6 +37,7 @@ class SubscriptionForm extends React.Component {
             param: 'c',
           },
           (err, data) => {
+            console.log(data);
             if (err) {
               this.setState({
                 status: 'error',
@@ -67,8 +68,8 @@ class SubscriptionForm extends React.Component {
         {(t, { i18n }) => (
           <div className={styles.container}>
             <div className="container text-center">
-              <h2>{t('subscription.1')}</h2>
-              <h3>{t('subscription.6')}</h3>
+              <h1>DO YOU HAVE ANY QUESTIONS?</h1>
+              <span className={styles.subtitle}>Don't hesitate and get in touch with us</span>
 
               <form action={action} method="post" noValidate>
                 <div className="col-xs-12 col-ms-8 col-ms-push-2">
@@ -78,7 +79,7 @@ class SubscriptionForm extends React.Component {
                         ref={node => (this.input = node)}
                         type="email"
                         name="email"
-                        placeholder={t('subscription.2')}
+                        placeholder={`Enter your e-mail`}
                         className={`${styles.input} form-control`}
                         required
                       />

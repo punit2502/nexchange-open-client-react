@@ -30,9 +30,9 @@ ShallowWrapper {
           order.failure2
            
           <a
-            href="mailto:support@n.exchange"
+            href="mailto:support@thegbdex.com"
           >
-            support@n.exchange
+            support@thegbdex.com
             .
           </a>
         </h5>,
@@ -63,9 +63,9 @@ ShallowWrapper {
             "order.failure2",
             " ",
             <a
-              href="mailto:support@n.exchange"
+              href="mailto:support@thegbdex.com"
             >
-              support@n.exchange
+              support@thegbdex.com
               .
             </a>,
           ],
@@ -80,14 +80,14 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "support@n.exchange",
+                "support@thegbdex.com",
                 ".",
               ],
-              "href": "mailto:support@n.exchange",
+              "href": "mailto:support@thegbdex.com",
             },
             "ref": null,
             "rendered": Array [
-              "support@n.exchange",
+              "support@thegbdex.com",
               ".",
             ],
             "type": "a",
@@ -121,9 +121,9 @@ ShallowWrapper {
             order.failure2
              
             <a
-              href="mailto:support@n.exchange"
+              href="mailto:support@thegbdex.com"
             >
-              support@n.exchange
+              support@thegbdex.com
               .
             </a>
           </h5>,
@@ -154,9 +154,9 @@ ShallowWrapper {
               "order.failure2",
               " ",
               <a
-                href="mailto:support@n.exchange"
+                href="mailto:support@thegbdex.com"
               >
-                support@n.exchange
+                support@thegbdex.com
                 .
               </a>,
             ],
@@ -171,14 +171,14 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "support@n.exchange",
+                  "support@thegbdex.com",
                   ".",
                 ],
-                "href": "mailto:support@n.exchange",
+                "href": "mailto:support@thegbdex.com",
               },
               "ref": null,
               "rendered": Array [
-                "support@n.exchange",
+                "support@thegbdex.com",
                 ".",
               ],
               "type": "a",
@@ -223,8 +223,6 @@ ShallowWrapper {
       },
     },
     "context": Object {},
-    Symbol(enzyme.__providerValues__): Map {},
   },
-  Symbol(enzyme.__providerValues__): Map {},
 }
 `;

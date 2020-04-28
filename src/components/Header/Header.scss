@@ -2,10 +2,14 @@
   position: absolute;
   width: 100%;
   padding: 15px;
-  height: 70px;
+  height: 90px;
   color: #fff;
   z-index: 3;
-  background: #fff;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#94e8ef+3,b8fce8+51 */
+  background: #000B2C; /* Old browsers */
+  background: -moz-linear-gradient(left,  #000B2C 3%, #000B2C 51%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #000B2C 3%,#000B2C 51%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #000B2C 3%,#000B2C 51%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
   :global .navbar-toggle {
     border: 1px solid $gray;
@@ -61,24 +65,11 @@
         color: #fff;
       }
       @media (max-width: $screen-sm-min) {
-        color: #000;
+        color: #fff;
       }
     }
     &:hover {
       text-decoration: underline;
-    }
-    &.main {
-        background-color: $green;
-        border-radius: 6px;
-        &:hover {
-          background-color: $green !important;
-        }
-        @media (max-width: $screen-sm-min) {
-          color: #fff;
-        }
-        @media (min-width: $screen-sm-min) {
-          margin-right: 10px;
-        }
     }
   }
 
@@ -96,7 +87,7 @@
 .navbar-nav {
   margin: 0;
   li a.link:hover {
-    text-decoration: underline;
+    text-decoration: none;
     background: none;
   }
 }
@@ -121,7 +112,7 @@
   font-size: 12px;
   text-transform: uppercase;
   font-family: 'Clan Offc Pro Medium';
-  color: $black;
+  color: #000;
 
   &:hover,
   &:visited,
@@ -131,9 +122,14 @@
     background: none !important;
     outline: none !important;
   }
-
+  @media (min-width: $screen-md-min) {
+    color: #fff;
+    a:hover {
+      color: #fff !important;
+    }
+  }
   @media (min-width: $screen-sm-min) {
-    padding: 10px 15px !important;
+    padding: 10px;
   }
 
   @media (min-width: $screen-lg-min) {
@@ -159,7 +155,7 @@
     }
 
     @media (min-width: $screen-md-min) {
-      padding: 10px 10px;
+      padding: 10px 15px;
     }
 
     @media (min-width: $screen-lg-min) {
@@ -171,7 +167,7 @@
 .social.social.social.social {
   padding: 10px 5px;
   float: left;
-  color: #044264;
+  color: $black;
 
   @media (min-width: $screen-sm-min) {
     padding: 0 5px;
@@ -183,7 +179,20 @@
   margin: 2px 0 0 0;
   overflow: hidden;
 
-  img {
-    width: 195px;
+  .logo {
+    display: flex;
+    align-items: flex-start;
+    img {
+      width: 150px;
+    }
+    h1 {
+      margin-top: 7px !important;
+      margin-left: 10px !important;
+      margin-bottom: 5px !important;
+      color: #fff;
+      font-size: 20px;
+      margin: 0 0 5px 10px;
+      text-decoration: none;
+    }
   }
 }

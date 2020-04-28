@@ -44,9 +44,9 @@ ShallowWrapper {
             refund.4
              
             <a
-              href="mailto:support@n.exchange"
+              href="mailto:support@thegbdex.com"
             >
-              support@n.exchange
+              support@thegbdex.com
             </a>
           </p>
         </div>
@@ -78,9 +78,9 @@ ShallowWrapper {
             refund.4
              
             <a
-              href="mailto:support@n.exchange"
+              href="mailto:support@thegbdex.com"
             >
-              support@n.exchange
+              support@thegbdex.com
             </a>
           </p>
         </div>,
@@ -109,9 +109,9 @@ ShallowWrapper {
               refund.4
                
               <a
-                href="mailto:support@n.exchange"
+                href="mailto:support@thegbdex.com"
               >
-                support@n.exchange
+                support@thegbdex.com
               </a>
             </p>,
           ],
@@ -172,9 +172,9 @@ ShallowWrapper {
                 "refund.4",
                 " ",
                 <a
-                  href="mailto:support@n.exchange"
+                  href="mailto:support@thegbdex.com"
                 >
-                  support@n.exchange
+                  support@thegbdex.com
                 </a>,
               ],
             },
@@ -187,11 +187,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "support@n.exchange",
-                  "href": "mailto:support@n.exchange",
+                  "children": "support@thegbdex.com",
+                  "href": "mailto:support@thegbdex.com",
                 },
                 "ref": null,
-                "rendered": "support@n.exchange",
+                "rendered": "support@thegbdex.com",
                 "type": "a",
               },
             ],
@@ -232,9 +232,9 @@ ShallowWrapper {
               refund.4
                
               <a
-                href="mailto:support@n.exchange"
+                href="mailto:support@thegbdex.com"
               >
-                support@n.exchange
+                support@thegbdex.com
               </a>
             </p>
           </div>
@@ -266,9 +266,9 @@ ShallowWrapper {
               refund.4
                
               <a
-                href="mailto:support@n.exchange"
+                href="mailto:support@thegbdex.com"
               >
-                support@n.exchange
+                support@thegbdex.com
               </a>
             </p>
           </div>,
@@ -297,9 +297,9 @@ ShallowWrapper {
                 refund.4
                  
                 <a
-                  href="mailto:support@n.exchange"
+                  href="mailto:support@thegbdex.com"
                 >
-                  support@n.exchange
+                  support@thegbdex.com
                 </a>
               </p>,
             ],
@@ -360,9 +360,9 @@ ShallowWrapper {
                   "refund.4",
                   " ",
                   <a
-                    href="mailto:support@n.exchange"
+                    href="mailto:support@thegbdex.com"
                   >
-                    support@n.exchange
+                    support@thegbdex.com
                   </a>,
                 ],
               },
@@ -375,11 +375,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "support@n.exchange",
-                    "href": "mailto:support@n.exchange",
+                    "children": "support@thegbdex.com",
+                    "href": "mailto:support@thegbdex.com",
                   },
                   "ref": null,
-                  "rendered": "support@n.exchange",
+                  "rendered": "support@thegbdex.com",
                   "type": "a",
                 },
               ],
@@ -417,8 +417,6 @@ ShallowWrapper {
       },
     },
     "context": Object {},
-    Symbol(enzyme.__providerValues__): Map {},
   },
-  Symbol(enzyme.__providerValues__): Map {},
 }
 `;

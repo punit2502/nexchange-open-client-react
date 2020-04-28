@@ -13,8 +13,6 @@ import KYCReducer from './reducer_kyc';
 import EmailReducer from './reducer_email';
 import OrderModeReducer from './reducer_order_mode';
 import OrderBookReducer from './reducer_order_book';
-import AuthReducer from './reducer_auth';
-import showSupportModal from './reducer_support_modal';
 
 const rootReducer = combineReducers({
   error: ErrorReducer,
@@ -30,9 +28,7 @@ const rootReducer = combineReducers({
   kyc: KYCReducer,
   email: EmailReducer,
   orderMode: OrderModeReducer,
-  orderBook: OrderBookReducer,
-  auth: AuthReducer,
-  supportModal: showSupportModal
+  orderBook: OrderBookReducer
 });
 
 export default rootReducer;

@@ -8,20 +8,20 @@ const Privacy = props => {
         <div className="container terms">
           <div className="row">
             <div className="col-xs-12">
-              <h2 style={{ marginBottom: 0 }}>{t('privacy.title')}</h2>
+              <h2 style={{ marginBottom: 0, marginTop: 100 }}>{t('privacy.title')}</h2>
               <Trans i18nKey="privacy.updated">
                 <h4 style={{ marginBottom: 30 }}>
                   Last updated: <strong>August 9th, 2017</strong>
                 </h4>
               </Trans>
-
+              {/* eslint max-len: ["error", { "code": 9999 }] */ }
               <Trans i18nKey="privacy.p1">
                 <p>
-                  This Privacy Policy explains how “YOA LTD.”, and its wholly owned subsidiaries (collectively, “YOA LTD.” we or us),
+                  This Privacy Policy explains how “CryptoFX.”, and its wholly owned subsidiaries (collectively, “CryptoFX.” we or us),
                   collects, uses, discloses and protects your information. This policy applies to information we collect when you access or
-                  use “YOA LTD.” websites and mobile applications (collectively, N.exchange services) or otherwise interact with us as
-                  described below. “YOA LTD.” provides the “YOA LTD.” Services through local operating entities that are wholly owned
-                  subsidiaries of “YOA LTD.” (each, a “YOA LTD.” Company). To determine which “YOA LTD.” Company collects your information
+                  use “CryptoFX.” websites and mobile applications (collectively, The GB DEX services) or otherwise interact with us as
+                  described below. “CryptoFX.” provides the “CryptoFX.” Services through local operating entities that are wholly owned
+                  subsidiaries of “CryptoFX.” (each, a “CryptoFX.” Company). To determine which “CryptoFX.” Company collects your information
                   and is responsible for processing your data.
                 </p>
               </Trans>
@@ -30,8 +30,8 @@ const Privacy = props => {
                 <p>
                   We may amend this Privacy Policy from time to time. If we make changes, we will notify you by revising the date at the top
                   of this policy, and in some circumstances, we may provide you with additional notice, including, for example, by adding a
-                  statement to the homepage of the “YOA LTD.” Services or by sending you an email notification. We strongly encourage you to
-                  review the Privacy Policy whenever you access or use “YOA LTD.” Services to stay informed about our information practices
+                  statement to the homepage of the “CryptoFX.” Services or by sending you an email notification. We strongly encourage you to
+                  review the Privacy Policy whenever you access or use “CryptoFX.” Services to stay informed about our information practices
                   and your privacy rights and choices.
                 </p>
               </Trans>
@@ -70,7 +70,7 @@ const Privacy = props => {
                 <h3>Information We Collect From Other Sources</h3>
 
                 <p>
-                  We may also obtain information from other sources and combine that with information we collect through the “YOA LTD.”
+                  We may also obtain information from other sources and combine that with information we collect through the “CryptoFX.”
                   Services. For example, we may collect nonpublic personal information about you from third parties, including identity
                   verification services.
                 </p>
@@ -79,10 +79,10 @@ const Privacy = props => {
               <Trans i18nKey="privacy.infoauto">
                 <h3>Information We Collect Automatically</h3>
 
-                <p>When you access or use the “YOA LTD.” Services, we automatically collect information as follows:</p>
+                <p>When you access or use the “CryptoFX.” Services, we automatically collect information as follows:</p>
 
                 <p>
-                  Transaction information: we collect information about the transaction you complete via the “YOA LTD.” Services, including
+                  Transaction information: we collect information about the transaction you complete via the “CryptoFX.” Services, including
                   the amount of funds associated with a trade, the types of trades executed and other transaction information.
                 </p>
 
@@ -92,18 +92,18 @@ const Privacy = props => {
                 </p>
 
                 <p>
-                  Device and Log information: we collect information about the computer or mobile device you use to access the “YOA LTD.”
+                  Device and Log information: we collect information about the computer or mobile device you use to access the “CryptoFX.”
                   Services, including device identifiers, mobile network information, type of operating system, and the type of browser
-                  used. We also log information about your use of the “YOA LTD.” Services, including access times, pages viewed, IP address,
+                  used. We also log information about your use of the “CryptoFX.” Services, including access times, pages viewed, IP address,
                   other standard web log data, and the page visited before and after navigating to our websites.
                 </p>
 
                 <p>
                   Cookies and similar tracking technologies: we may use cookies, pixel tags, web beacons, and other tracking technologies to
-                  collect information about you when you interact with the “YOA LTD.” Services, including information about your browsing
-                  behaviour on our “YOA LTD.” Services. Cookies are small data files sent from our web servers to your computer or mobile
-                  device that enable us to, for example, capture how you arrived at the “YOA LTD.” Services, when you return, which pages on
-                  the “YOA LTD.” Services you visit, and to recognize that you are already logged on when we receive a page request from
+                  collect information about you when you interact with the “CryptoFX.” Services, including information about your browsing
+                  behaviour on our “CryptoFX.” Services. Cookies are small data files sent from our web servers to your computer or mobile
+                  device that enable us to, for example, capture how you arrived at the “CryptoFX.” Services, when you return, which pages on
+                  the “CryptoFX.” Services you visit, and to recognise that you are already logged on when we receive a page request from
                   your browser.
                 </p>
               </Trans>
@@ -114,16 +114,16 @@ const Privacy = props => {
                 <p>We may use your information as follows:</p>
 
                 <ul>
-                  <li>Provide the “YOA LTD.” services and customer support;</li>
+                  <li>Provide the “CryptoFX.” services and customer support;</li>
                   <li>Process transactions and send notices about your transactions;</li>
                   <li>
                     Manage your account(s) and send technical notices, updates, security alerts and support and administrative messages;
                   </li>
                   <li>Resolve disputes, collect fees, and troubleshoot problems;</li>
                   <li>Prevent potentially prohibited or illegal activities and enforce our user agreements;</li>
-                  <li>Personalize, measure and improve the “YOA LTD.” Services;</li>
+                  <li>Personalize, measure and improve the “CryptoFX.” Services;</li>
                   <li>
-                    Deliver marketing and promotional offers on behalf of “YOA LTD.” and others, including via SMS, voice calls or email;
+                    Deliver marketing and promotional offers on behalf of “CryptoFX.” and others, including via SMS, voice calls or email;
                   </li>
                   <li>
                     Link or combine your personal information with information we obtain from others to help understand your needs and
@@ -131,7 +131,7 @@ const Privacy = props => {
                   </li>
                   <li>
                     Carry out any other purpose for which the information was collected, to the extent such purpose is necessarily
-                    contemplated by the collection of such information or as otherwise notified in the “YOA LTD.” Services at the time of
+                    contemplated by the collection of such information or as otherwise notified in the “CryptoFX.” Services at the time of
                     collection.
                   </li>
                 </ul>
@@ -141,7 +141,7 @@ const Privacy = props => {
                 <h2>Processing of information</h2>
 
                 <p>
-                  By accessing or using the “YOA LTD.” Services or otherwise providing information to us, you consent to the processing and
+                  By accessing or using the “CryptoFX.” Services or otherwise providing information to us, you consent to the processing and
                   transfer of information in and to the U.S. and other countries. Please refer to the U.S. – EU / Swiss Safe Harbor
                   Compliance section below if you are a resident of the European Union or Switzerland.
                 </p>
@@ -152,9 +152,9 @@ const Privacy = props => {
 
                 <p>
                   We may disclose any information we collect about you, whether you are a current or former customer, including nonpublic
-                  personal information and any other information we collect, to “YOA LTD.”, which processes information on behalf of all
-                  “YOA LTD.”, and with nonaffiliated third parties, which include non-financial companies, such as email service providers
-                  and fraud verification services, and others, such as other “YOA LTD.” users with which you engage in transactions. We may
+                  personal information and any other information we collect, to “CryptoFX.”, which processes information on behalf of all
+                  “CryptoFX.”, and with nonaffiliated third parties, which include non-financial companies, such as email service providers
+                  and fraud verification services, and others, such as other “CryptoFX.” users with which you engage in transactions. We may
                   make such disclosures:
                 </p>
 
@@ -167,7 +167,7 @@ const Privacy = props => {
                   </li>
                   <ul>
                     <li>
-                      With any party you intend to distribute funds to, or that intends to distribute funds to you, via the “YOA LTD.”
+                      With any party you intend to distribute funds to, or that intends to distribute funds to you, via the “CryptoFX.”
                       Services, including information about whether your account is active and whether the account has been verified.
                     </li>
                     <li>
@@ -180,12 +180,12 @@ const Privacy = props => {
                       agreements or other policies and agreements.
                     </li>
                     <li>
-                      In connection with, or during negotiations of, any merger, sale of “YOA LTD.” assets, financing or acquisition or all
+                      In connection with, or during negotiations of, any merger, sale of “CryptoFX.” assets, financing or acquisition or all
                       or a portion of our business to another company. With your consent or at your direction.
                     </li>
                     <li>
                       If we are under a duty to disclose or share your information to comply with our legal obligations. Other than in
-                      connection with a merger, sale of “YOA LTD.” assets, financing or acquisition, we will not sell or rent any of your
+                      connection with a merger, sale of “CryptoFX.” assets, financing or acquisition, we will not sell or rent any of your
                       information to third parties for their own marketing purposes.
                     </li>
                   </ul>
@@ -208,8 +208,8 @@ const Privacy = props => {
 
                 <p>
                   We allow other entities to provide analytics services on our behalf. These entities may use cookies, web beacons and other
-                  tracking technologies to collect information about your use of the “YOA LTD.” Services, including your IP address, web
-                  browser, pages viewed, time spent on pages and links clicked. This information may be used by “YOA LTD.” to, among other
+                  tracking technologies to collect information about your use of the “CryptoFX.” Services, including your IP address, web
+                  browser, pages viewed, time spent on pages and links clicked. This information may be used by “CryptoFX.” to, among other
                   things, analyze and track data, determine the popularity of certain content, and better understand your online activity.
                 </p>
               </Trans>
@@ -225,17 +225,17 @@ const Privacy = props => {
                 </p>
 
                 <p>
-                  “YOA LTD.” complies with the U.S.-EU Safe Harbor Framework and the U.S.-Swiss Safe Harbor Framework as set forth by the
+                  “CryptoFX.” complies with the U.S.-EU Safe Harbor Framework and the U.S.-Swiss Safe Harbor Framework as set forth by the
                   U.S. Department of Commerce regarding the collection, use, and retention of personal information from European Union
-                  member countries and Switzerland. “YOA LTD.”has certified that it adheres to the Safe Harbor Privacy Principles of notice,
+                  member countries and Switzerland. “CryptoFX.”has certified that it adheres to the Safe Harbor Privacy Principles of notice,
                   choice, onward transfer, security, data integrity, access, and enforcement. To learn more about the Safe Harbor program,
-                  and to view “YOA LTD.” certification, please visit http://www.export.gov/safeharbor/
+                  and to view “CryptoFX.” certification, please visit http://www.export.gov/safeharbor/
                 </p>
 
                 <p>
-                  If you have a complaint regarding “YOA LTD.” compliance with the U.S.-EU Safe Harbor Framework or the U.S.-Swiss Safe
-                  Harbor Framework, first contact us through support at support@n.exchange. “YOA LTD.” has elected to use JAMS arbitration
-                  as an independent recourse mechanism available to settle unresolved complaints regarding “YOA LTD.” Safe Harbor
+                  If you have a complaint regarding “CryptoFX.” compliance with the U.S.-EU Safe Harbor Framework or the U.S.-Swiss Safe
+                  Harbor Framework, first contact us through support at support@thegbdex.com. “CryptoFX.” has elected to use JAMS arbitration
+                  as an independent recourse mechanism available to settle unresolved complaints regarding “CryptoFX.” Safe Harbor
                   commitments. Please refer to the section titled “Applicable Law; Arbitration” in our Terms of Service
                   /en/articles/legal_privacy
                 </p>
@@ -246,15 +246,15 @@ const Privacy = props => {
 
                 <p>
                   Account Information: You may access and review or update your online account information at any time by logging into your
-                  account and viewing your profile. If you want to close your account, please contact us at support@n.exchange. However,
+                  account and viewing your profile. If you want to close your account, please contact us at support@thegbdex.com. However,
                   please note that if you close your account, we may retain your information as required by law or for our legitimate
                   business purposes, such as to collect fees owed, resolve disputes, troubleshoot problems, assist with any investigations,
                   prevent fraud or enforce our user agreements.
                 </p>
 
                 <p>
-                  Communications Preferences: You may opt out of receiving promotional communications from “YOA LTD.” by following the
-                  instructions in those communications. You may also opt out of receiving the N.exchange newsletter or certain
+                  Communications Preferences: You may opt out of receiving promotional communications from “CryptoFX.” by following the
+                  instructions in those communications. You may also opt out of receiving the The GB DEX newsletter or certain
                   administrative emails by modifying your communications preferences through the settings feature of your online account. If
                   you opt out of receiving promotional communications, we may still send you transactional or relationship messages, such as
                   those about your account or our ongoing business relations.
@@ -274,7 +274,7 @@ const Privacy = props => {
                   add-on permits, but choosing to remove or disable our cookies may interfere with your use and functionality of the “YOA
                   LTD.” Services. Additionally, we may use certain persistent cookies that are not affected by your browser settings, but
                   will use such cookies solely for identity verification and fraud prevention purposes. For more information about cookies
-                  and how to block, delete or disable them, please refer to your browser instructions, or contact us at support@n.exchange.
+                  and how to block, delete or disable them, please refer to your browser instructions, or contact us at support@thegbdex.com.
                 </p>
               </Trans>
 
@@ -298,7 +298,7 @@ const Privacy = props => {
                 <h2>Contact us</h2>
                 <p>
                   If you have any questions or concerns regarding this Privacy Policy, please contact us at{' '}
-                  <a href="mailto:support@n.exchange">support@n.exchange</a>.
+                  <a href="mailto:support@thegbdex.com">support@thegbdex.com</a>.
                 </p>
               </Trans>
             </div>

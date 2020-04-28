@@ -1,7 +1,7 @@
 body,
 html {
   height: 100%;
-  background: #fafafa;
+  background: #fff;
 }
 
 #root {
@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  color: $blue;
+  color: $black;
 }
 
 button[disabled],
@@ -48,7 +48,7 @@ h2 {
 }
 
 a {
-  color: $green;
+  color: $blue;
   &:visited,
   &:focus {
     outline: none;
@@ -57,6 +57,7 @@ a {
 
 .btn {
   font-family: 'Clan Offc Pro Medium';
+  background-color: $blue;
 }
 
 .error {
@@ -64,7 +65,7 @@ a {
 }
 
 .success {
-  color: $green !important;
+  color: $blue !important;
 }
 
 .clickable {
@@ -126,7 +127,7 @@ textarea.form-control:focus {
 }
 
 .text-green {
-  color: $green !important;
+  color: $blue !important;
 }
 
 input {
@@ -172,13 +173,6 @@ input[type='file'] {
   }
 }
 
-.crisp-client {
-  z-index: 99999999;
-}
-
-.profile-menu {
-  margin-top: 80px;
-}
 
 @media (min-width: $screen-xs-min) {
 }
