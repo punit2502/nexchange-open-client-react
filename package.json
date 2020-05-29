@@ -141,7 +141,11 @@
     "test:ci": "CI=true node scripts/test.js --no-watchman --all --env=jsdom"
   },
   "reactSnap": {
-    "inlineCss": true
+    "inlineCss": true,
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ]
   },
   "jest": {
     "collectCoverageFrom": [
