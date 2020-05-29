@@ -108,19 +108,20 @@
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
-    "babel-eslint": "^10.0.3",
     "@apollo/react-testing": "^3.1.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
     "@storybook/addon-actions": "^5.0.8",
     "@storybook/addon-links": "^5.0.8",
     "@storybook/addons": "^3.4.12",
     "@storybook/react": "^5.0.8",
     "axios-mock-adapter": "^1.15.0",
+    "babel-eslint": "^10.0.3",
     "cypress": "^2.1.0",
     "identity-obj-proxy": "^3.0.0",
     "jest-localstorage-mock": "^2.2.0",
     "jest-mock-axios": "^2.1.11",
     "mockdate": "^2.0.2",
+    "react-snap": "^1.23.0",
     "react-test-renderer": "^16.4.1",
     "redux-mock-store": "^1.5.3",
     "start-server-and-test": "^1.4.1",
@@ -130,6 +131,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
+    "postbuild": "react-snap",
     "lint": "prettier --write src/**/**/**/*.js",
     "deploy": "./deploy.sh",
     "cypress:open": "cypress open",
@@ -137,6 +139,9 @@
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook",
     "test:ci": "CI=true node scripts/test.js --no-watchman --all --env=jsdom"
+  },
+  "reactSnap": {
+    "inlineCss": true
   },
   "jest": {
     "collectCoverageFrom": [
