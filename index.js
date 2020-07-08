@@ -106,9 +106,9 @@ const generalHandler = (req, res) => {
       const testUrl = process.env.NODE_ENV !== 'production' ? 'https://sapi.n.exchange' : 'https://api.n.exchange';
 
       res.redirect(
-        `${testUrl}/en/orders/buy-${toCurr.toLowerCase()}-with-${getCur(
-          fromCurr
-        ).toLowerCase()}?payment_method=${testPaymentMethod.name.toLowerCase()}`
+        `${testUrl}/en/orders/buy-${toCurr.toLowerCase()}-with-${getCur(fromCurr).toLowerCase()}/${toCurr.toUpperCase()}${
+          fromCurr.toUpperCase
+        }/?payment_method=${testPaymentMethod.name.toLowerCase()}`
       );
       return;
     }
