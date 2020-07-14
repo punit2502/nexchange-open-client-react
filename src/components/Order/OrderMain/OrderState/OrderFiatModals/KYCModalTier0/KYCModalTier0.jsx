@@ -38,25 +38,27 @@ class KYCModal extends Component {
         email: this.props.email.value,
       });
     }
-    window.addEventListener("message", this.handleFrameTasks);
-
+    window.addEventListener('message', this.handleFrameTasks);
   }
   componentWillUnmount() {
-    window.removeEventListener("message", this.handleFrameTasks);
+    window.removeEventListener('message', this.handleFrameTasks);
   }
-  handleFrameTasks = (e) => {
-    if (e.data.status === "failed") {
+  handleFrameTasks = e => {
+    if (e.data.status === 'failed') {
       this.setState({ showManualId: true });
     } else if (e.data.status === 'approved') {
-      setTimeout(function () {
-        this.setState({ idApproved: true });
-      }.bind(this), 3000)
+      setTimeout(
+        function() {
+          this.setState({ idApproved: true });
+        }.bind(this),
+        3000
+      );
     }
-  }
+  };
   componentDidUpdate(prevProps) {
     if (this.state.show !== this.props.show) {
       this.setState({ show: this.props.show }, () => {
-        $(function () {
+        $(function() {
           $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
         });
       });
@@ -98,7 +100,13 @@ class KYCModal extends Component {
     const residenceProof = document.querySelector('#residenceProof');
 
     formData.append('order_reference', this.props.order.unique_reference);
-    formData.append('user_input_comment', this.state.message.slice(0, 255));
+
+    if (this.state.email) {
+      // eslint-disable-next-line max-len
+      formData.append('user_input_comment', `${this.state.email}: ${this.state.message.slice(0, 253 - this.state.email.length)}`); // 2 chars for `: `
+    } else {
+      formData.append('user_input_comment', this.state.message.slice(0, 255));
+    }
 
     if (governmentID) {
       formData.append('identity_document', governmentID.files[0]);
@@ -136,9 +144,7 @@ class KYCModal extends Component {
       });
 
     if (this.state.email) {
-      this.props.setUserEmail(
-        { email: this.state.email, phone: this.state.phone }
-      );
+      this.props.setUserEmail({ email: this.state.email, phone: this.state.phone || {} });
     }
   }
 
@@ -172,7 +178,7 @@ class KYCModal extends Component {
   render() {
     return (
       <I18n ns="translations">
-        {(t) => (
+        {t => (
           <Modal id="kyc-modal" show={this.state.show} onHide={this.close}>
             <div className="modal-content">
               <div className="modal-header">
@@ -181,42 +187,66 @@ class KYCModal extends Component {
                 </button>
                 <h4 className={`modal-title text-${this.state.titleClass}`}>{this.state.title}</h4>
                 <h5 style={{ marginBottom: 0 }}>
-                  <b>
-                    {t('order.fiat.tier.explanation')}
-                  </b>
+                  <b>{t('order.fiat.tier.explanation')}</b>
                 </h5>
               </div>
 
               <div className="modal-body">
-                {!this.state.idApproved && this.props.kyc.identity_token && !this.state.showManualId &&
+                {!this.state.idApproved &&
+                  this.props.kyc.identity_token &&
+                  !this.state.showManualId &&
                   this.props.kyc.id_document_status !== 'APPROVED' && (
                     <div hidden={!this.props.kyc.identity_token && this.state.idApproved}>
-                      <iframe src={`https://ui.idenfy.com/?iframe=true&authToken=${this.props.kyc.identity_token}`} width="100%" height="600" allow="camera" frameBorder="0" title="idenfy" id="idenfy"></iframe>
+                      <iframe
+                        src={`https://ui.idenfy.com/?iframe=true&authToken=${this.props.kyc.identity_token}`}
+                        width="100%"
+                        height="600"
+                        allow="camera"
+                        frameBorder="0"
+                        title="idenfy"
+                        id="idenfy"
+                      ></iframe>
                     </div>
                   )}
 
-                <form onSubmit={this.handleSubmit}
-                  hidden={(this.props.kyc.identity_token && !this.state.showManualId) && !this.state.idApproved}>
-                  {!this.state.idApproved &&
-                    this.props.kyc.id_document_status !== 'APPROVED' && (
-                      <div>
-                        <label htmlFor="governmentID" style={{ 'cursor': 'pointer' }}>
-                          <h2>{t('order.fiat.kyc.1')}</h2>
-                          <small><b>{t('order.fiat.kyc.govSelfieDesc')}</b></small>
+                <form
+                  onSubmit={this.handleSubmit}
+                  hidden={this.props.kyc.identity_token && !this.state.showManualId && !this.state.idApproved}
+                >
+                  {!this.state.idApproved && this.props.kyc.id_document_status !== 'APPROVED' && (
+                    <div>
+                      <label htmlFor="governmentID" style={{ cursor: 'pointer' }}>
+                        <h2>{t('order.fiat.kyc.1')}</h2>
+                        <small>
+                          <b>{t('order.fiat.kyc.govSelfieDesc')}</b>
+                        </small>
 
-                          <div style={{ 'textAlign': 'center', 'maxWidth': '100%' }}>
-                            <div style={{ 'display': 'inline-block', 'maxWidth': '100%' }}>
-                              <img style={{
-                                'textAlign': 'center',
-                                margin: 'auto', 'width': '400px', 'maxWidth': '100%'
-                              }} src="/img/order/selfie.jpg"
-                                alt={t('order.fiat.selfie')} title={t('order.fiat.click_to_upload')} />
-                              <input type="file" name="governmentID" id="governmentID"
-                                onChange={this.handleInputChange} accept="image/*" style={{ 'margin': '0 25% 20px 25%' }} />
-                            </div></div>
-                        </label>
-                      </div>
-                    )}
+                        <div style={{ textAlign: 'center', maxWidth: '100%' }}>
+                          <div style={{ display: 'inline-block', maxWidth: '100%' }}>
+                            <img
+                              style={{
+                                textAlign: 'center',
+                                margin: 'auto',
+                                width: '400px',
+                                maxWidth: '100%',
+                              }}
+                              src="/img/order/selfie.jpg"
+                              alt={t('order.fiat.selfie')}
+                              title={t('order.fiat.click_to_upload')}
+                            />
+                            <input
+                              type="file"
+                              name="governmentID"
+                              id="governmentID"
+                              onChange={this.handleInputChange}
+                              accept="image/*"
+                              style={{ margin: '0 25% 20px 25%' }}
+                            />
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                  )}
 
                   {/*
               {this.props.kyc.residence_document_status !== 'APPROVED' && (
@@ -275,7 +305,7 @@ class KYCModal extends Component {
                     rows="2"
                     onChange={this.handleInputChange}
                     value={this.state.message}
-                    maxLength="255"
+                    maxLength={this.state.email ? 253 - this.state.email.length : 255} // 2 chars for `: `
                   />
 
                   <button type="submit" className="btn btn-themed btn-md" disabled={this.state.filesReady ? null : 'disabled'}>
@@ -304,7 +334,4 @@ class KYCModal extends Component {
 const mapStateToProps = ({ email }) => ({ email });
 const mapDistachToProps = dispatch => bindActionCreators({ setUserEmail }, dispatch);
 
-export default connect(
-  mapStateToProps,
-  mapDistachToProps
-)(KYCModal);
+export default connect(mapStateToProps, mapDistachToProps)(KYCModal);
