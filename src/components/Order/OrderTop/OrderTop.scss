@@ -6,7 +6,7 @@
 
   @media (min-width: $screen-ms-min) {
     float: right;
-    margin: 32px 0 0 0;
+    // margin: 32px 0 0 0;
   }
 
   &:hover,
@@ -14,6 +14,11 @@
   &:active {
     color: $green;
   }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .ref.ref {
@@ -24,4 +29,19 @@
     float: left;
     margin-bottom: 24px;
   }
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.flagOrder {
+  background-color: #d73a49;
+  color: #ffffff;
+  padding: 0.25rem 2rem;
+  border-radius: 100px;
+  border: none;
+  font-size: 1.5rem;
+  margin-left: 2rem;
 }
