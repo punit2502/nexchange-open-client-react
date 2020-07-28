@@ -64,7 +64,9 @@ class CoinsDropdown extends Component {
       return this.props.type.toUpperCase() === 'DEPOSIT' ? coin.is_quote_of_enabled_pair : coin.is_base_of_enabled_pair;
     });
     //Non cryptos first, then alphabetical
-    // filteredCoins = _.sortBy(filteredCoins, (coin) => {return coin.is_crypto + coin.code});
+    filteredCoins = _.sortBy(filteredCoins, coin => {
+      return coin.is_crypto + coin.code;
+    });
     filteredCoins = this.searchCoins(filteredCoins);
 
     if (this.props.selectedCoin.orderByAddress && this.props.type.toUpperCase() === 'RECEIVE') {

@@ -59,7 +59,6 @@ export const setMemo = payload => ({
 export const fetchCoinDetails = () => dispatch => {
   const url = `${config.API_BASE_URL}/currency/`;
   const request = axios.get(url);
-  const isWhiteLabel = config.REFERRAL_CODE && config.REFERRAL_CODE.length > 0;
 
   return request
     .then(response => {
@@ -73,17 +72,12 @@ export const fetchCoinDetails = () => dispatch => {
           const { has_enabled_pairs_for_test } = elem;
           return has_enabled_pairs_for_test === true;
         });
-      } else if (isWhiteLabel) {
-        coins = response.data.filter(elem => {
-          const { has_enabled_pairs, is_crypto, code } = elem;
-          if (has_enabled_pairs && is_crypto && config.COINS_LIST.includes(code)) return elem;
-
-          return null;
-        });
       } else {
         coins = response.data.filter(elem => {
-          const { has_enabled_pairs } = elem;
-          return has_enabled_pairs === true;
+          const { has_enabled_pairs, is_crypto, code } = elem;
+          if (has_enabled_pairs && (config.COINS_LIST.includes(code) || !is_crypto)) return elem;
+
+          return null;
         });
       }
 
