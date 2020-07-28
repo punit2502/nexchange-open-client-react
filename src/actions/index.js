@@ -74,8 +74,8 @@ export const fetchCoinDetails = () => dispatch => {
         });
       } else {
         coins = response.data.filter(elem => {
-          const { has_enabled_pairs, is_crypto, code } = elem;
-          if (has_enabled_pairs && (config.COINS_LIST.includes(code) || !is_crypto)) return elem;
+          const { has_enabled_pairs, code } = elem;
+          if (has_enabled_pairs && config.COINS_LIST.includes(code)) return elem;
 
           return null;
         });
@@ -261,7 +261,6 @@ export const fetchPairs = ({ base, quote } = {}) => dispatch => {
         params.pair = pathNameParams[2].toUpperCase();
       }
       const pairs = response.data.filter(pair => {
-        // console.log(pair.name, config.COINS_LIST.includes(pair.base) && config.COINS_LIST.includes(pair.quote));
         if (config.COINS_LIST.includes(pair.base) && config.COINS_LIST.includes(pair.quote)) {
           if (params && params.hasOwnProperty('test')) {
             return !pair.disabled;
@@ -334,7 +333,13 @@ export const fetchPairs = ({ base, quote } = {}) => dispatch => {
             console.log('Error:', err);
           }
         } else {
-          pickRandomPair();
+          const pair = await pickMostTraded();
+          if (pair) {
+            depositCoin = pair.quote;
+            receiveCoin = pair.base;
+          } else {
+            pickRandomPair();
+          }
         }
       };
       await pickCoins();

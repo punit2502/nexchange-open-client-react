@@ -12,7 +12,7 @@ const config = {
   RECENT_ORDERS_INTERVAL: 20000,
   RECENT_ORDERS_COUNT: 5,
   PRICE_COMPARISON_INTERVAL: 60000,
-  REFERRAL_CODE: 'R',
+  REFERRAL_CODE: null,
   KYC_DETAILS_FETCH_INTERVAL: 20000,
   ADVANCED_MODE_ENABLED: true,
   GRAPHCMS_API: 'https://api-euwest.graphcms.com/v1/ck2olkts50bo501i0h3ej7d1f/master',
@@ -21,7 +21,31 @@ const config = {
   AUTH_CLIENT_SECRET: development
     ? 'hpS5mRTDN8EWRgTFlDetU6mlMJw5VintTSPazuP0MUil4KyvEQnNAZHN79PObFtjTR8lL9XwTWxboXiMA19f6s4AeWNuZK7X2d1B2icmRj9q1ol5m0Qpp8RAJHVBvSji'
     : '5cNFTdJGtR0qwRYevWOMFjNIepkl6TMieZP6wdqOOIVplL0YWB8Lw5WvizU6CHiIBn21JnUd0Twc1W52MyzFRsGrV8AixFcZJpnHY3fzgiaYv9AyXS1zDbNP0xUqAxgp',
-  COINS_LIST: ['BTC', 'BCH', 'DASH', 'ETH', 'LTC', 'XLM', 'XRP', 'BDG', 'OMG', 'COB', 'COSS', 'BIX', 'BMH', 'BNT', 'HT', 'KCS', 'KNC'],
+  COINS_LIST: [
+    'EUR',
+    'USD',
+    'JPY',
+    'RUB',
+    'GBP',
+    'AUD',
+    'BTC',
+    'BCH',
+    'DASH',
+    'ETH',
+    'LTC',
+    'XLM',
+    'XRP',
+    'BDG',
+    'OMG',
+    'COB',
+    'COSS',
+    'BIX',
+    'BMH',
+    'BNT',
+    'HT',
+    'KCS',
+    'KNC',
+  ],
 };
 
 export default config;
