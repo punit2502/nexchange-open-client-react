@@ -21,7 +21,7 @@ const config = {
   AUTH_CLIENT_SECRET: development
     ? 'hpS5mRTDN8EWRgTFlDetU6mlMJw5VintTSPazuP0MUil4KyvEQnNAZHN79PObFtjTR8lL9XwTWxboXiMA19f6s4AeWNuZK7X2d1B2icmRj9q1ol5m0Qpp8RAJHVBvSji'
     : '5cNFTdJGtR0qwRYevWOMFjNIepkl6TMieZP6wdqOOIVplL0YWB8Lw5WvizU6CHiIBn21JnUd0Twc1W52MyzFRsGrV8AixFcZJpnHY3fzgiaYv9AyXS1zDbNP0xUqAxgp',
-  COINS_LIST: ['BTC', 'BCH', 'DASH', 'ETH', 'LTC', 'XLM', 'XRP'],
+  COINS_LIST: ['BTC', 'BCH', 'DASH', 'ETH', 'LTC', 'XLM', 'XRP', 'BDG', 'OMG', 'COB', 'COSS', 'BIX', 'BMH', 'BNT', 'HT', 'KCS', 'KNC'],
 };
 
 export default config;
