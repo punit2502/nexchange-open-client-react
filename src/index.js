@@ -35,7 +35,7 @@ const Referrals = React.lazy(() => import('Components/Referrals/Referrals'));
 // const Header = React.lazy(() => import('Components/Header/Header'));
 // const Footer = React.lazy(() => import('Components/Footer'));
 const NotFound = React.lazy(() => import('Components/NotFound/NotFound'));
-const FAQ = React.lazy(() => import('Components/FAQ2/FAQ'));
+// const FAQ = React.lazy(() => import('Components/FAQ2/FAQ'));
 
 const Home = React.lazy(() => import('Components/Home/Home'));
 const TermsConditions = React.lazy(() => import('Components/TermsConditions/TermsConditions'));
@@ -79,7 +79,6 @@ ReactDOM.render(
                 <Route exact path="/:lang(en|de|ru)/order/:orderRef" component={Order} />
                 <Route exact path="/:lang(en|de|ru)/orders/:orderRef?" component={Orders} />
                 <Route exact path="/:lang(en|de|ru)" render={props => <Home {...props} store={store} />} />
-                <Route exact path="/:lang(en|de|ru)/faqs/:id?" component={FAQ} />
                 <Route exact path="/:lang(en|de|ru)/not-found" component={NotFound} />
                 <Route component={NotFoundRedirect} />
               </Switch>
