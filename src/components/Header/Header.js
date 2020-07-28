@@ -21,19 +21,6 @@ const Header = props => {
   const location = useLocation();
   const lang = i18n.language || window.localStorage.i18nextLng || 'en';
 
-  const isHomeHeader = useMemo(() => {
-    const { pathname } = location;
-    const routes = ['instant-white-label', 'faqs'];
-
-    // Comment: Matches - /lang, /lang/, /lang/route, /lang/route/, etc
-    const showHomeHeader = routes.map(route => new RegExp(`^/${lang}(/${route})?(/)?$`).test(pathname));
-
-    if (showHomeHeader.includes(true)) {
-      return true;
-    }
-    return false;
-  }, [location]);
-
   const isHideHeader = useMemo(() => {
     const { pathname } = location;
     const routes = ['signin', 'signup', 'forgot-password'];
@@ -77,7 +64,6 @@ const Header = props => {
         showSupportModal: props.showSupportModal,
         lang,
         closeNavbar,
-        isHomeHeader,
         hideSupport,
       }}
     />
@@ -85,12 +71,12 @@ const Header = props => {
 };
 
 export const HeaderStuff = props => {
-  const { isHomeHeader, lang, closeNavbar, hideSupport, supportModal } = props;
+  const { lang, closeNavbar, hideSupport, supportModal } = props;
 
   return (
     <I18n ns="translations">
       {(t, { i18n }) => (
-        <div className={`${styles.header} ${isHomeHeader ? styles.home : ''}`} data-test="header">
+        <div className={styles.header} data-test="header">
           <div className="container">
             <div className="navbar-header">
               <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navigation-index">
@@ -102,11 +88,7 @@ export const HeaderStuff = props => {
 
               <Link to={`/${lang}`}>
                 <div className={styles['logo-container']}>
-                  {isHomeHeader ? (
-                    <img src="/img/logo-white.svg" alt="Logo" data-test="logo" />
-                  ) : (
-                    <img src="/img/logo.svg" alt="Logo" data-test="logo" />
-                  )}
+                  <img src="/img/pumapay-logo.png" alt="Logo" data-test="logo" />
                 </div>
               </Link>
             </div>

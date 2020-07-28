@@ -75,8 +75,8 @@ export const fetchCoinDetails = () => dispatch => {
         });
       } else if (isWhiteLabel) {
         coins = response.data.filter(elem => {
-          const { has_enabled_pairs, is_crypto } = elem;
-          if (has_enabled_pairs && is_crypto) return elem;
+          const { has_enabled_pairs, is_crypto, code } = elem;
+          if (has_enabled_pairs && is_crypto && config.COINS_LIST.includes(code)) return elem;
 
           return null;
         });
@@ -267,10 +267,13 @@ export const fetchPairs = ({ base, quote } = {}) => dispatch => {
         params.pair = pathNameParams[2].toUpperCase();
       }
       const pairs = response.data.filter(pair => {
-        if (params && params.hasOwnProperty('test')) {
-          return !pair.disabled;
-        } else {
-          return !pair.disabled && !pair.test_mode;
+        // console.log(pair.name, config.COINS_LIST.includes(pair.base) && config.COINS_LIST.includes(pair.quote));
+        if (config.COINS_LIST.includes(pair.base) && config.COINS_LIST.includes(pair.quote)) {
+          if (params && params.hasOwnProperty('test')) {
+            return !pair.disabled;
+          } else {
+            return !pair.disabled && !pair.test_mode;
+          }
         }
       });
       const processedPairs = preparePairs(pairs);
@@ -305,6 +308,7 @@ export const fetchPairs = ({ base, quote } = {}) => dispatch => {
       };
 
       const pickRandomPair = async () => {
+        console.log('pairs is', pairs);
         const pair = pairs[Math.floor(Math.random() * pairs.length)];
         depositCoin = pair.quote;
         receiveCoin = pair.base;
@@ -336,13 +340,7 @@ export const fetchPairs = ({ base, quote } = {}) => dispatch => {
             console.log('Error:', err);
           }
         } else {
-          const pair = await pickMostTraded();
-          if (pair) {
-            depositCoin = pair.quote;
-            receiveCoin = pair.base;
-          } else {
-            pickRandomPair();
-          }
+          pickRandomPair();
         }
       };
       await pickCoins();

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
 
 import { bindActionCreators } from 'redux';
 import { fetchOrder, fetchPrice, setOrder, fetchCoinDetails } from 'Actions';
@@ -13,7 +13,7 @@ import OrderTop from './OrderTop/OrderTop';
 
 import OrderLoading from './OrderLoading/OrderLoading';
 import OrderCoinsProcessed from './OrderCoinsProcessed/OrderCoinsProcessed';
-import OrderCta from './OrderCta/OrderCta';
+// import OrderCta from './OrderCta/OrderCta';
 
 import styles from './Order.scss';
 
@@ -62,7 +62,7 @@ class Order extends Component {
         this.props.order.status_name[0][0] === 11 &&
         nextProps.order.status_name[0][0] === 12
       ) {
-        window.gtag('event', 'Order paid', {event_category: 'Order', event_label: `${nextProps.unique_reference}`});
+        window.gtag('event', 'Order paid', { event_category: 'Order', event_label: `${nextProps.unique_reference}` });
       }
     }
   }
@@ -72,17 +72,17 @@ class Order extends Component {
       <div className={`${styles.container} ${this.state.order && (isFiatOrder(this.state.order) ? 'order-fiat' : 'order-crypto')}`}>
         <div className="container">
           <div className="row">
-            {
-              ((this.state.order == null) && <OrderLoading />)
-              || ((this.state.order === 404) && <Redirect to='/not-found' />)
-              || ((typeof this.state.order === 'object') && <>
-                <OrderTop order={this.state.order} />
-                <OrderCoinsProcessed order={this.state.order} />
+            {(this.state.order == null && <OrderLoading />) ||
+              (this.state.order === 404 && <Redirect to="/not-found" />) ||
+              (typeof this.state.order === 'object' && (
+                <>
+                  <OrderTop order={this.state.order} />
+                  <OrderCoinsProcessed order={this.state.order} />
 
-                <OrderMain {...this.props} />
-                <OrderCta order={this.state.order} />
-                </>)
-            }
+                  <OrderMain {...this.props} />
+                  {/* <OrderCta order={this.state.order} /> */}
+                </>
+              ))}
           </div>
         </div>
       </div>
@@ -93,7 +93,4 @@ class Order extends Component {
 const mapStateToProps = ({ order, price }) => ({ order, price });
 const mapDispatchToProps = dispatch => bindActionCreators({ fetchOrder, fetchPrice, setOrder, fetchCoinDetails }, dispatch);
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Order);
+export default connect(mapStateToProps, mapDispatchToProps)(Order);

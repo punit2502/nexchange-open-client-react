@@ -1,8 +1,9 @@
 .hero {
+  height: 600px;
   position: relative;
-  padding: 0 0 75px 0;
+  padding: 75px 0;
   text-align: center;
-  color: #fff;
+  color: #1d3964;
   background: -moz-linear-gradient(45deg, rgba(2, 3, 31, 1) 0%, rgba(2, 3, 31, 1) 44%, rgba(26, 157, 139, 1) 100%); /* ff3.6+ */
   background: -webkit-gradient(
     linear,
@@ -24,11 +25,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1A9D8B', endColorstr='#02031f',GradientType=1 ); /* ie6-9 */
 
   @media (min-width: $screen-md-min) {
-    background-color: #01031e;
-    background-image: url('../../../img/ellipse.svg');
-    background-position: 130% 50%;
-    background-size: 150%;
-    background-repeat: no-repeat;
+    background: #eef3ff;
   }
 }
 
@@ -54,7 +51,7 @@
     margin-bottom: 60px;
     font-weight: 400;
     font-size: 16px;
-    font-family: 'Clan Offc Pro Book', sans-serif;
+    font-family: 'Poppins', sans-serif;
 
     @media (min-width: $screen-md-min) {
       font-size: 24px;
@@ -65,7 +62,7 @@
     }
 
     span {
-      font-family: 'Clan Offc Pro Medium', sans-serif;
+      font-family: 'Noto Sans', sans-serif;
     }
   }
 }

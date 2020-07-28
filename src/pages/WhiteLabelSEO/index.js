@@ -73,7 +73,7 @@ const StyledWhitelabel = styled.main`
   padding: 70px 0 75px 0;
   text-align: center;
   strong {
-    font-family: Clan Offc Pro Book;
+    font-family: Poppins;
   }
   > aside {
     margin: 8rem 0;

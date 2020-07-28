@@ -1,11 +1,7 @@
 .container {
   padding: 40px 0 35px;
-  background-color: #01031e;
-  background-image: url('Img/ellipse.svg');
-  background-position: 50% 50%;
-  background-size: 90%;
-  background-repeat: no-repeat;
-  color: #fff;
+  background-color: #eef3ff;
+  color: #1d3964;
 
   @media (min-width: $screen-sm-min) {
     padding-bottom: 50px;
@@ -45,22 +41,22 @@
   }
 
   &::-webkit-input-placeholder {
-    color: #fff;
+    color: #7a7a7a;
     font-size: 12px;
   }
 
   &::-moz-placeholder {
-    color: #fff;
+    color: #7a7a7a;
     font-size: 12px;
   }
 
   &:-ms-input-placeholder {
-    color: #fff;
+    color: #7a7a7a;
     font-size: 12px;
   }
 
   &:-moz-placeholder {
-    color: #fff;
+    color: #7a7a7a;
     font-size: 12px;
   }
 }
