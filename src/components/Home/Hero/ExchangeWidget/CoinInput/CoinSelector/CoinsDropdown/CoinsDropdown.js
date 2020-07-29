@@ -6,7 +6,6 @@ import { translate } from 'react-i18next';
 import urlParams from 'Utils/urlParams';
 import { getMatchingCoins } from 'Utils/walletAddress';
 import debounce from 'Utils/debounce';
-import config from 'Config';
 import styles from './CoinsDropdown.scss';
 
 class CoinsDropdown extends Component {
