@@ -8,7 +8,12 @@ class Referrals extends Component {
   componentDidMount() {
     axios.interceptors.request.use(
       function(requestConfig) {
-        let referral = config.REFERRAL_CODE ? config.REFERRAL_CODE : localStorage.getItem('referral');
+        let referral;
+        let params = urlParams();
+        if (params && params.hasOwnProperty('ref')) {
+          referral = params['ref'].toString();
+        } else referral = config.REFERRAL_CODE ? config.REFERRAL_CODE : localStorage.getItem('referral');
+
         if (referral && requestConfig.url && requestConfig.url.indexOf(config.API_BASE_URL.toLowerCase()) > -1)
           requestConfig.headers['x-referral-token'] = referral;
 
@@ -20,14 +25,14 @@ class Referrals extends Component {
     );
   }
 
-  checkNotRef (queryParam) {
-    return ! queryParam.includes('ref=');
+  checkNotRef(queryParam) {
+    return !queryParam.includes('ref=');
   }
 
   redirectRef() {
     let url = window.location.pathname + window.location.search + window.location.hash;
-    let baseUrl = url.split("?")[0];
-    let queryParams = url.split("?")[1].split("&");
+    let baseUrl = url.split('?')[0];
+    let queryParams = url.split('?')[1].split('&');
     queryParams = queryParams.filter(this.checkNotRef);
     queryParams = '?'.concat(queryParams.join('&'));
     let urlWithoutRef = baseUrl.concat(queryParams);
@@ -39,7 +44,6 @@ class Referrals extends Component {
     let params = urlParams();
     if (params != null && params.hasOwnProperty('ref')) {
       localStorage.setItem('referral', params['ref']);
-      return this.redirectRef();
     }
 
     return null;
