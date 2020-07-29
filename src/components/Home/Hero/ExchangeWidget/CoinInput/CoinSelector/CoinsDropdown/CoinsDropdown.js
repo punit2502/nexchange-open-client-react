@@ -6,6 +6,7 @@ import { translate } from 'react-i18next';
 import urlParams from 'Utils/urlParams';
 import { getMatchingCoins } from 'Utils/walletAddress';
 import debounce from 'Utils/debounce';
+import config from 'Config';
 import styles from './CoinsDropdown.scss';
 
 class CoinsDropdown extends Component {
@@ -61,7 +62,7 @@ class CoinsDropdown extends Component {
         return this.props.type.toUpperCase() === 'DEPOSIT' ? coin.is_quote_of_enabled_pair_for_test : coin.is_base_of_enabled_pair_for_test;
       }
 
-      return this.props.type.toUpperCase() === 'DEPOSIT' ? coin.is_quote_of_enabled_pair : coin.is_base_of_enabled_pair;
+      return this.props.type.toUpperCase() === 'DEPOSIT' ? coin.is_quote_of_enabled_pair && !coin.is_crypto : coin.is_base_of_enabled_pair;
     });
     //Non cryptos first, then alphabetical
     filteredCoins = _.sortBy(filteredCoins, coin => {

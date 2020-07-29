@@ -75,7 +75,7 @@ export const fetchCoinDetails = () => dispatch => {
       } else {
         coins = response.data.filter(elem => {
           const { has_enabled_pairs, code } = elem;
-          if (has_enabled_pairs && config.COINS_LIST.includes(code)) return elem;
+          if (has_enabled_pairs && (config.COINS_LIST.includes(code) || config.FIAT_LIST.includes(code))) return elem;
 
           return null;
         });
@@ -261,13 +261,14 @@ export const fetchPairs = ({ base, quote } = {}) => dispatch => {
         params.pair = pathNameParams[2].toUpperCase();
       }
       const pairs = response.data.filter(pair => {
-        if (config.COINS_LIST.includes(pair.base) && config.COINS_LIST.includes(pair.quote)) {
+        if (config.COINS_LIST.includes(pair.base) && config.FIAT_LIST.includes(pair.quote)) {
           if (params && params.hasOwnProperty('test')) {
             return !pair.disabled;
           } else {
             return !pair.disabled && !pair.test_mode;
           }
         }
+        return null;
       });
       const processedPairs = preparePairs(pairs);
 
@@ -301,7 +302,6 @@ export const fetchPairs = ({ base, quote } = {}) => dispatch => {
       };
 
       const pickRandomPair = async () => {
-        console.log('pairs is', pairs);
         const pair = pairs[Math.floor(Math.random() * pairs.length)];
         depositCoin = pair.quote;
         receiveCoin = pair.base;
