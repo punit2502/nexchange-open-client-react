@@ -6,6 +6,7 @@ import { I18n } from 'react-i18next';
 import i18n from 'Src/i18n';
 import axios from 'axios';
 import config from 'Config';
+import urlParams from 'Utils/urlParams';
 
 import { errorAlert, setOrder } from 'Actions/index.js';
 // import { bindCrispEmail } from 'Utils/crispEmailBinding';
@@ -22,9 +23,20 @@ class ExchangeWidget extends Component {
     this.state = {
       orderPlaced: false,
       loading: false,
+      withdraw_address: {},
     };
 
     this.placeOrder = this.placeOrder.bind(this);
+  }
+
+  componentDidMount() {
+    const params = urlParams();
+
+    if (params && params.hasOwnProperty('withdraw_address')) {
+      this.setState(prevState => {
+        return { withdraw_address: { ...prevState.withdraw_address, address: params['withdraw_address'].toString() } };
+      });
+    }
   }
 
   componentWillUnmount() {
@@ -39,14 +51,14 @@ class ExchangeWidget extends Component {
       pair: {
         name: `${this.props.selectedCoin.receive}${this.props.selectedCoin.deposit}`,
       },
-      withdraw_address: {},
+      withdraw_address: this.state.withdraw_address,
     };
 
     if (this.props.price.lastEdited === 'receive') data['amount_base'] = parseFloat(this.props.price.receive);
     else if (this.props.price.lastEdited === 'deposit') data['amount_quote'] = parseFloat(this.props.price.deposit);
 
     axios
-      .post(`${config.API_BASE_URL}/orders/`, data)
+      .post(`${config.API_BASE_URL}/or/`, data)
       .then(response => {
         this.props.setOrder(response.data);
         this.setState({

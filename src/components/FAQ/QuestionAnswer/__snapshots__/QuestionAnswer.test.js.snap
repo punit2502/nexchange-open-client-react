@@ -79,7 +79,7 @@ ShallowWrapper {
           >
             <div>
               <span>
-                Whas this helpful?
+                Was this helpful?
               </span>
             </div>
             <div
@@ -191,7 +191,7 @@ ShallowWrapper {
             >
               <div>
                 <span>
-                  Whas this helpful?
+                  Was this helpful?
                 </span>
               </div>
               <div
@@ -318,7 +318,7 @@ ShallowWrapper {
               "children": Array [
                 <div>
                   <span>
-                    Whas this helpful?
+                    Was this helpful?
                   </span>
                 </div>,
                 <div
@@ -358,7 +358,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <span>
-                    Whas this helpful?
+                    Was this helpful?
                   </span>,
                 },
                 "ref": null,
@@ -367,10 +367,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Whas this helpful?",
+                    "children": "Was this helpful?",
                   },
                   "ref": null,
-                  "rendered": "Whas this helpful?",
+                  "rendered": "Was this helpful?",
                   "type": "span",
                 },
                 "type": "div",
@@ -560,7 +560,7 @@ ShallowWrapper {
             >
               <div>
                 <span>
-                  Whas this helpful?
+                  Was this helpful?
                 </span>
               </div>
               <div
@@ -672,7 +672,7 @@ ShallowWrapper {
               >
                 <div>
                   <span>
-                    Whas this helpful?
+                    Was this helpful?
                   </span>
                 </div>
                 <div
@@ -799,7 +799,7 @@ ShallowWrapper {
                 "children": Array [
                   <div>
                     <span>
-                      Whas this helpful?
+                      Was this helpful?
                     </span>
                   </div>,
                   <div
@@ -839,7 +839,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <span>
-                      Whas this helpful?
+                      Was this helpful?
                     </span>,
                   },
                   "ref": null,
@@ -848,10 +848,10 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Whas this helpful?",
+                      "children": "Was this helpful?",
                     },
                     "ref": null,
-                    "rendered": "Whas this helpful?",
+                    "rendered": "Was this helpful?",
                     "type": "span",
                   },
                   "type": "div",
