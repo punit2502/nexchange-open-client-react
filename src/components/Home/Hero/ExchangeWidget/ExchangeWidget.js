@@ -58,7 +58,7 @@ class ExchangeWidget extends Component {
     else if (this.props.price.lastEdited === 'deposit') data['amount_quote'] = parseFloat(this.props.price.deposit);
 
     axios
-      .post(`${config.API_BASE_URL}/or/`, data)
+      .post(`${config.API_BASE_URL}/orders/`, data)
       .then(response => {
         this.props.setOrder(response.data);
         this.setState({
