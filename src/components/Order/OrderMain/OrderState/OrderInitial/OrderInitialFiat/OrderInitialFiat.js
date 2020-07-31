@@ -7,11 +7,6 @@ import styled from '@emotion/styled';
 import OrderPreReleased from '../../OrderPreReleased/OrderPreReleased';
 import OrderFailed from '../../OrderFailure/OrderFailure';
 
-const PaymentNewTabText = styled.h4`
-  text-align: center;
-  padding: 2rem 0 0.75rem;
-`;
-
 const PaymentIframeContainer = styled.div`
   position: relative;
   iframe {
@@ -125,12 +120,6 @@ class OrderInitial extends Component {
             </Helmet>
             {this.state.showPaymentIFrame ? (
               <div>
-                <PaymentNewTabText>
-                  <a href={props.order.payment_url} target="_blank" rel="noopener noreferrer">
-                    Open payment window in new tab
-                  </a>
-                </PaymentNewTabText>
-
                 <PaymentIframeContainer>
                   <Spinner>
                     <img src="/img/spinner.gif" alt="" />
@@ -139,7 +128,7 @@ class OrderInitial extends Component {
                     title="SafeCharge"
                     id="safecharge_payment_iframe"
                     src={props.order.payment_url}
-                    height={620}
+                    height={750}
                     width={'100%'}
                     scrolling="no"
                     style={{ border: 'none' }}
