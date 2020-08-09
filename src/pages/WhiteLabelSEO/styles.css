@@ -30,7 +30,7 @@
     margin-bottom: 0px;
     font-weight: 400;
     font-size: 16px;
-    font-family: 'Clan Offc Pro Book';
+    font-family: Merriweather;
 
     @media (min-width: $screen-md-min) {
       font-size: 24px;

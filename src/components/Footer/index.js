@@ -10,7 +10,6 @@ import { showSupportModal } from 'Actions';
 import styled from '@emotion/styled';
 
 const paymentGateways = ['mastercard', 'visa'];
-const aggregators = ['bestchange', 'okchanger', 'emon', 'allchange'];
 
 const Footer = props => {
   const { location } = props;
@@ -123,14 +122,6 @@ const Footer = props => {
                     <div className="compliance">
                       {paymentGateways.map(e => (
                         <img src={`/img/compliance/${e}.svg`} alt="e" className={e} key={e} />
-                      ))}
-                    </div>
-
-                    <div className="compliance2">
-                      {aggregators.map(e => (
-                        <a href={t(`footer.aggregators.${e}.url`)} target="_blank" rel="noopener noreferrer" key={e}>
-                          <img src={`/img/compliance/${e}.svg`} alt={t(`footer.aggregators.${e}.name`)} className={e} />
-                        </a>
                       ))}
                     </div>
 

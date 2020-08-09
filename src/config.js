@@ -2,10 +2,10 @@ const development = process.env.NODE_ENV !== 'production';
 
 const config = {
   NAME: 'N.exchange',
-  DOMAIN: 'https://n.exchange',
+  DOMAIN: 'https://valorex.com',
   API_BASE_URL: 'https://api.n.exchange/en/api/v1',
   //   API_BASE_URL: 'http://localhost:8000/en/api/v1',
-  SUPPORT_EMAIL: 'support@n.exchange',
+  SUPPORT_EMAIL: 'support@valorex.com',
   PRICE_FETCH_INTERVAL: 60000,
   ORDER_BOOK_FETCH_INTERVAL: 10000,
   ORDER_DETAILS_FETCH_INTERVAL: 20000,

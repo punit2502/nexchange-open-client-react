@@ -9,7 +9,7 @@ import { setUserEmail } from 'Actions';
 import config from 'Config';
 
 class Support extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -32,7 +32,7 @@ class Support extends Component {
     if (this.state.show !== this.props.show) {
       this.setState({
         show: this.props.show,
-        subject: this.props.subject ? this.props.subject : ''
+        subject: this.props.subject ? this.props.subject : '',
       });
     }
 
@@ -106,7 +106,7 @@ class Support extends Component {
                 <div className="row">
                   <div className="col-xs-12 col-sm-6">
                     <h3>{t('support.2')}</h3>
-                    <div onClick={() => window.gtag('event', 'Support number click', {event_category: 'Support', event_label: ``})}>
+                    <div onClick={() => window.gtag('event', 'Support number click', { event_category: 'Support', event_label: `` })}>
                       <div className="hidden-xs hidden-sm">
                         {/*desktop link structure*/}
                         <a href="tel:+442030971920">+442030971920</a>
@@ -123,7 +123,7 @@ class Support extends Component {
                   <div className="col-xs-12 col-sm-6">
                     <h3>{t('support.3')}</h3>
                     <p>
-                      <a href="mailto:support@n.exchange">support@n.exchange</a>
+                      <a href="mailto:support@valorex.com">support@valorex.com</a>
                     </p>
                   </div>
                 </div>
@@ -230,7 +230,4 @@ class Support extends Component {
 const mapStateToProps = ({ email }) => ({ email });
 const mapDistachToProps = dispatch => bindActionCreators({ setUserEmail }, dispatch);
 
-export default connect(
-  mapStateToProps,
-  mapDistachToProps
-)(Support);
+export default connect(mapStateToProps, mapDistachToProps)(Support);

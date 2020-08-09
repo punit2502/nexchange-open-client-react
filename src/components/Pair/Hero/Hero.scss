@@ -58,7 +58,7 @@
     margin-bottom: 60px;
     font-weight: 400;
     font-size: 16px;
-    font-family: 'Clan Offc Pro Book', sans-serif;
+    font-family: Merriweather, sans-serif;
 
     @media (min-width: $screen-md-min) {
       font-size: 24px;
@@ -66,10 +66,6 @@
 
     @media (min-height: $screen-lg-height) and (min-width: $screen-md-min) {
       margin-bottom: 0;
-    }
-
-    span {
-      font-family: 'Clan Offc Pro Medium', sans-serif;
     }
   }
 }

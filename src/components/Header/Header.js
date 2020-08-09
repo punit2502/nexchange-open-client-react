@@ -8,10 +8,8 @@ import i18n from 'i18next';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import UserIcon from './user.svg';
-
 import Support from './Support/Support';
-import LanguagePicker from './LanguagePicker/LanguagePicker';
+// import LanguagePicker from './LanguagePicker/LanguagePicker';
 import { loadAuth, loadUserDetails, showSupportModal } from 'Actions';
 
 import styles from './Header.scss';
@@ -20,19 +18,6 @@ const Header = props => {
   const [, setShowNavbar] = useState(false);
   const location = useLocation();
   const lang = i18n.language || window.localStorage.i18nextLng || 'en';
-
-  const isHomeHeader = useMemo(() => {
-    const { pathname } = location;
-    const routes = ['instant-white-label', 'faqs'];
-
-    // Comment: Matches - /lang, /lang/, /lang/route, /lang/route/, etc
-    const showHomeHeader = routes.map(route => new RegExp(`^/${lang}(/${route})?(/)?$`).test(pathname));
-
-    if (showHomeHeader.includes(true)) {
-      return true;
-    }
-    return false;
-  }, [location]);
 
   const isHideHeader = useMemo(() => {
     const { pathname } = location;
@@ -77,7 +62,6 @@ const Header = props => {
         showSupportModal: props.showSupportModal,
         lang,
         closeNavbar,
-        isHomeHeader,
         hideSupport,
       }}
     />
@@ -85,12 +69,12 @@ const Header = props => {
 };
 
 export const HeaderStuff = props => {
-  const { isHomeHeader, lang, closeNavbar, hideSupport, supportModal } = props;
+  const { lang, closeNavbar, hideSupport, supportModal } = props;
 
   return (
     <I18n ns="translations">
       {(t, { i18n }) => (
-        <div className={`${styles.header} ${isHomeHeader ? styles.home : ''}`} data-test="header">
+        <div className={styles.header} data-test="header">
           <div className="container">
             <div className="navbar-header">
               <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navigation-index">
@@ -102,11 +86,7 @@ export const HeaderStuff = props => {
 
               <Link to={`/${lang}`}>
                 <div className={styles['logo-container']}>
-                  {isHomeHeader ? (
-                    <img src="/img/logo-white.svg" alt="Logo" data-test="logo" />
-                  ) : (
-                    <img src="/img/logo.svg" alt="Logo" data-test="logo" />
-                  )}
+                  <img src="/img/logo.svg" alt="Logo" data-test="logo" />
                 </div>
               </Link>
             </div>
@@ -172,7 +152,7 @@ export const HeaderStuff = props => {
 
                 <li className={styles['ico-link']}>
                   <a
-                    href="https://n.exchange/ico"
+                    href="https://valorex.com/ico"
                     className={`${styles.btn} btn btn-block btn-primary`}
                     onClick={() => {
                       window.gtag('event', 'ICO open', { event_category: 'ICO', event_label: `` });
@@ -185,28 +165,7 @@ export const HeaderStuff = props => {
                   </a>
                 </li>
 
-                {(props.auth && props.auth.profile && props.auth.profile.username && (
-                  <li>
-                    <Link className={styles.link} to={`/${lang}/profile/me`}>
-                      <UserIcon style={{ width: 18, height: 18 }} title={props.auth.profile.username} />
-                    </Link>
-                  </li>
-                )) || (
-                  <>
-                    <li>
-                      <Link className={styles.link} to={`/${lang}/signup`}>
-                        {t('accounts.signup')}
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className={styles.link} to={`/${lang}/signin`}>
-                        {t('accounts.signin')}
-                      </Link>
-                    </li>
-                  </>
-                )}
-
-                <LanguagePicker />
+                {/* <LanguagePicker /> */}
 
                 <li id="social-mobile">
                   <a

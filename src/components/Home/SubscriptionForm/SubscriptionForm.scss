@@ -1,11 +1,8 @@
 .container {
   padding: 40px 0 35px;
-  background-color: #01031e;
-  background-image: url('Img/ellipse.svg');
-  background-position: 50% 50%;
-  background-size: 90%;
-  background-repeat: no-repeat;
   color: #fff;
+  background: #0f2027;
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
 
   @media (min-width: $screen-sm-min) {
     padding-bottom: 50px;
