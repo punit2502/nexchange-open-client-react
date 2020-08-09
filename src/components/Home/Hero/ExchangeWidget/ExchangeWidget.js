@@ -102,9 +102,7 @@ class ExchangeWidget extends Component {
   }
 
   render() {
-    const lang = i18n.language ? i18n.language : 'en';
-
-    if (this.state.orderPlaced) return <Redirect to={`/${lang}/order/${this.state.orderRef}`} />;
+    if (this.state.orderPlaced) return <Redirect to={`/order/${this.state.orderRef}`} />;
 
     return (
       <I18n ns="translations">

@@ -1,36 +1,18 @@
-import React, { useMemo, useCallback, useState, useEffect } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import { useLocation } from 'react-router';
 import { I18n } from 'react-i18next';
-import i18n from 'i18next';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import Support from './Support/Support';
-// import LanguagePicker from './LanguagePicker/LanguagePicker';
 import { loadAuth, loadUserDetails, showSupportModal } from 'Actions';
 
 import styles from './Header.scss';
 
 const Header = props => {
   const [, setShowNavbar] = useState(false);
-  const location = useLocation();
-  const lang = i18n.language || window.localStorage.i18nextLng || 'en';
-
-  const isHideHeader = useMemo(() => {
-    const { pathname } = location;
-    const routes = ['signin', 'signup', 'forgot-password'];
-
-    // Comment: Matches - /lang/route, /lang/route/
-    const shouldHide = routes.map(route => new RegExp(`^/${lang}/${route}(/?)$`).test(pathname));
-
-    if (shouldHide.includes(true)) {
-      return true;
-    }
-    return false;
-  }, [location]);
 
   useEffect(() => {
     props.loadAuth();
@@ -52,15 +34,13 @@ const Header = props => {
     props.showSupportModal(false);
   }, [props.supportModal]);
 
-  if (isHideHeader) return null;
-
   return (
     <HeaderStuff
       {...{
         auth: props.auth,
         supportModal: props.supportModal,
         showSupportModal: props.showSupportModal,
-        lang,
+
         closeNavbar,
         hideSupport,
       }}
@@ -69,11 +49,11 @@ const Header = props => {
 };
 
 export const HeaderStuff = props => {
-  const { lang, closeNavbar, hideSupport, supportModal } = props;
+  const { closeNavbar, hideSupport, supportModal } = props;
 
   return (
     <I18n ns="translations">
-      {(t, { i18n }) => (
+      {t => (
         <div className={styles.header} data-test="header">
           <div className="container">
             <div className="navbar-header">
@@ -84,7 +64,7 @@ export const HeaderStuff = props => {
                 <span className="icon-bar" />
               </button>
 
-              <Link to={`/${lang}`}>
+              <Link to="/">
                 <div className={styles['logo-container']}>
                   <img src="/img/logo.svg" alt="Logo" data-test="logo" />
                 </div>
@@ -93,14 +73,14 @@ export const HeaderStuff = props => {
 
             <div className="collapse navbar-collapse" id="navigation-index">
               <ul className="nav navbar-nav navbar-right">
-                <li>
-                  <HashLink smooth onClick={() => closeNavbar()} to={`/${lang}#about`} className={styles.link}>
+                {/* <li>
+                  <HashLink smooth onClick={() => closeNavbar()} to="/#about" className={styles.link}>
                     {t('header.about')}
                   </HashLink>
-                </li>
+                </li> */}
 
                 <li>
-                  <Link onClick={() => closeNavbar()} to={`/${lang}/faqs`} className={styles.link} data-test="faq-btn">
+                  <Link onClick={() => closeNavbar()} to="/faqs" className={styles.link} data-test="faq-btn">
                     {t('header.faq')}
                   </Link>
                 </li>
@@ -149,23 +129,6 @@ export const HeaderStuff = props => {
                     {t('header.support')}
                   </Link>
                 </li>
-
-                <li className={styles['ico-link']}>
-                  <a
-                    href="https://valorex.com/ico"
-                    className={`${styles.btn} btn btn-block btn-primary`}
-                    onClick={() => {
-                      window.gtag('event', 'ICO open', { event_category: 'ICO', event_label: `` });
-                    }}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-test="ico-link"
-                  >
-                    {t('header.ico')}
-                  </a>
-                </li>
-
-                {/* <LanguagePicker /> */}
 
                 <li id="social-mobile">
                   <a

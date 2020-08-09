@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { I18n, Trans } from 'react-i18next';
+import { I18n } from 'react-i18next';
 
 import ExchangeWidget from './ExchangeWidget/ExchangeWidget';
 import OrderBookWidget from './OrderBookWidget/OrderBookWidget';
@@ -53,12 +53,8 @@ class Hero extends Component {
               <div className="row">
                 <div className="col-xs-12">
                   <div className={styles.brand}>
-                    <h1>{t('hero.1')}</h1>
-                    <Trans i18nKey="hero.2">
-                      <h2>
-                        Simple. <span className="text-green">Fast</span>. Secure.
-                      </h2>
-                    </Trans>
+                    <h1>Your simple access to crypto</h1>
+                    <h2>Buy and sell cryptocurrenices instantly</h2>
                   </div>
                 </div>
 

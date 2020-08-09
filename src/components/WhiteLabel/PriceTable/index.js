@@ -98,7 +98,7 @@ const tableStyle = `
   }
 
   .coinlist {
-    color: #2cc5bd;
+    color: #547aa5;
   }
 
   th,

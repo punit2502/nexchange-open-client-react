@@ -136,7 +136,7 @@ const Button = styled.div`
 
   #submit_address {
     color: #ffffff;
-    background-color: #2cc5bd;
+    background-color: #547aa5;
     padding: 1.2rem 3rem;
     border: none;
     border-radius: 5px;

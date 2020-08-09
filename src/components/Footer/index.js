@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useState } from 'react';
 
 import { I18n } from 'react-i18next';
 import { NavLink as Link, withRouter } from 'react-router-dom';
@@ -12,24 +12,6 @@ import styled from '@emotion/styled';
 const paymentGateways = ['mastercard', 'visa'];
 
 const Footer = props => {
-  const { location } = props;
-  const { pathname } = location;
-  const lang = I18n.language || window.localStorage.i18nextLng || 'en';
-
-  const hideFooter = useMemo(() => {
-    const routes = ['signin', 'signup', 'forgot-password'];
-
-    // Comment: Matches - /lang/route, /lang/route/
-    const shouldHide = routes.map(route => new RegExp(`^/${lang}/${route}(/?)$`).test(pathname));
-
-    if (shouldHide.includes(true)) {
-      return true;
-    }
-    return false;
-  }, [location]);
-
-  if (hideFooter) return null;
-
   return (
     <div className="container">
       <div className="row">
@@ -48,17 +30,9 @@ const Footer = props => {
                       <h4>{t('header.resources')}</h4>
                       <ul>
                         <li>
-                          <Link to={`/${lang}/instant-white-label`}>
-                            <strong>{t('header.whitelabel')}</strong>
-                          </Link>
-                        </li>
-                        <li>
                           <a href="https://forms.gle/4huiErgdSrXie5VD6" target="_blank" rel="noopener noreferrer">
                             {t('header.listcoin')}
                           </a>
-                        </li>
-                        <li>
-                          <a href="https://nexchange2.docs.apiary.io/">{t('header.apidocumentation')}</a>
                         </li>
                         <li>
                           <Link
@@ -76,12 +50,12 @@ const Footer = props => {
                       <h4>{t('header.about')}</h4>
                       <ul>
                         <li>
-                          <HashLink smooth to={`/${lang}#about`}>
+                          <HashLink smooth to={`/#about`}>
                             {t('header.about')}
                           </HashLink>
                         </li>
                         <li>
-                          <Link to={`/${lang}/faqs`}>{t('header.faq')}</Link>
+                          <Link to={`/faqs`}>{t('header.faq')}</Link>
                         </li>
                         <li>
                           <span />
@@ -90,7 +64,7 @@ const Footer = props => {
                     </section>
                     <section>
                       <h4>{t('footer.popular-pairs')}</h4>
-                      <PopularPairs lang={lang} />
+                      <PopularPairs />
                     </section>
                     <section>
                       <h4>{t('header.social')}</h4>
@@ -126,12 +100,12 @@ const Footer = props => {
                     </div>
 
                     <p>
-                      <CopyrightNotice /> — <RegisteredCompany />
+                      <CopyrightNotice />
                     </p>
                     <p>
-                      <Link to={`/${lang}/terms-and-conditions`}>{t('header.terms-and-conditions')}</Link>
+                      <Link to={`/terms-and-conditions`}>{t('header.terms-and-conditions')}</Link>
                       <span> — </span>
-                      <Link to={`/${lang}/privacy`}>{t('header.privacy-policy')}</Link>
+                      <Link to={`/privacy`}>{t('header.privacy-policy')}</Link>
                     </p>
                   </aside>
                 </section>
@@ -152,21 +126,21 @@ BTC to XMR
 BTC to USDT
 */
 const defaultPairs = [
-  ['eth', 'btc'],
-  ['btc', 'eth'],
-  ['ltc', 'eth'],
-  ['usdt', 'btc'],
-  ['btc', 'xmr'],
-  ['btc', 'usdt'],
+  ['EUR', 'BTC'],
+  ['BTC', 'ETH'],
+  ['USD', 'BTC'],
+  ['BTC', 'BCH'],
+  ['DOGE', 'BTC'],
+  ['RUB', 'LTC'],
 ];
-const PopularPairs = ({ lang }) => {
+const PopularPairs = () => {
   const [pairs] = useState(defaultPairs);
   return (
     <ul>
-      {pairs.map(([quote, base], index) => (
-        <li key={`${quote}-to-${base}`}>
-          <Link to={`/${lang}/convert/${quote}-to-${base}`}>
-            {quote.toUpperCase()} to {base.toUpperCase()}
+      {pairs.map(([quote, base]) => (
+        <li key={`${base}${quote}`}>
+          <Link to={`/?pair=${base}${quote}`}>
+            {quote} to {base}
           </Link>
         </li>
       ))}
@@ -174,13 +148,7 @@ const PopularPairs = ({ lang }) => {
   );
 };
 
-const CopyrightNotice = () => <>All rights reserved, YOA LTD 2016-{new Date().getFullYear()} — England & Wales</>;
-
-const RegisteredCompany = props => (
-  <a href="https://beta.companieshouse.gov.uk/company/10009845" rel="noopener noreferrer" target="_blank">
-    registered company No. 10009845
-  </a>
-);
+const CopyrightNotice = () => <>Copyright &copy; {new Date().getFullYear()} Valorex. All rights reserved.</>;
 
 const StyledFooter = styled.footer`
   > section {

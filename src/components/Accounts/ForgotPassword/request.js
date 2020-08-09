@@ -2,59 +2,62 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import Marked from 'react-markdown'
+import Marked from 'react-markdown';
 import { Link } from 'react-router-dom';
 import { I18n } from 'react-i18next';
-import { requestPasswordReset, resetPassword } from 'Actions'
+import { requestPasswordReset, resetPassword } from 'Actions';
 
-import { css } from 'emotion'
-import { Modal } from 'react-bootstrap'
-import { 
-  emailCheck
-} from '../'
+import { css } from 'emotion';
+import { Modal } from 'react-bootstrap';
+import { emailCheck } from '../';
 
 import styles from '../Accounts.scss';
 
-const RequestReset = (props) => {
-  const { auth } = props
-  const [showSuccessModal, setShowSuccessModal] = useState()
-  const [email, setEmailState] = useState('')
-  const [error, setError] = useState()
+const RequestReset = props => {
+  const { auth } = props;
+  const [showSuccessModal, setShowSuccessModal] = useState();
+  const [email, setEmailState] = useState('');
+  const [error, setError] = useState();
 
-  const setEmail = useCallback(value => {
-    setError()
-    setEmailState(value)
-  }, [setError, setEmailState])
+  const setEmail = useCallback(
+    value => {
+      setError();
+      setEmailState(value);
+    },
+    [setError, setEmailState]
+  );
 
-  const onEmailChange = useCallback(({ target: { value } }) => setEmail(value), [setEmail])
-  const onSubmit = useCallback((event) => {
-    event.preventDefault()
-    
-    if (email && emailCheck.test(email)) {
-      if (!auth.loading) props.requestPasswordReset(email)
-    } else setError(`accounts.errors.email`)
+  const onEmailChange = useCallback(({ target: { value } }) => setEmail(value), [setEmail]);
+  const onSubmit = useCallback(
+    event => {
+      event.preventDefault();
 
-  }, [email, auth])
+      if (email && emailCheck.test(email)) {
+        if (!auth.loading) props.requestPasswordReset(email);
+      } else setError(`accounts.errors.email`);
+    },
+    [email, auth]
+  );
 
-  const onHideModal = useCallback(() => setShowSuccessModal(false), [setShowSuccessModal])
+  const onHideModal = useCallback(() => setShowSuccessModal(false), [setShowSuccessModal]);
 
   useEffect(() => {
     if (auth.error && !auth.loading && auth.error.email) {
-      setError('accounts.errors.email')
+      setError('accounts.errors.email');
     } else if (!auth.loading && auth.reset && auth.reset === 'Please check your E-mail') {
-      setShowSuccessModal(true)
+      setShowSuccessModal(true);
     }
-  }, [auth])
+  }, [auth]);
 
   return (
     <I18n ns="translations">
-      {(t, {lng}) => (
-        <div className='row'>
+      {t => (
+        <div className="row">
           <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 ${styles.container}`}>
-            <Link to={`/${lng}`}>
-                <div className={styles['logo-container']}>
-                    <img className={styles.logo} src="/img/logo-white.svg" alt="Logo" data-test="logo" />
-                </div>
+            <Link to={`/`}>
+              <div className={styles['logo-container']}>
+                <img className={styles.logo} src="/img/logo-white.svg" alt="Logo" data-test="logo" />
+              </div>
             </Link>
             <div className={`col-xs-12 col-sm-12 col-md-8 col-lg-6 ${styles['sub-container']}`}>
               <h3>{t('accounts.forgotpassword1')}</h3>
@@ -83,7 +86,7 @@ const RequestReset = (props) => {
                   </div>
                 )}
                 <div className={styles.resetPassword}>
-                  <button disabled={auth.loading} type='submit' className={`${styles.button} ${styles.main}`}>
+                  <button disabled={auth.loading} type="submit" className={`${styles.button} ${styles.main}`}>
                     {!auth.loading ? t('accounts.resetpassword') : 'Loading...'}
                   </button>
                 </div>
@@ -96,17 +99,19 @@ const RequestReset = (props) => {
               <Modal.Title>{t('accounts.requestResetPassword.successTitle')}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <Marked>{t('accounts.requestResetPassword.successBody')}</Marked>
+              <Marked>{t('accounts.requestResetPassword.successBody')}</Marked>
             </Modal.Body>
             <Modal.Footer>
-              <Link className={`btn-default btn`} to='/'>Home</Link>
+              <Link className={`btn-default btn`} to="/">
+                Home
+              </Link>
             </Modal.Footer>
           </Modal>
         </div>
       )}
     </I18n>
-  )
-}
+  );
+};
 
 const dialogStyle = css`
   height: calc(100vh - 60px);
@@ -127,12 +132,9 @@ const dialogStyle = css`
       }
     }
   }
-`
+`;
 
 const mapStateToProps = ({ auth }) => ({ auth });
 const mapDispatchToProps = dispatch => bindActionCreators({ requestPasswordReset, resetPassword }, dispatch);
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(RequestReset);
+export default connect(mapStateToProps, mapDispatchToProps)(RequestReset);

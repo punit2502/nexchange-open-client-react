@@ -89,13 +89,13 @@ class CoinPrices extends Component {
   }
 
   render() {
-  const lang = i18n.language || window.localStorage.i18nextLng || 'en';
+    const lang = i18n.language || window.localStorage.i18nextLng || 'en';
 
     return (
       <div className={styles.container}>
         <div className={styles.row}>
           <div className="container">
-            <Link to={`/${lang}/convert/ETH-to-BTC`} replace={false}>
+            <Link to={`/convert/ETH-to-BTC`} replace={false}>
               <div
                 className={`${styles['coin-price']} ${this.state.change['ethbtc']}`}
                 ref={el => {
@@ -109,7 +109,7 @@ class CoinPrices extends Component {
               </div>
             </Link>
 
-            <Link to={`/${lang}/convert/BDG-to-BTC`} replace={false}>
+            <Link to={`/convert/BDG-to-BTC`} replace={false}>
               <div
                 className={`${styles['coin-price']} ${this.state.change['bdgbtc']}`}
                 ref={el => {
@@ -121,9 +121,9 @@ class CoinPrices extends Component {
                 </h5>
                 <h6>{this.state.rates.bdgbtc ? this.state.rates.bdgbtc.toFixed(6) : '...'}</h6>
               </div>
-             </Link>
+            </Link>
 
-            <Link to={`/${lang}/convert/LTC-to-BTC`} replace={false}>
+            <Link to={`/convert/LTC-to-BTC`} replace={false}>
               <div
                 className={`${styles['coin-price']} ${this.state.change['ltcbtc']}`}
                 ref={el => {
@@ -137,7 +137,7 @@ class CoinPrices extends Component {
               </div>
             </Link>
 
-            <Link to={`/${lang}/convert/BTC-to-DOGE`} replace={false}>
+            <Link to={`/convert/BTC-to-DOGE`} replace={false}>
               <div
                 className={`${styles['coin-price']} ${this.state.change['btcdoge']}`}
                 ref={el => {
@@ -151,7 +151,7 @@ class CoinPrices extends Component {
               </div>
             </Link>
 
-            <Link to={`/${lang}/convert/LTC-to-ETH`} replace={false}>
+            <Link to={`/convert/LTC-to-ETH`} replace={false}>
               <div
                 className={`${styles['coin-price']} ${this.state.change['ltceth']}`}
                 ref={el => {
@@ -165,7 +165,7 @@ class CoinPrices extends Component {
               </div>
             </Link>
 
-            <Link to={`/${lang}/convert/LTC-to-DOGE`} replace={false}>
+            <Link to={`/convert/LTC-to-DOGE`} replace={false}>
               <div
                 className={`${styles['coin-price']} ${this.state.change['ltcdoge']}`}
                 ref={el => {
@@ -179,7 +179,7 @@ class CoinPrices extends Component {
               </div>
             </Link>
 
-            <Link to={`/${lang}/convert/BTC-to-USD`} replace={false}>
+            <Link to={`/convert/BTC-to-USD`} replace={false}>
               <div
                 className={`${styles['coin-price']} ${this.state.change['btcusd']}`}
                 ref={el => {
@@ -193,7 +193,7 @@ class CoinPrices extends Component {
               </div>
             </Link>
 
-            <Link to={`/${lang}/convert/LTC-to-USD`} replace={false}>
+            <Link to={`/convert/LTC-to-USD`} replace={false}>
               <div
                 className={`${styles['coin-price']} ${this.state.change['ltcusd']}`}
                 ref={el => {
@@ -207,7 +207,7 @@ class CoinPrices extends Component {
               </div>
             </Link>
 
-            <Link to={`/${lang}/convert/ETH-to-USD`} replace={false}>
+            <Link to={`/convert/ETH-to-USD`} replace={false}>
               <div
                 className={`${styles['coin-price']} ${this.state.change['ethusd']}`}
                 ref={el => {
@@ -220,7 +220,6 @@ class CoinPrices extends Component {
                 <h6>{this.state.rates.ethusd ? this.state.rates.ethusd.toFixed(5) : '...'}</h6>
               </div>
             </Link>
-
           </div>
         </div>
       </div>
@@ -231,7 +230,4 @@ class CoinPrices extends Component {
 const mapStateToProps = ({ selectedCoin, amounts, price }) => ({ selectedCoin, amounts, price });
 const mapDispatchToProps = dispatch => bindActionCreators({ fetchPrice }, dispatch);
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CoinPrices);
+export default connect(mapStateToProps, mapDispatchToProps)(CoinPrices);

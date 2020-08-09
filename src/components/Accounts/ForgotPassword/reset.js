@@ -56,7 +56,7 @@ export const NewPassword = props => {
       {(t, { lng }) => (
         <div className="row">
           <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 ${styles.container}`}>
-            <Link to={`/${lng}`}>
+            <Link to={`/`}>
               <div className={styles['logo-container']}>
                 <img className={styles.logo} src="/img/logo-white.svg" alt="Logo" data-test="logo" />
               </div>

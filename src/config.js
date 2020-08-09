@@ -1,7 +1,7 @@
 const development = process.env.NODE_ENV !== 'production';
 
 const config = {
-  NAME: 'N.exchange',
+  NAME: 'Valorex',
   DOMAIN: 'https://valorex.com',
   API_BASE_URL: 'https://api.n.exchange/en/api/v1',
   //   API_BASE_URL: 'http://localhost:8000/en/api/v1',
@@ -12,7 +12,7 @@ const config = {
   RECENT_ORDERS_INTERVAL: 20000,
   RECENT_ORDERS_COUNT: 5,
   PRICE_COMPARISON_INTERVAL: 60000,
-  REFERRAL_CODE: null,
+  REFERRAL_CODE: 'TEST',
   KYC_DETAILS_FETCH_INTERVAL: 20000,
   ADVANCED_MODE_ENABLED: true,
   GRAPHCMS_API: 'https://api-euwest.graphcms.com/v1/ck2olkts50bo501i0h3ej7d1f/master',

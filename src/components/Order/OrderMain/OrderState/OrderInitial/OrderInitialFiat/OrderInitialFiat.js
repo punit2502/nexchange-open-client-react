@@ -139,7 +139,7 @@ class OrderInitial extends Component {
                     title="SafeCharge"
                     id="safecharge_payment_iframe"
                     src={props.order.payment_url}
-                    height={620}
+                    height={750}
                     width={'100%'}
                     scrolling="no"
                     style={{ border: 'none' }}

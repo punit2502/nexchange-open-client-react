@@ -1,9 +1,9 @@
-import { NavLink } from 'react-router-dom'
-import styled from '@emotion/styled'
+import { NavLink } from 'react-router-dom';
+import styled from '@emotion/styled';
 
 const TagLink = styled.a`
   display: inline-block;
-  background: #2cc5bd;
+  background: #547aa5;
   border-radius: 6px;
   border: none;
   color: #fff;
@@ -19,9 +19,8 @@ const TagLink = styled.a`
     color: #222;
     text-decoration: none;
   }
-`
-const TagNavLink = TagLink.withComponent(NavLink)
+`;
+const TagNavLink = TagLink.withComponent(NavLink);
 
-
-export default TagLink
-export { TagLink, TagNavLink }
+export default TagLink;
+export { TagLink, TagNavLink };
