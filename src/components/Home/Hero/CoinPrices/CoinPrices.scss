@@ -41,19 +41,11 @@
     .arrow {
       background: url('../../../../img/price-up.svg');
     }
-
-    h6 {
-      color: $green;
-    }
   }
 
   &.down {
     .arrow {
       background: url('../../../../img/price-down.svg');
-    }
-
-    h6 {
-      color: #e25656;
     }
   }
 
