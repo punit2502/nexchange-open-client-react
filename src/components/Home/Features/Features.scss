@@ -1,0 +1,14 @@
+.featureCard {
+  text-align: center;
+  padding-bottom: 5rem;
+  img {
+    height: 10rem;
+    padding-bottom: 2rem;
+  }
+  @media (min-width: 769px) {
+    padding-bottom: 0;
+    img {
+      height: 18rem;
+    }
+  }
+}

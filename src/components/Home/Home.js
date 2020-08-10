@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import { fetchCoinDetails, fetchPairs, changeOrderMode } from 'Actions';
 import Hero from './Hero/Hero';
+import Features from './Features/Features';
 import About from './About/About';
 import Testimonials from './Testimonials/Testimonials';
 import RecentOrders from './RecentOrders/RecentOrders';
@@ -30,6 +31,7 @@ export class Home extends Component {
     return (
       <div>
         <Hero {...this.props} />
+        <Features />
         <RecentOrders />
         <Testimonials />
         <About />

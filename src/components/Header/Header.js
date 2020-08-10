@@ -1,6 +1,7 @@
 import React, { useCallback, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { I18n } from 'react-i18next';
+import { HashLink } from 'react-router-hash-link';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -72,11 +73,11 @@ export const HeaderStuff = props => {
 
             <div className="collapse navbar-collapse" id="navigation-index">
               <ul className="nav navbar-nav navbar-right">
-                {/* <li>
-                  <HashLink smooth onClick={() => closeNavbar()} to="/#about" className={styles.link}>
-                    {t('header.about')}
+                <li>
+                  <HashLink smooth onClick={() => closeNavbar()} to="/#features" className={styles.link}>
+                    Why Valorex?
                   </HashLink>
-                </li> */}
+                </li>
 
                 <li>
                   <Link onClick={() => closeNavbar()} to="/faqs" className={styles.link} data-test="faq-btn">
@@ -158,15 +159,6 @@ export const HeaderStuff = props => {
                   </a>
 
                   <a
-                    href="/slack"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${styles.social} btn btn-simple btn-just-icon visible-xs`}
-                  >
-                    <i className="fab fa-slack-hash" aria-hidden="true" />
-                  </a>
-
-                  <a
                     href="/telegram"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -215,20 +207,6 @@ export const HeaderStuff = props => {
                     data-placement="bottom"
                   >
                     <i className="fab fa-facebook-f" aria-hidden="true" />
-                  </a>
-                </li>
-
-                <li className="visible-md visible-lg social-desktop">
-                  <a
-                    href="/slack"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${styles.social} btn btn-simple btn-just-icon`}
-                    title={t('header.slack')}
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                  >
-                    <i className="fab fa-slack-hash" aria-hidden="true" />
                   </a>
                 </li>
 
