@@ -30,8 +30,17 @@
       "src": "/forgot-password/(?<token>[^/]+)",
       "headers": {
         "Set-Cookie": "resetToken=$token",
-        "Location": "/forgot-password"
-      }
+        "Location": "https://n.exchange/forgot-password"
+      },
+      "continue": true
+    },
+    {
+      "src": "/(?!en|de|ru)(.*)",
+      "dest": "/en",
+      "headers": {
+        "Set-Cookie": "i18next=en"
+      },
+      "continue": true
     }
   ]
 }
