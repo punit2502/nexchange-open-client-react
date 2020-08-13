@@ -31,7 +31,7 @@
       "status": 302,
       "headers": {
         "Set-Cookie": "resetToken=$token",
-        "Location": "https://n.exchange/forgot-password"
+        "Location": "/forgot-password"
       },
       "continue": true
     },
@@ -40,7 +40,7 @@
       "status": 302,
       "headers": {
         "Set-Cookie": "i18next=en",
-        "Location": "https://n.exchange/en/$1"
+        "Location": "/en/$1"
       },
       "continue": true
     }
