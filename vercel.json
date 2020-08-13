@@ -27,9 +27,9 @@
       "headers": { "Location": "https://t.me/joinchat/F5JKfhGOMrzDKsJSmPbf9Q" }
     },
     {
-      "src": "/forgot-password/(?<token>[^/]+)",
+      "src": "/forgot-password/(/w+)(/)?",
       "headers": {
-        "Set-Cookie": "resetToken=$token"
+        "Set-Cookie": "resetToken=$1"
       },
       "dest": "/forgot-password"
     }
