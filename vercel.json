@@ -36,9 +36,9 @@
     },
     {
       "src": "/(?!en|de|ru)(.*)",
-      "dest": "/en",
       "headers": {
-        "Set-Cookie": "i18next=en"
+        "Set-Cookie": "i18next=en",
+        "Location": "https://n.exchange/en/$1"
       },
       "continue": true
     }
