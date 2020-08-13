@@ -27,11 +27,11 @@
       "headers": { "Location": "https://t.me/joinchat/F5JKfhGOMrzDKsJSmPbf9Q" }
     },
     {
-      "src": "/forgot-password/(/w+)(/)?",
+      "src": "/forgot-password/(?<token>[^/]+)",
       "headers": {
-        "Set-Cookie": "resetToken=$1"
-      },
-      "dest": "/forgot-password"
+        "Set-Cookie": "resetToken=$token",
+        "Location": "/forgot-password"
+      }
     }
   ]
 }
