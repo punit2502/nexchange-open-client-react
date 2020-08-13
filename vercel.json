@@ -28,6 +28,7 @@
     },
     {
       "src": "/forgot-password/(?<token>[^/]+)",
+      "status": 302,
       "headers": {
         "Set-Cookie": "resetToken=$token",
         "Location": "https://n.exchange/forgot-password"
@@ -36,6 +37,7 @@
     },
     {
       "src": "/(?!en|de|ru)(.*)",
+      "status": 302,
       "headers": {
         "Set-Cookie": "i18next=en",
         "Location": "https://n.exchange/en/$1"
