@@ -29,7 +29,7 @@
     {
       "src": "/forgot-password/(?<token>[^/]+)",
       "headers": {
-        "Set-Cookie": "resetToken=${token}"
+        "Set-Cookie": "resetToken=$token"
       },
       "dest": "/forgot-password"
     }
