@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/twitter",
+      "status": 301,
+      "headers": { "Location": "https://twitter.com/nexchangeCC" }
+    },
+    {
+      "src": "/youtube",
+      "status": 301,
+      "headers": { "Location": "https://www.youtube.com/watch?v=7ujmzb3HzCA" }
+    },
+    {
+      "src": "/fb",
+      "status": 301,
+      "headers": { "Location": "https://www.facebook.com/nexchangeCC/" }
+    },
+    {
+      "src": "/slack",
+      "status": 301,
+      "headers": { "Location": "https://join.slack.com/t/nexchangecommunity/shared_invite/MjM0OTU1ODc4NTkyLTE1MDQ0Mzc3NjEtYzZiMTYxMjdhNA" }
+    },
+    {
+      "src": "/telegram",
+      "status": 301,
+      "headers": { "Location": "https://t.me/joinchat/F5JKfhGOMrzDKsJSmPbf9Q" }
+    },
+    {
+      "src": "/forgot-password/(?<token>[^/]+)",
+      "status": 302,
+      "headers": {
+        "Set-Cookie": "resetToken=$token",
+        "Location": "/forgot-password"
+      },
+      "continue": true
+    },
+    {
+      "src": "/(?!en|de|ru)(.*)",
+      "status": 302,
+      "headers": {
+        "Set-Cookie": "i18next=en",
+        "Location": "/en/$1"
+      }
+    }
+  ]
+}
