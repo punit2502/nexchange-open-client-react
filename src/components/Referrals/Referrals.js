@@ -8,14 +8,18 @@ class Referrals extends Component {
   componentDidMount() {
     axios.interceptors.request.use(
       function(requestConfig) {
-        let referral;
+        let referral, refUid;
         let params = urlParams();
-        if (params && params.hasOwnProperty('ref')) {
-          referral = params['ref'].toString();
+        if (params && (params.hasOwnProperty('ref') || params.hasOwnProperty('ref_uid'))) {
+          referral = params['ref']?.toString();
+          refUid = params['ref_uid']?.toString();
         } else referral = config.REFERRAL_CODE ? config.REFERRAL_CODE : localStorage.getItem('referral');
 
-        if (referral && requestConfig.url && requestConfig.url.indexOf(config.API_BASE_URL.toLowerCase()) > -1)
-          requestConfig.headers['x-referral-token'] = referral;
+        if (requestConfig.url && requestConfig.url.indexOf(config.API_BASE_URL.toLowerCase()) > -1) {
+          if (referral) requestConfig.headers['x-referral-token'] = referral;
+
+          if (refUid) requestConfig.headers['x-referral-uid'] = refUid;
+        }
 
         return requestConfig;
       },
