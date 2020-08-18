@@ -3,59 +3,19 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://valorex.com/en</loc>
+    <loc>https://valorex.com</loc>
     <priority>1</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://valorex.com/de" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://valorex.com/en" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://valorex.com/ru" />
   </url>
   <url>
-    <loc>https://valorex.com/en/instant-white-label</loc>
+    <loc>https://valorex.com/faq</loc>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://valorex.com/de/instant-white-label" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://valorex.com/en/instant-white-label" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://valorex.com/ru/instant-white-label" />
   </url>
   <url>
-    <loc>https://valorex.com/en/faq</loc>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://valorex.com/de/faq" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://valorex.com/en/faq" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://valorex.com/ru/faq" />
-  </url>
-  <url>
-    <loc>https://valorex.com/en/about</loc>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://valorex.com/de/about" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://valorex.com/en/about" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://valorex.com/ru/about" />
-  </url>
-  <url>
-    <loc>https://valorex.com/en/signup</loc>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://valorex.com/de/signup" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://valorex.com/en/signup" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://valorex.com/ru/signup" />
-  </url>
-  <url>
-    <loc>https://valorex.com/en/signin</loc>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://valorex.com/de/signin" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://valorex.com/en/signin" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://valorex.com/ru/signin" />
-  </url>
-  <url>
-    <loc>https://valorex.com/en/terms-and-conditions</loc>
+    <loc>https://valorex.com/terms-and-conditions</loc>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://valorex.com/de/terms-and-conditions" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://valorex.com/en/terms-and-conditions" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://valorex.com/ru/terms-and-conditions" />
   </url>
   <url>
-    <loc>https://valorex.com/en/privacy</loc>
+    <loc>https://valorex.com/privacy</loc>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://valorex.com/de/privacy" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://valorex.com/en/privacy" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://valorex.com/ru/privacy" />
   </url>
 </urlset>

@@ -1,8 +1,6 @@
 .header {
-  position: absolute;
   width: 100%;
   padding: 15px;
-  height: 70px;
   color: #fff;
   z-index: 3;
   background: #fff;
@@ -25,6 +23,7 @@
     z-index: 9999;
 
     @media (min-width: $screen-sm-min) {
+      padding: 8px 0;
       background: transparent;
       box-shadow: none;
       border: none;
