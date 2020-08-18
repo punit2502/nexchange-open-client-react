@@ -1,8 +1,6 @@
 User-agent: *
 
 # Block order page indexing
-Disallow: /de/order/
-Disallow: /en/order/
-Disallow: /ru/order/
+Disallow: /order/
 
-Sitemap: https://valorex.com/sitemap.xml
+Sitemap: https://valorex.io/sitemap.xml

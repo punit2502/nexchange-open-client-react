@@ -19,7 +19,7 @@ describe('QuestionAnswer', () => {
             </p>
             <p>We will be adding more currencies very soon, stay tuned!</p>
             <p>
-              Missing your favorite coin? Let us know here: <a href="mailto:support@valorex.com">support@valorex.com</a>.
+              Missing your favorite coin? Let us know here: <a href="mailto:support@valorex.io">support@valorex.io</a>.
             </p>
           </div>
         }

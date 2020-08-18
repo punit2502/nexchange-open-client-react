@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="https://valorex.com/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://valorex.io/sitemap.xsl"?>
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://valorex.com</loc>
+    <loc>https://valorex.io</loc>
     <priority>1</priority>
   </url>
   <url>
-    <loc>https://valorex.com/faq</loc>
+    <loc>https://valorex.io/faq</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://valorex.com/terms-and-conditions</loc>
+    <loc>https://valorex.io/terms-and-conditions</loc>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://valorex.com/privacy</loc>
+    <loc>https://valorex.io/privacy</loc>
     <priority>0.3</priority>
   </url>
 </urlset>

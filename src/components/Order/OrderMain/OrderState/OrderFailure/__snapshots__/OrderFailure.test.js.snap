@@ -30,9 +30,9 @@ ShallowWrapper {
           order.failure2
            
           <a
-            href="mailto:support@valorex.com"
+            href="mailto:support@valorex.io"
           >
-            support@valorex.com
+            support@valorex.io
             .
           </a>
         </h5>,
@@ -63,9 +63,9 @@ ShallowWrapper {
             "order.failure2",
             " ",
             <a
-              href="mailto:support@valorex.com"
+              href="mailto:support@valorex.io"
             >
-              support@valorex.com
+              support@valorex.io
               .
             </a>,
           ],
@@ -80,14 +80,14 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "support@valorex.com",
+                "support@valorex.io",
                 ".",
               ],
-              "href": "mailto:support@valorex.com",
+              "href": "mailto:support@valorex.io",
             },
             "ref": null,
             "rendered": Array [
-              "support@valorex.com",
+              "support@valorex.io",
               ".",
             ],
             "type": "a",
@@ -121,9 +121,9 @@ ShallowWrapper {
             order.failure2
              
             <a
-              href="mailto:support@valorex.com"
+              href="mailto:support@valorex.io"
             >
-              support@valorex.com
+              support@valorex.io
               .
             </a>
           </h5>,
@@ -154,9 +154,9 @@ ShallowWrapper {
               "order.failure2",
               " ",
               <a
-                href="mailto:support@valorex.com"
+                href="mailto:support@valorex.io"
               >
-                support@valorex.com
+                support@valorex.io
                 .
               </a>,
             ],
@@ -171,14 +171,14 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "support@valorex.com",
+                  "support@valorex.io",
                   ".",
                 ],
-                "href": "mailto:support@valorex.com",
+                "href": "mailto:support@valorex.io",
               },
               "ref": null,
               "rendered": Array [
-                "support@valorex.com",
+                "support@valorex.io",
                 ".",
               ],
               "type": "a",

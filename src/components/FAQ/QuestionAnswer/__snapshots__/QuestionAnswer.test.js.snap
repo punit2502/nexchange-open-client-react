@@ -15,9 +15,9 @@ ShallowWrapper {
         <p>
           Missing your favorite coin? Let us know here: 
           <a
-            href="mailto:support@valorex.com"
+            href="mailto:support@valorex.io"
           >
-            support@valorex.com
+            support@valorex.io
           </a>
           .
         </p>
@@ -67,9 +67,9 @@ ShallowWrapper {
             <p>
               Missing your favorite coin? Let us know here: 
               <a
-                href="mailto:support@valorex.com"
+                href="mailto:support@valorex.io"
               >
-                support@valorex.com
+                support@valorex.io
               </a>
               .
             </p>
@@ -179,9 +179,9 @@ ShallowWrapper {
               <p>
                 Missing your favorite coin? Let us know here: 
                 <a
-                  href="mailto:support@valorex.com"
+                  href="mailto:support@valorex.io"
                 >
-                  support@valorex.com
+                  support@valorex.io
                 </a>
                 .
               </p>
@@ -241,9 +241,9 @@ ShallowWrapper {
                 <p>
                   Missing your favorite coin? Let us know here: 
                   <a
-                    href="mailto:support@valorex.com"
+                    href="mailto:support@valorex.io"
                   >
-                    support@valorex.com
+                    support@valorex.io
                   </a>
                   .
                 </p>,
@@ -281,9 +281,9 @@ ShallowWrapper {
                   "children": Array [
                     "Missing your favorite coin? Let us know here: ",
                     <a
-                      href="mailto:support@valorex.com"
+                      href="mailto:support@valorex.io"
                     >
-                      support@valorex.com
+                      support@valorex.io
                     </a>,
                     ".",
                   ],
@@ -296,11 +296,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "support@valorex.com",
-                      "href": "mailto:support@valorex.com",
+                      "children": "support@valorex.io",
+                      "href": "mailto:support@valorex.io",
                     },
                     "ref": null,
-                    "rendered": "support@valorex.com",
+                    "rendered": "support@valorex.io",
                     "type": "a",
                   },
                   ".",
@@ -548,9 +548,9 @@ ShallowWrapper {
               <p>
                 Missing your favorite coin? Let us know here: 
                 <a
-                  href="mailto:support@valorex.com"
+                  href="mailto:support@valorex.io"
                 >
-                  support@valorex.com
+                  support@valorex.io
                 </a>
                 .
               </p>
@@ -660,9 +660,9 @@ ShallowWrapper {
                 <p>
                   Missing your favorite coin? Let us know here: 
                   <a
-                    href="mailto:support@valorex.com"
+                    href="mailto:support@valorex.io"
                   >
-                    support@valorex.com
+                    support@valorex.io
                   </a>
                   .
                 </p>
@@ -722,9 +722,9 @@ ShallowWrapper {
                   <p>
                     Missing your favorite coin? Let us know here: 
                     <a
-                      href="mailto:support@valorex.com"
+                      href="mailto:support@valorex.io"
                     >
-                      support@valorex.com
+                      support@valorex.io
                     </a>
                     .
                   </p>,
@@ -762,9 +762,9 @@ ShallowWrapper {
                     "children": Array [
                       "Missing your favorite coin? Let us know here: ",
                       <a
-                        href="mailto:support@valorex.com"
+                        href="mailto:support@valorex.io"
                       >
-                        support@valorex.com
+                        support@valorex.io
                       </a>,
                       ".",
                     ],
@@ -777,11 +777,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "support@valorex.com",
-                        "href": "mailto:support@valorex.com",
+                        "children": "support@valorex.io",
+                        "href": "mailto:support@valorex.io",
                       },
                       "ref": null,
-                      "rendered": "support@valorex.com",
+                      "rendered": "support@valorex.io",
                       "type": "a",
                     },
                     ".",

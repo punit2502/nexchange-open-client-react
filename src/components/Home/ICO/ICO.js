@@ -26,7 +26,7 @@ const ICO = () => {
                 <h3>{t('ico.desc')}</h3>
 
                 <a
-                  href="https://valorex.com/ico"
+                  href="https://valorex.io/ico"
                   className={`${styles.btn} btn btn-block btn-primary`}
                   target="_blank"
                   rel="noopener noreferrer"
