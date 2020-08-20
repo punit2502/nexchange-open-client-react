@@ -66,7 +66,7 @@ export const HeaderStuff = props => {
 
               <Link to="/">
                 <div className={styles['logo-container']}>
-                  <img src="/img/logo.svg" alt="Logo" data-test="logo" />
+                  <img src="/img/logo.png" alt="Valorex Logo" data-test="logo" />
                 </div>
               </Link>
             </div>

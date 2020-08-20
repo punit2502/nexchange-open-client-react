@@ -23,7 +23,7 @@ const Footer = props => {
                   <main className="">
                     <section className="logo">
                       <Link to="/">
-                        <img src="/img/logo.svg" alt="N.exchange Logo" />
+                        <img src="/img/logo.png" alt="valorex Logo" />
                       </Link>
                     </section>
                     <section>
