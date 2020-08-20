@@ -100,7 +100,7 @@
   },
   "exchangewidget": {
     "1": "GET STARTED",
-    "2": "*Confirm & Place Order",
+    "2": "Buy Now!",
     "3": "Current fee is 0.5%",
     "min": "Min amount",
     "max": "Max amount"
@@ -185,7 +185,7 @@
   "recentorders": {
     "1": "Recent Orders",
     "2": "Click to view on API",
-    "3": "View on API",
+    "3": "View order details",
     "4": "You have no recent orders."
   },
   "testimonialsx": {

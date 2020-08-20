@@ -11,13 +11,9 @@ const About = () => (
 
         <div className="col-xs-12">
           <p className="desc">
-            Cryptocurrency trading is the process of exchanging Fiat to cryptocurrency or cryptocurrency to cryptocurrency. The process of
-            selling crypto after holding it is also a part of cryptocurrency trading. This entire process happens through a trustworthy
-            exchange platform, and this is where you have to do a bit of research before trusting any platform with your crypto asset.
-          </p>
-          <p>
-            The best option is to go for an exchange, which gives you the leverage to have complete control over your funds. Valorex is that
-            crypto exchange platform, which enables the crypto users around the world to go through the trading process in a seamless way.
+            Cryptocurrency Trading involves exchanging one cryptocurrency for another or buying and selling crypto using fiat money on an
+            exchange. The concept is quite similar to foreign exchange (forex), where fiat currencies from across the world are traded 24
+            hours a day.
           </p>
         </div>
       </div>
