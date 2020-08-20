@@ -88,7 +88,7 @@ export const fetchCoinDetails = () => dispatch => {
       } else {
         coins = response.data.filter(elem => {
           const { has_enabled_pairs } = elem;
-          return has_enabled_pairs === true;
+          return has_enabled_pairs === true && config.COINSLIST.includes(elem.code);
         });
       }
 
@@ -303,7 +303,7 @@ export const fetchPairs = ({ base, quote } = {}) => dispatch => {
       const pickMostTraded = () => {
         return new Promise((resolve, reject) => {
           axios
-            .get(`${config.API_BASE_URL}/pair/most_traded/`)
+            .get(`${config.API_BASE_URL}/pair/BTCUSD/`)
             .then(res => resolve(res.data))
             .catch(err => resolve(null));
         });
