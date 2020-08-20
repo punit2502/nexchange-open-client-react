@@ -17,10 +17,12 @@
   h1 {
     font-size: 25px;
     margin-bottom: 32px;
+    padding-top: 2.5rem;
 
     @media (min-width: $screen-md-min) {
       margin-bottom: 15px;
       font-size: 48px;
+      padding-top: 5rem;
     }
   }
 

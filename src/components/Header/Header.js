@@ -71,7 +71,7 @@ export const HeaderStuff = props => {
               </Link>
             </div>
 
-            <div className="collapse navbar-collapse" id="navigation-index">
+            <div className={`collapse navbar-collapse ${styles['mobile-navigation']}`} id="navigation-index">
               <ul className="nav navbar-nav navbar-right">
                 <li>
                   <HashLink smooth onClick={() => closeNavbar()} to="/#features" className={styles.link}>
@@ -150,15 +150,6 @@ export const HeaderStuff = props => {
                   </a>
 
                   <a
-                    href="/youtube"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${styles.social} btn btn-simple btn-just-icon visible-xs`}
-                  >
-                    <i className="fab fa-youtube" aria-hidden="true" />
-                  </a>
-
-                  <a
                     href="/telegram"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -179,20 +170,6 @@ export const HeaderStuff = props => {
                     data-placement="bottom"
                   >
                     <i className="fab fa-twitter" aria-hidden="true" />
-                  </a>
-                </li>
-
-                <li className="visible-md visible-lg social-desktop">
-                  <a
-                    href="/youtube"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${styles.social} btn btn-simple btn-just-icon`}
-                    title={t('header.youtube')}
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                  >
-                    <i className="fab fa-youtube" aria-hidden="true" />
                   </a>
                 </li>
 

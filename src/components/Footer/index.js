@@ -23,7 +23,7 @@ const Footer = props => {
                   <main className="">
                     <section className="logo">
                       <Link to="/">
-                        <img src="/img/logo.png" alt="valorex Logo" />
+                        <img src="/img/logo.png" alt="Valorex Logo" />
                       </Link>
                     </section>
                     <section>
@@ -71,22 +71,17 @@ const Footer = props => {
                       <ul>
                         <li>
                           <a href="/twitter" target="_blank" rel="noopener noreferrer">
-                            {t('header.twitter')}
+                            Twitter
                           </a>
                         </li>
                         <li>
                           <a href="/fb" target="_blank" rel="noopener noreferrer">
-                            {t('header.facebook')}
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/slack" target="_blank" rel="noopener noreferrer">
-                            {t('header.slack')}
+                            Facebook
                           </a>
                         </li>
                         <li>
                           <a href="/telegram" target="_blank" rel="noopener noreferrer">
-                            {t('header.telegram')}
+                            Telegram
                           </a>
                         </li>
                       </ul>
@@ -126,12 +121,12 @@ BTC to XMR
 BTC to USDT
 */
 const defaultPairs = [
-  ['EUR', 'BTC'],
-  ['BTC', 'ETH'],
   ['USD', 'BTC'],
-  ['BTC', 'BCH'],
-  ['DOGE', 'BTC'],
-  ['RUB', 'LTC'],
+  ['BTC', 'ETH'],
+  ['USD', 'ETH'],
+  ['BTC', 'LTC'],
+  ['USD', 'BCH'],
+  ['LTC', 'ETH'],
 ];
 const PopularPairs = () => {
   const [pairs] = useState(defaultPairs);

@@ -4,10 +4,21 @@
   color: #fff;
   z-index: 3;
   background: #fff;
+  position: absolute;
+  top: 0;
+
+  .mobile-navigation {
+    position: absolute;
+    width: calc(100% - 30px);
+    @media (min-width: $screen-md-min) {
+      position: static;
+      width: 100%;
+    }
+  }
 
   :global .navbar-toggle {
     border: 1px solid $gray;
-    margin-top: 2px;
+    // margin-top: 2px;
     margin-right: 0;
 
     :global .icon-bar {
