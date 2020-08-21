@@ -150,12 +150,12 @@ export const HeaderStuff = props => {
                   </a>
 
                   <a
-                    href="/telegram"
+                    href="/instagram"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`${styles.social} btn btn-simple btn-just-icon visible-xs`}
                   >
-                    <i className="fab fa-telegram" aria-hidden="true" />
+                    <i className="fab fa-instagram" aria-hidden="true" />
                   </a>
                 </li>
 
@@ -189,15 +189,15 @@ export const HeaderStuff = props => {
 
                 <li className="visible-md visible-lg social-desktop">
                   <a
-                    href="/telegram"
+                    href="/instagram"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`${styles.social} btn btn-simple btn-just-icon`}
-                    title={t('header.telegram')}
+                    title={t('header.instagram')}
                     data-toggle="tooltip"
                     data-placement="bottom"
                   >
-                    <i className="fab fa-telegram" aria-hidden="true" />
+                    <i className="fab fa-instagram" aria-hidden="true" />
                   </a>
                 </li>
               </ul>

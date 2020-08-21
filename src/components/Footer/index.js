@@ -80,8 +80,8 @@ const Footer = props => {
                           </a>
                         </li>
                         <li>
-                          <a href="/telegram" target="_blank" rel="noopener noreferrer">
-                            Telegram
+                          <a href="/instagram" target="_blank" rel="noopener noreferrer">
+                            Instagram
                           </a>
                         </li>
                       </ul>
