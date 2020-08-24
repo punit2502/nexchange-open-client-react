@@ -70,26 +70,25 @@ class ExchangeWidget extends Component {
     if (this.props.price.lastEdited === 'receive') data['amount_base'] = parseFloat(this.props.price.receive);
     else if (this.props.price.lastEdited === 'deposit') data['amount_quote'] = parseFloat(this.props.price.deposit);
 
-    // let params = urlParams();
-    // if (params != null && (params.hasOwnProperty('ref_uid') || params.hasOwnProperty('ref_kyc') || params.hasOwnProperty('ref_email'))) {
-    //   console.log('params is', params);
-    //   let refUid = params['ref_uid']?.toString();
-    //   let refKyc = params['ref_kyc']?.toString();
-    //   let refEmail = params['ref_email']?.toString();
+    let params = urlParams();
+    if (params != null && (params.hasOwnProperty('ref_uid') || params.hasOwnProperty('ref_kyc') || params.hasOwnProperty('ref_email'))) {
+      let refUid = params['ref_uid']?.toString();
+      let refKyc = params['ref_kyc']?.toString();
+      let refEmail = params['ref_email']?.toString();
 
-    //   axios.interceptors.request.use(
-    //     function(requestConfig) {
-    //       if (refUid) requestConfig.headers['x-referral-uid'] = refUid;
-    //       if (refKyc) requestConfig.headers['x-referral-kyc'] = refKyc;
-    //       if (refEmail) requestConfig.headers['x-referral-email'] = refEmail;
+      axios.interceptors.request.use(
+        function(requestConfig) {
+          if (refUid) requestConfig.headers['x-referral-uid'] = refUid;
+          if (refKyc) requestConfig.headers['x-referral-kyc'] = refKyc;
+          if (refEmail) requestConfig.headers['x-referral-email'] = refEmail;
 
-    //       return requestConfig;
-    //     },
-    //     function(error) {
-    //       return Promise.reject(error);
-    //     }
-    //   );
-    // }
+          return requestConfig;
+        },
+        function(error) {
+          return Promise.reject(error);
+        }
+      );
+    }
 
     axios
       .post(`${config.API_BASE_URL}/orders/`, data)
@@ -148,9 +147,7 @@ class ExchangeWidget extends Component {
   }
 
   render() {
-    const lang = i18n.language ? i18n.language : 'en';
-
-    if (this.state.orderPlaced) return <Redirect to={`/${lang}/order/${this.state.orderRef}`} />;
+    if (this.state.orderPlaced) return <Redirect to={`/order/${this.state.orderRef}`} />;
 
     return (
       <I18n ns="translations">

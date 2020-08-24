@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
-import { BrowserRouter, Route, Switch, Redirect, useLocation } from 'react-router-dom';
-import './i18n';
-import i18n from 'i18next';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import setAuthToken from 'Utils/setAuthToken';
 
@@ -44,24 +42,6 @@ const Privacy = React.lazy(() => import('Components/Privacy/Privacy'));
 const Orders = React.lazy(() => import('Components/Accounts/Orders'));
 const Order = React.lazy(() => import('Components/Order/Order'));
 
-const languages = ['en', 'de', 'ru'];
-let lang = i18n.language || window.localStorage.i18nextLng || 'en';
-
-// If for some reason lang variable is not one of the available languages, change the language to en
-if (!languages.includes(lang)) {
-  lang = 'en';
-  i18n.changeLanguage('en');
-}
-
-const NotFoundRedirect = () => {
-  const { pathname } = useLocation();
-
-  // Comment: Redirects urls like /order/any to /en/order/any
-  if (!languages.includes(pathname.split('/')[1])) return <Redirect to={`/${lang}${pathname}`} />;
-
-  return <Redirect to={`/${lang}/not-found`} />;
-};
-
 ReactDOM.render(
   <GraphCMSProvider>
     <Provider store={store}>
@@ -73,14 +53,13 @@ ReactDOM.render(
               {/* <Header /> */}
 
               <Switch>
-                <Route exact path="/" render={props => <Redirect to={`/${lang}${props.location.search}`} />} />
-                <Route exact path="/:lang(en|de|ru)/terms-and-conditions" component={TermsConditions} />
-                <Route exact path="/:lang(en|de|ru)/privacy" component={Privacy} />
-                <Route exact path="/:lang(en|de|ru)/order/:orderRef" component={Order} />
-                <Route exact path="/:lang(en|de|ru)/orders/:orderRef?" component={Orders} />
-                <Route exact path="/:lang(en|de|ru)" render={props => <Home {...props} store={store} />} />
-                <Route exact path="/:lang(en|de|ru)/not-found" component={NotFound} />
-                <Route component={NotFoundRedirect} />
+                <Route exact path="/terms-and-conditions" component={TermsConditions} />
+                <Route exact path="/privacy" component={Privacy} />
+                <Route exact path="/order/:orderRef" component={Order} />
+                <Route exact path="/orders/:orderRef?" component={Orders} />
+                <Route exact path="/" render={props => <Home {...props} store={store} />} />
+                <Route exact path="/not-found" component={NotFound} />
+                <Route component={() => <Redirect to="/not-found" />} />
               </Switch>
 
               {/* <Footer /> */}
