@@ -66,7 +66,7 @@ export const HeaderStuff = props => {
 
               <Link to="/">
                 <div className={styles['logo-container']}>
-                  <img src="/img/logo.png" alt="Valorex Logo" data-test="logo" />
+                  <img src="/img/logo.png" alt="ValorEx Logo" data-test="logo" />
                 </div>
               </Link>
             </div>
@@ -75,7 +75,7 @@ export const HeaderStuff = props => {
               <ul className="nav navbar-nav navbar-right">
                 <li>
                   <HashLink smooth onClick={() => closeNavbar()} to="/#features" className={styles.link}>
-                    Why Valorex?
+                    Why ValorEx?
                   </HashLink>
                 </li>
 

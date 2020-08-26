@@ -105,22 +105,6 @@ class Support extends Component {
               <div className="modal-body">
                 <div className="row">
                   <div className="col-xs-12 col-sm-6">
-                    <h3>{t('support.2')}</h3>
-                    <div onClick={() => window.gtag('event', 'Support number click', { event_category: 'Support', event_label: `` })}>
-                      <div className="hidden-xs hidden-sm">
-                        {/*desktop link structure*/}
-                        <a href="tel:+442030971920">+442030971920</a>
-                      </div>
-                      <div className="hidden-md hidden-lg">
-                        {/*mobile link structure*/}
-                        <a href="tel:+442030971920">+442030971920</a>
-                      </div>
-                      <br />
-                      {/*+16464612858 (US)*/}
-                    </div>
-                  </div>
-
-                  <div className="col-xs-12 col-sm-6">
                     <h3>{t('support.3')}</h3>
                     <p>
                       <a href="mailto:support@valorex.io">support@valorex.io</a>

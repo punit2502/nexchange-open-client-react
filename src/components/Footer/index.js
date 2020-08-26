@@ -23,17 +23,12 @@ const Footer = props => {
                   <main className="">
                     <section className="logo">
                       <Link to="/">
-                        <img src="/img/logo.png" alt="Valorex Logo" />
+                        <img src="/img/logo.png" alt="ValorEx Logo" />
                       </Link>
                     </section>
                     <section>
                       <h4>{t('header.resources')}</h4>
                       <ul>
-                        <li>
-                          <a href="https://forms.gle/4huiErgdSrXie5VD6" target="_blank" rel="noopener noreferrer">
-                            {t('header.listcoin')}
-                          </a>
-                        </li>
                         <li>
                           <Link
                             onClick={() => {
@@ -143,7 +138,7 @@ const PopularPairs = () => {
   );
 };
 
-const CopyrightNotice = () => <>Copyright &copy; {new Date().getFullYear()} Valorex. All rights reserved.</>;
+const CopyrightNotice = () => <>Copyright &copy; {new Date().getFullYear()} ValorEx. All rights reserved.</>;
 
 const StyledFooter = styled.footer`
   > section {

@@ -7,7 +7,7 @@ const Features = () => {
       <div className="container">
         <div className="row">
           <div className="col-xs-12">
-            <h2 className="title">Why Valorex?</h2>
+            <h2 className="title">Why ValorEx?</h2>
           </div>
 
           <div className="col-xs-12 col-sm-4">
@@ -25,7 +25,7 @@ const Features = () => {
               <img className="card-img-top" src="/img/features/lock.svg" alt="Card cap" />
               <div className="card-body">
                 <p className={`card-text ${styles.cardText}`}>
-                  Valorex is a secure, well-designed and easy-to-use exchange-even for beginners.
+                  ValorEx is a secure, well-designed and easy-to-use exchange-even for beginners.
                 </p>
               </div>
             </div>

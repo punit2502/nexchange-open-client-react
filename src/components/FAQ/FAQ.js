@@ -217,10 +217,6 @@ class FAQ extends Component {
                     ) : null}
 
                     {this.showQuestion(5) ? (
-                      <QuestionAnswer id="ques7" answer={<img src="/img/verification.png" alt="Verification" />} />
-                    ) : null}
-
-                    {this.showQuestion(6) ? (
                       <QuestionAnswer
                         id="ques9"
                         openSupportModal={this.openSupportModal}
@@ -241,7 +237,7 @@ class FAQ extends Component {
                       />
                     ) : null}
 
-                    {this.showQuestion(7) ? (
+                    {this.showQuestion(6) ? (
                       <QuestionAnswer
                         id="ques10"
                         openSupportModal={this.openSupportModal}
@@ -262,7 +258,7 @@ class FAQ extends Component {
                       />
                     ) : null}
 
-                    {this.showQuestion(8) ? (
+                    {this.showQuestion(7) ? (
                       <QuestionAnswer
                         id="ques12"
                         openSupportModal={this.openSupportModal}
@@ -286,14 +282,14 @@ class FAQ extends Component {
                       />
                     ) : null}
 
-                    {this.showQuestion(9) ? (
+                    {this.showQuestion(8) ? (
                       <QuestionAnswer
                         id="ques14"
                         openSupportModal={this.openSupportModal}
                         answer={
                           <div>
                             <p>
-                              In order to use Valorex, you need to have your own wallet. The main upside of this feature is that we don’t
+                              In order to use ValorEx, you need to have your own wallet. The main upside of this feature is that we don’t
                               hold your coins, and thus you retain full control over your assets at all times.
                             </p>
                           </div>
