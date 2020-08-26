@@ -53,6 +53,13 @@ ReactDOM.render(
               {/* <Header /> */}
 
               <Switch>
+                <Route
+                  exact
+                  path="/en"
+                  component={props => {
+                    return <Redirect to={`/${props.location.search}`} />;
+                  }}
+                />
                 <Route exact path="/terms-and-conditions" component={TermsConditions} />
                 <Route exact path="/privacy" component={Privacy} />
                 <Route exact path="/order/:orderRef" component={Order} />
