@@ -3,12 +3,16 @@
   "redirects": [
     { "source": "/twitter", "destination": "https://twitter.com/CryptoValorex" },
     {
-      "source": "/facebook",
+      "source": "/fb",
       "destination": "https://www.facebook.com/ValorExCrypto/"
     },
     {
       "source": "/instagram",
       "destination": "https://www.instagram.com/Valorexcrypto/"
+    },
+    {
+      "source": "/telegram",
+      "destination": "https://t.me/valorexcrypto"
     }
   ]
 }

@@ -157,6 +157,15 @@ export const HeaderStuff = props => {
                   >
                     <i className="fab fa-instagram" aria-hidden="true" />
                   </a>
+
+                  <a
+                    href="/telegram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${styles.social} btn btn-simple btn-just-icon visible-xs`}
+                  >
+                    <i className="fab fa-telegram" aria-hidden="true" />
+                  </a>
                 </li>
 
                 <li className="visible-md visible-lg social-desktop">
@@ -198,6 +207,20 @@ export const HeaderStuff = props => {
                     data-placement="bottom"
                   >
                     <i className="fab fa-instagram" aria-hidden="true" />
+                  </a>
+                </li>
+
+                <li className="visible-md visible-lg social-desktop">
+                  <a
+                    href="/telegram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${styles.social} btn btn-simple btn-just-icon`}
+                    title={t('header.telegram')}
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                  >
+                    <i className="fab fa-telegram" aria-hidden="true" />
                   </a>
                 </li>
               </ul>
