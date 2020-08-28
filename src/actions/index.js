@@ -303,8 +303,15 @@ export const fetchPairs = ({ base, quote } = {}) => dispatch => {
       const pickMostTraded = () => {
         return new Promise((resolve, reject) => {
           axios
-            .get(`${config.API_BASE_URL}/pair/BTCUSD/`)
-            .then(res => resolve(res.data))
+            .get(`${config.API_BASE_URL}/pair/BTCCAD/`)
+            .then(res => {
+              const { disbaled, test_mode } = res.data;
+              if (!disbaled && !test_mode) {
+                resolve(res.data);
+              } else {
+                axios.get(`${config.API_BASE_URL}/pair/BTCUSD/`).then(res => resolve(res.data));
+              }
+            })
             .catch(err => resolve(null));
         });
       };
