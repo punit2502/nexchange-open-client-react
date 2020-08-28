@@ -20,22 +20,25 @@ class CoinSelector extends Component {
 
   selectCoin = coin => {
     const selectedByUser = this.props.selectedCoin.selectedByUser;
-    if(!_.isEmpty(selectedByUser) && !_.isEmpty(this.props.type)) {
+    if (!_.isEmpty(selectedByUser) && !_.isEmpty(this.props.type)) {
       selectedByUser[this.props.type] = true;
     }
-    this.props.selectCoin({
-      ...this.props.selectedCoin,
-      [this.props.type]: coin,
-      lastSelected: this.props.type,
-      selectedByUser,
-    }, this.props.pairs);
+    this.props.selectCoin(
+      {
+        ...this.props.selectedCoin,
+        [this.props.type]: coin,
+        lastSelected: this.props.type,
+        selectedByUser,
+      },
+      this.props.pairs
+    );
 
     this.setState({ isDropdownVisible: false });
-    window.gtag('event', 'Select coin', {event_category: 'Order', event_label: `${this.props.type} - ${coin}`});
+    window.gtag('event', 'Select coin', { event_category: 'Order', event_label: `${this.props.type} - ${coin}` });
   };
 
   calculateDepositAmount = coin => {
-    return ['EUR', 'GBP', 'USD', 'JPY'].indexOf(coin.name) > -1 ? 100 : parseFloat(coin.minimal_amount) * 100;
+    return ['EUR', 'GBP', 'USD', 'JPY', 'CAD'].indexOf(coin.name) > -1 ? 100 : parseFloat(coin.minimal_amount) * 100;
   };
 
   handleClickOutside = event => {
@@ -44,7 +47,7 @@ class CoinSelector extends Component {
 
   handleClick = code => {
     this.selectCoin(code);
-    if(this.props.onSelect) {
+    if (this.props.onSelect) {
       this.props.onSelect();
     }
   };
@@ -157,16 +160,6 @@ class CoinSelector extends Component {
 const mapStateToProps = ({ selectedCoin, coinsInfo, pairs, price }) => ({ selectedCoin, coinsInfo, pairs, price });
 const mapDispatchToProps = dispatch => bindActionCreators({ selectCoin, fetchPrice, errorAlert }, dispatch);
 
-export default translate()(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(onClickOutside(CoinSelector))
-);
+export default translate()(connect(mapStateToProps, mapDispatchToProps)(onClickOutside(CoinSelector)));
 
-export const CoinSelectorTesting = translate()(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(CoinSelector)
-);
+export const CoinSelectorTesting = translate()(connect(mapStateToProps, mapDispatchToProps)(CoinSelector));

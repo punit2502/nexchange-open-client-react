@@ -7,7 +7,6 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import './i18n';
 
 import setAuthToken from 'Utils/setAuthToken';
-import crispEmailBinding from 'Utils/crispEmailBinding';
 
 import ToTop from 'Components/misc/ToTop';
 
@@ -16,7 +15,6 @@ import reducers from './reducers';
 import { BreakpointProvider, defaultQuery } from 'Components/misc/breakpoint';
 
 import GraphCMSProvider from './services/graphcms';
-import Intercom from './services/intercom';
 import './css/index.scss';
 
 window.$ = window.jQuery = require('jquery');
@@ -30,7 +28,6 @@ const enhancer = composeEnhancers(applyMiddleware(thunk));
 const store = createStore(reducers, enhancer);
 
 setAuthToken();
-crispEmailBinding(store);
 require('Utils/bindGa');
 
 const Referrals = React.lazy(() => import('Components/Referrals/Referrals'));
@@ -71,7 +68,6 @@ ReactDOM.render(
               </Switch>
 
               <Footer />
-              <Intercom />
             </ToTop>
           </Suspense>
         </BrowserRouter>
