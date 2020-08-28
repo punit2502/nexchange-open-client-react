@@ -46,7 +46,7 @@ const PriceChart = ({ pair }) => {
                   .sort(([a], [b]) => (a > b ? 1 : -1)),
           type: 'area',
           name: pair,
-          color: '#547aa5',
+          color: '#2eabe3',
           tooltip: {
             valueDecimals: 2,
           },
@@ -58,7 +58,7 @@ const PriceChart = ({ pair }) => {
               y2: 1,
             },
             stops: [
-              [0, '#547aa5'],
+              [0, '#2eabe3'],
               [
                 1,
                 Highcharts.Color(Highcharts.getOptions().colors[0])

@@ -50,7 +50,7 @@ class OrderDepthItem extends PureComponent {
     const item = this.props.item;
     const myOrderSize = this.getMyOrderSize(item.rate);
 
-    const color = this.props.side === 'SELL' ? '#e25656' : '#547aa5';
+    const color = this.props.side === 'SELL' ? '#e25656' : '#2eabe3';
     const percentage = (item.size * 100) / this.props.maxSize;
     const sizeBackground = `-webkit-linear-gradient(left, ${color} ${percentage}%, #fff ${percentage}%)`;
 

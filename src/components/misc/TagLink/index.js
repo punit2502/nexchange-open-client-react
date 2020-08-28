@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 
 const TagLink = styled.a`
   display: inline-block;
-  background: #547aa5;
+  background: #2eabe3;
   border-radius: 6px;
   border: none;
   color: #fff;
