@@ -184,7 +184,7 @@
     }
   },
   "recentorders": {
-    "1": "Recent Orders",
+    "1": "Recent Transactions",
     "2": "Click to view on API",
     "3": "View order details",
     "4": "You have no recent orders."
@@ -376,8 +376,8 @@
     "rates": "Rates at order creation",
     "fee": "Withdrawal fee",
     "feeinfo": "The indicated price is final, all fees are included.",
-    "byclickTC": "*By clicking <b>{{buttonName}}</b> you agree to our Terms and Conditions (<a href='/en/terms-and-conditions'>T&C</a>)",
-    "iAgreedTC": "I have read and agree to the <a href='/en/terms-and-conditions' target='_blank'>Terms and Conditions</a> and <a href='/en/privacy' target='_blank'>Privacy Policy</a>.",
+    "byclickTC": "*By clicking <b>{{buttonName}}</b> you agree to our Terms and Conditions (<a href='/terms-and-conditions'>T&C</a>)",
+    "iAgreedTC": "I have read and agree to the <a href='/terms-and-conditions' target='_blank'>Terms and Conditions</a> and <a href='/en/privacy' target='_blank'>Privacy Policy</a>.",
     "iAcknowledgeKYC": "I acknowledge that I have to upload my Identity Document after the payment.",
     "tooltipTC": "By clicking 'PAY NOW' You agree to our T&C and Privacy Policy.",
     "refund": "Your order has been refunded. Please contact support in the live chat or at",

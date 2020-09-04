@@ -13,7 +13,7 @@ class CoinPrices extends Component {
       btccad: '',
       ethcad: '',
       ltccad: '',
-      btcbch: '',
+      bchbtc: '',
       ethbtc: '',
       bchusd: '',
       btcusd: '',
@@ -24,7 +24,7 @@ class CoinPrices extends Component {
       btccad: '',
       ethcad: '',
       ltccad: '',
-      btcbch: '',
+      bchbtc: '',
       ethbtc: '',
       bchusd: '',
       btcusd: '',
@@ -41,7 +41,7 @@ class CoinPrices extends Component {
     this.fetchPrice('btccad');
     this.fetchPrice('ethcad');
     this.fetchPrice('ltccad');
-    this.fetchPrice('btcbch');
+    this.fetchPrice('bchbtc');
     this.fetchPrice('ethbtc');
     this.fetchPrice('bchusd');
     this.fetchPrice('btcusd');
@@ -100,7 +100,7 @@ class CoinPrices extends Component {
                 <h5>
                   BTC/CAD <span className={styles.arrow} />
                 </h5>
-                <h6>{this.state.rates.btccad ? this.state.rates.btccad.toFixed(5) : '...'}</h6>
+                <h6>{this.state.rates.btccad ? this.state.rates.btccad.toFixed(2) : '...'}</h6>
               </div>
             </Link>
 
@@ -114,7 +114,7 @@ class CoinPrices extends Component {
                 <h5>
                   ETH/CAD <span className={styles.arrow} />
                 </h5>
-                <h6>{this.state.rates.ethcad ? this.state.rates.ethcad.toFixed(6) : '...'}</h6>
+                <h6>{this.state.rates.ethcad ? this.state.rates.ethcad.toFixed(2) : '...'}</h6>
               </div>
             </Link>
 
@@ -126,23 +126,23 @@ class CoinPrices extends Component {
                 }}
               >
                 <h5>
-                  LTC/BTC <span className={styles.arrow} />
+                  LTC/CAD <span className={styles.arrow} />
                 </h5>
-                <h6>{this.state.rates.ltccad ? this.state.rates.ltccad.toFixed(5) : '...'}</h6>
+                <h6>{this.state.rates.ltccad ? this.state.rates.ltccad.toFixed(2) : '...'}</h6>
               </div>
             </Link>
 
-            <Link to={{ pathname: '/', search: '?pair=BTCBCH' }} replace={false}>
+            <Link to={{ pathname: '/', search: '?pair=BCHBTC' }} replace={false}>
               <div
-                className={`${styles['coin-price']} ${this.state.change['btcbch']}`}
+                className={`${styles['coin-price']} ${this.state.change['bchbtc']}`}
                 ref={el => {
-                  this.btcbch = el;
+                  this.bchbtc = el;
                 }}
               >
                 <h5>
-                  BTC/BCH <span className={styles.arrow} />
+                  BCH/BTC <span className={styles.arrow} />
                 </h5>
-                <h6>{this.state.rates.btcbch ? this.state.rates.btcbch.toFixed(1) : '...'}</h6>
+                <h6>{this.state.rates.bchbtc ? this.state.rates.bchbtc.toFixed(4) : '...'}</h6>
               </div>
             </Link>
 
@@ -156,7 +156,7 @@ class CoinPrices extends Component {
                 <h5>
                   ETH/BTC <span className={styles.arrow} />
                 </h5>
-                <h6>{this.state.rates.ethbtc ? this.state.rates.ethbtc.toFixed(5) : '...'}</h6>
+                <h6>{this.state.rates.ethbtc ? this.state.rates.ethbtc.toFixed(4) : '...'}</h6>
               </div>
             </Link>
 
@@ -170,7 +170,7 @@ class CoinPrices extends Component {
                 <h5>
                   BCH/USD <span className={styles.arrow} />
                 </h5>
-                <h6>{this.state.rates.bchusd ? this.state.rates.bchusd.toFixed(1) : '...'}</h6>
+                <h6>{this.state.rates.bchusd ? this.state.rates.bchusd.toFixed(2) : '...'}</h6>
               </div>
             </Link>
 
@@ -184,7 +184,7 @@ class CoinPrices extends Component {
                 <h5>
                   BTC/USD <span className={styles.arrow} />
                 </h5>
-                <h6>{this.state.rates.btcusd ? this.state.rates.btcusd.toFixed(5) : '...'}</h6>
+                <h6>{this.state.rates.btcusd ? this.state.rates.btcusd.toFixed(2) : '...'}</h6>
               </div>
             </Link>
 
@@ -198,7 +198,7 @@ class CoinPrices extends Component {
                 <h5>
                   LTC/USD <span className={styles.arrow} />
                 </h5>
-                <h6>{this.state.rates.ltcusd ? this.state.rates.ltcusd.toFixed(5) : '...'}</h6>
+                <h6>{this.state.rates.ltcusd ? this.state.rates.ltcusd.toFixed(2) : '...'}</h6>
               </div>
             </Link>
 
@@ -212,7 +212,7 @@ class CoinPrices extends Component {
                 <h5>
                   ETH/USD <span className={styles.arrow} />
                 </h5>
-                <h6>{this.state.rates.ethusd ? this.state.rates.ethusd.toFixed(5) : '...'}</h6>
+                <h6>{this.state.rates.ethusd ? this.state.rates.ethusd.toFixed(2) : '...'}</h6>
               </div>
             </Link>
           </div>

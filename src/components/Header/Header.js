@@ -54,7 +54,7 @@ export const HeaderStuff = props => {
   return (
     <I18n ns="translations">
       {t => (
-        <div className={styles.header} data-test="header">
+        <div className={styles.header} data-test="header" id="exchange">
           <div className="container">
             <div className="navbar-header">
               <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navigation-index">

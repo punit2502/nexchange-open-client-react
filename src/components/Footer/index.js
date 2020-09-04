@@ -134,9 +134,9 @@ const PopularPairs = () => {
     <ul>
       {pairs.map(([quote, base]) => (
         <li key={`${base}${quote}`}>
-          <Link to={`/?pair=${base}${quote}`}>
+          <HashLink smooth to={`/?pair=${base}${quote}#exchange`}>
             {quote} to {base}
-          </Link>
+          </HashLink>
         </li>
       ))}
     </ul>
