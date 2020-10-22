@@ -121,12 +121,11 @@ BTC to XMR
 BTC to USDT
 */
 const defaultPairs = [
-  ['CAD', 'BTC'],
-  ['USD', 'BCH'],
-  ['CAD', 'ETH'],
-  ['USD', 'ETH'],
-  ['CAD', 'LTC'],
   ['USD', 'BTC'],
+  ['USD', 'BCH'],
+  ['USD', 'ETH'],
+  ['USD', 'LTC'],
+  ['USD', 'ZEC'],
 ];
 const PopularPairs = () => {
   const [pairs] = useState(defaultPairs);

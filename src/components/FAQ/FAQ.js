@@ -209,8 +209,8 @@ class FAQ extends Component {
                         answer={
                           <p>
                             For cryptocurrency only exchange orders , We do not collect or store any private information about you. The
-                            process is completely anonymous. For FIAT (USD, CAD etc) orders we do a strict compliance according to best
-                            KYC/AML standards out there.{' '}
+                            process is completely anonymous. For FIAT (USD, etc) orders we do a strict compliance according to best KYC/AML
+                            standards out there.{' '}
                           </p>
                         }
                       />

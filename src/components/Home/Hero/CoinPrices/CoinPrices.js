@@ -10,26 +10,26 @@ import styles from './CoinPrices.scss';
 class CoinPrices extends Component {
   state = {
     rates: {
-      btccad: '',
-      ethcad: '',
-      ltccad: '',
-      bchbtc: '',
-      ethbtc: '',
-      bchusd: '',
       btcusd: '',
-      ltcusd: '',
       ethusd: '',
+      bchusd: '',
+      ltcusd: '',
+      zecusd: '',
+      ethbtc: '',
+      btcbch: '',
+      bchbtc: '',
+      btceth: '',
     },
     change: {
-      btccad: '',
-      ethcad: '',
-      ltccad: '',
-      bchbtc: '',
-      ethbtc: '',
-      bchusd: '',
       btcusd: '',
-      ltcusd: '',
       ethusd: '',
+      bchusd: '',
+      ltcusd: '',
+      zecusd: '',
+      ethbtc: '',
+      btcbch: '',
+      bchbtc: '',
+      btceth: '',
     },
   };
 
@@ -38,15 +38,15 @@ class CoinPrices extends Component {
   }
 
   fetchPrices = () => {
-    this.fetchPrice('btccad');
-    this.fetchPrice('ethcad');
-    this.fetchPrice('ltccad');
-    this.fetchPrice('bchbtc');
-    this.fetchPrice('ethbtc');
-    this.fetchPrice('bchusd');
     this.fetchPrice('btcusd');
-    this.fetchPrice('ltcusd');
     this.fetchPrice('ethusd');
+    this.fetchPrice('bchusd');
+    this.fetchPrice('ltcusd');
+    this.fetchPrice('zecusd');
+    this.fetchPrice('ethbtc');
+    this.fetchPrice('btcbch');
+    this.fetchPrice('bchbtc');
+    this.fetchPrice('btceth');
 
     this.timeout = setTimeout(() => {
       this.fetchPrices();
@@ -90,73 +90,31 @@ class CoinPrices extends Component {
       <div className={styles.container}>
         <div className={styles.row}>
           <div className="container">
-            <Link to={{ pathname: '/', search: '?pair=BTCCAD' }} replace={false}>
+            <Link to={{ pathname: '/', search: '?pair=BTCUSD' }} replace={false}>
               <div
-                className={`${styles['coin-price']} ${this.state.change['btccad']}`}
+                className={`${styles['coin-price']} ${this.state.change['btcusd']}`}
                 ref={el => {
-                  this.btccad = el;
+                  this.btcusd = el;
                 }}
               >
                 <h5>
-                  BTC/CAD <span className={styles.arrow} />
+                  BTC/USD <span className={styles.arrow} />
                 </h5>
-                <h6>{this.state.rates.btccad ? this.state.rates.btccad.toFixed(2) : '...'}</h6>
+                <h6>{this.state.rates.btcusd ? this.state.rates.btcusd.toFixed(2) : '...'}</h6>
               </div>
             </Link>
 
-            <Link to={{ pathname: '/', search: '?pair=ETHCAD' }} replace={false}>
+            <Link to={{ pathname: '/', search: '?pair=ETHUSD' }} replace={false}>
               <div
-                className={`${styles['coin-price']} ${this.state.change['ethcad']}`}
+                className={`${styles['coin-price']} ${this.state.change['ethusd']}`}
                 ref={el => {
-                  this.ethcad = el;
+                  this.ethusd = el;
                 }}
               >
                 <h5>
-                  ETH/CAD <span className={styles.arrow} />
+                  ETH/USD <span className={styles.arrow} />
                 </h5>
-                <h6>{this.state.rates.ethcad ? this.state.rates.ethcad.toFixed(2) : '...'}</h6>
-              </div>
-            </Link>
-
-            <Link to={{ pathname: '/', search: '?pair=LTCCAD' }} replace={false}>
-              <div
-                className={`${styles['coin-price']} ${this.state.change['ltccad']}`}
-                ref={el => {
-                  this.ltccad = el;
-                }}
-              >
-                <h5>
-                  LTC/CAD <span className={styles.arrow} />
-                </h5>
-                <h6>{this.state.rates.ltccad ? this.state.rates.ltccad.toFixed(2) : '...'}</h6>
-              </div>
-            </Link>
-
-            <Link to={{ pathname: '/', search: '?pair=BCHBTC' }} replace={false}>
-              <div
-                className={`${styles['coin-price']} ${this.state.change['bchbtc']}`}
-                ref={el => {
-                  this.bchbtc = el;
-                }}
-              >
-                <h5>
-                  BCH/BTC <span className={styles.arrow} />
-                </h5>
-                <h6>{this.state.rates.bchbtc ? this.state.rates.bchbtc.toFixed(4) : '...'}</h6>
-              </div>
-            </Link>
-
-            <Link to={{ pathname: '/', search: '?pair=ETHBTC' }} replace={false}>
-              <div
-                className={`${styles['coin-price']} ${this.state.change['ethbtc']}`}
-                ref={el => {
-                  this.ethbtc = el;
-                }}
-              >
-                <h5>
-                  ETH/BTC <span className={styles.arrow} />
-                </h5>
-                <h6>{this.state.rates.ethbtc ? this.state.rates.ethbtc.toFixed(4) : '...'}</h6>
+                <h6>{this.state.rates.ethusd ? this.state.rates.ethusd.toFixed(2) : '...'}</h6>
               </div>
             </Link>
 
@@ -174,20 +132,6 @@ class CoinPrices extends Component {
               </div>
             </Link>
 
-            <Link to={{ pathname: '/', search: '?pair=BTCUSD' }} replace={false}>
-              <div
-                className={`${styles['coin-price']} ${this.state.change['btcusd']}`}
-                ref={el => {
-                  this.btcusd = el;
-                }}
-              >
-                <h5>
-                  BTC/USD <span className={styles.arrow} />
-                </h5>
-                <h6>{this.state.rates.btcusd ? this.state.rates.btcusd.toFixed(2) : '...'}</h6>
-              </div>
-            </Link>
-
             <Link to={{ pathname: '/', search: '?pair=LTCUSD' }} replace={false}>
               <div
                 className={`${styles['coin-price']} ${this.state.change['ltcusd']}`}
@@ -198,21 +142,77 @@ class CoinPrices extends Component {
                 <h5>
                   LTC/USD <span className={styles.arrow} />
                 </h5>
-                <h6>{this.state.rates.ltcusd ? this.state.rates.ltcusd.toFixed(2) : '...'}</h6>
+                <h6>{this.state.rates.ltcusd ? this.state.rates.ltcusd.toFixed(4) : '...'}</h6>
               </div>
             </Link>
 
-            <Link to={{ pathname: '/', search: '?pair=ETHUSD' }} replace={false}>
+            <Link to={{ pathname: '/', search: '?pair=ZECUSD' }} replace={false}>
               <div
-                className={`${styles['coin-price']} ${this.state.change['ethusd']}`}
+                className={`${styles['coin-price']} ${this.state.change['zecusd']}`}
                 ref={el => {
-                  this.ethusd = el;
+                  this.zecusd = el;
                 }}
               >
                 <h5>
-                  ETH/USD <span className={styles.arrow} />
+                  ZEC/USD <span className={styles.arrow} />
                 </h5>
-                <h6>{this.state.rates.ethusd ? this.state.rates.ethusd.toFixed(2) : '...'}</h6>
+                <h6>{this.state.rates.zecusd ? this.state.rates.zecusd.toFixed(4) : '...'}</h6>
+              </div>
+            </Link>
+
+            <Link to={{ pathname: '/', search: '?pair=ETHBTC' }} replace={false}>
+              <div
+                className={`${styles['coin-price']} ${this.state.change['ethbtc']}`}
+                ref={el => {
+                  this.ethbtc = el;
+                }}
+              >
+                <h5>
+                  ETH/BTC <span className={styles.arrow} />
+                </h5>
+                <h6>{this.state.rates.ethbtc ? this.state.rates.ethbtc.toFixed(2) : '...'}</h6>
+              </div>
+            </Link>
+
+            <Link to={{ pathname: '/', search: '?pair=BTCBCH' }} replace={false}>
+              <div
+                className={`${styles['coin-price']} ${this.state.change['btcbch']}`}
+                ref={el => {
+                  this.btcbch = el;
+                }}
+              >
+                <h5>
+                  BTC/BCH <span className={styles.arrow} />
+                </h5>
+                <h6>{this.state.rates.btcbch ? this.state.rates.btcbch.toFixed(2) : '...'}</h6>
+              </div>
+            </Link>
+
+            <Link to={{ pathname: '/', search: '?pair=BCHBTC' }} replace={false}>
+              <div
+                className={`${styles['coin-price']} ${this.state.change['bchbtc']}`}
+                ref={el => {
+                  this.bchbtc = el;
+                }}
+              >
+                <h5>
+                  BCH/BTC <span className={styles.arrow} />
+                </h5>
+                <h6>{this.state.rates.bchbtc ? this.state.rates.bchbtc.toFixed(2) : '...'}</h6>
+              </div>
+            </Link>
+
+            <Link to={{ pathname: '/', search: '?pair=BTCETH' }} replace={false}>
+              <div
+                className={`${styles['coin-price']} ${this.state.change['btceth']}`}
+                ref={el => {
+                  this.btceth = el;
+                }}
+              >
+                <h5>
+                  BTC/ETH <span className={styles.arrow} />
+                </h5>
+                <h6>{this.state.rates.btceth ? this.state.rates.btceth.toFixed(2) : '...'}</h6>
               </div>
             </Link>
           </div>
