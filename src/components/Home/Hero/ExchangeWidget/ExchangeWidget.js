@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import { I18n } from 'react-i18next';
 import i18n from 'Src/i18n';
 import axios from 'axios';
+import Cookies from 'js-cookie';
 import config from 'Config';
 
 import { errorAlert, setOrder } from 'Actions/index.js';
@@ -58,6 +59,8 @@ class ExchangeWidget extends Component {
         if (response.data.token) {
           localStorage.setItem('token', response.data.token);
         }
+
+        if (Cookies.get('5usdfree') === 'eligible') Cookies.set('5usdfree', 'redeeming', { expires: 365 });
 
         // bindCrispEmail(this.props.store);
 

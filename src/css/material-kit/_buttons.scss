@@ -22,6 +22,12 @@
   &.btn-default {
     @include btn-styles($blue);
   }
+  &.btn-advcash {
+    @include btn-styles($advcash);
+  }
+  &.btn-payeer {
+    @include btn-styles($payeer);
+  }
   &.btn-primary {
     @include btn-styles($green);
   }

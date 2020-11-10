@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import urlParams from 'Utils/urlParams';
 import config from 'Config';
+import Cookies from 'js-cookie';
 
 class Referrals extends Component {
   componentDidMount() {
@@ -20,14 +21,14 @@ class Referrals extends Component {
     );
   }
 
-  checkNotRef (queryParam) {
-    return ! queryParam.includes('ref=');
+  checkNotRef(queryParam) {
+    return !queryParam.includes('ref=');
   }
 
   redirectRef() {
     let url = window.location.pathname + window.location.search + window.location.hash;
-    let baseUrl = url.split("?")[0];
-    let queryParams = url.split("?")[1].split("&");
+    let baseUrl = url.split('?')[0];
+    let queryParams = url.split('?')[1].split('&');
     queryParams = queryParams.filter(this.checkNotRef);
     queryParams = '?'.concat(queryParams.join('&'));
     let urlWithoutRef = baseUrl.concat(queryParams);
@@ -38,7 +39,12 @@ class Referrals extends Component {
   render() {
     let params = urlParams();
     if (params != null && params.hasOwnProperty('ref')) {
-      localStorage.setItem('referral', params['ref']);
+      const referralCode = params['ref'];
+      localStorage.setItem('referral', referralCode);
+
+      if (referralCode.toLowerCase() === '5usdfree') {
+        Cookies.set('5usdfree', 'eligible', { expires: 365 });
+      }
       return this.redirectRef();
     }
 

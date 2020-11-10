@@ -61,8 +61,7 @@ class CreditCardModal extends Component {
         value = value.replace(/[^0-9 \,]/, '');
         if (value.length > 4) value = value.slice(0, value.length - 1);
 
-        if (value.length >= 2)
-          value = value.slice(0, 2) + '/' + value.slice(2, value.length);
+        if (value.length >= 2) value = value.slice(0, 2) + '/' + value.slice(2, value.length);
       } else {
         if (value.length === 3) {
           value = value.replace(/[^0-9 \,]/, '');
@@ -81,148 +80,109 @@ class CreditCardModal extends Component {
 
   render() {
     return (
-    <I18n ns="translations">
-	{(t) => (
-      <Modal id="credit-card-modal" show={this.state.show} onHide={this.close}>
-        <div className="modal-content">
-          <div className="modal-header">
-            <button
-              type="button"
-              className="close"
-              data-dismiss="modal"
-              aria-hidden="true"
-              onClick={this.close}
-            >
-              <i className="material-icons">clear</i>
-            </button>
-            <h4 className="modal-title">{t('status.pay')}</h4>
-          </div>
-
-          <div className="modal-body">
-            <div className="row">
-              <div className="col-xs-12 col-sm-6">
-                <Cards
-                  number={this.state.number}
-                  name={this.state.name}
-                  expiry={this.state.expiry}
-                  cvc={this.state.cvc}
-                  focused={this.state.focused}
-                />
+      <I18n ns="translations">
+        {t => (
+          <Modal id="credit-card-modal" show={this.state.show} onHide={this.close}>
+            <div className="modal-content">
+              <div className="modal-header">
+                <button type="button" className="close" data-dismiss="modal" aria-hidden="true" onClick={this.close}>
+                  <i className="material-icons">clear</i>
+                </button>
+                <h4 className="modal-title">{t('status.pay')}</h4>
               </div>
 
-              <div className="col-xs-12 col-sm-6">
-                <form id="credit-card-form" onSubmit={this.handleSubmit}>
-                  {this.state.success === true ? (
-                    <h4 className="text-success">
-                      {t('generalterms.formsucess')}
-                    </h4>
-                  ) : null}
-                  {this.state.success === false ? (
-                    <h4 className="text-danger">
-                      {t('generalterms.formfailed')}
-                    </h4>
-                  ) : null}
-
-                  <div className="form-group label-floating">
-                    <input
-                      type="text"
-                      name="name"
-                      className="form-control"
-                      placeholder={t('order.fiat.name')}
-                      onChange={this.handleInputChange}
-                      value={this.state.name}
-                      required
+              <div className="modal-body">
+                <div className="row">
+                  <div className="col-xs-12 col-sm-6">
+                    <Cards
+                      number={this.state.number}
+                      name={this.state.name}
+                      expiry={this.state.expiry}
+                      cvc={this.state.cvc}
+                      focused={this.state.focused}
                     />
-                    <span className="material-input" />
-                    <span className="material-icons form-control-feedback">
-                      clear
-                    </span>
                   </div>
 
-                  <div
-                    className={`form-group label-floating ${
-                      this.state.errors.number.length ? 'has-error' : ''
-                    }`}
-                  >
-                    {this.state.errors.number.true ? (
-                      <label className="control-label">
-                        {this.state.errors.number.message}
-                      </label>
-                    ) : null}
-                    <input
-                      type="text"
-                      name="number"
-                      className="form-control"
-                      placeholder="•••• •••• •••• ••••"
-                      onChange={this.handleInputChange}
-                      value={this.state.number}
-                      required
-                    />
-                    <span className="material-input" />
-                    <span className="material-icons form-control-feedback">
-                      clear
-                    </span>
-                  </div>
+                  <div className="col-xs-12 col-sm-6">
+                    <form id="credit-card-form" onSubmit={this.handleSubmit}>
+                      {this.state.success === true ? <h4 className="text-success">{t('generalterms.formsucess')}</h4> : null}
+                      {this.state.success === false ? <h4 className="text-danger">{t('generalterms.formfailed')}</h4> : null}
 
-                  <div className="row">
-                    <div className="col-xs-6">
                       <div className="form-group label-floating">
                         <input
                           type="text"
-                          name="expiry"
+                          name="name"
                           className="form-control"
-                          placeholder={'order.fiat.expirationformat'}
+                          placeholder={t('order.fiat.name')}
                           onChange={this.handleInputChange}
-                          value={this.state.expiry}
+                          value={this.state.name}
                           required
                         />
                         <span className="material-input" />
-                        <span className="material-icons form-control-feedback">
-                          clear
-                        </span>
+                        <span className="material-icons form-control-feedback">clear</span>
                       </div>
-                    </div>
 
-                    <div className="col-xs-6">
-                      <div className="form-group label-floating">
+                      <div className={`form-group label-floating ${this.state.errors.number.length ? 'has-error' : ''}`}>
+                        {this.state.errors.number.true ? <label className="control-label">{this.state.errors.number.message}</label> : null}
                         <input
-                          type="number"
-                          name="cvc"
+                          type="text"
+                          name="number"
                           className="form-control"
-                          placeholder="CVC"
+                          placeholder="•••• •••• •••• ••••"
                           onChange={this.handleInputChange}
-                          value={this.state.cvc}
+                          value={this.state.number}
                           required
                         />
                         <span className="material-input" />
-                        <span className="material-icons form-control-feedback">
-                          clear
-                        </span>
+                        <span className="material-icons form-control-feedback">clear</span>
                       </div>
-                    </div>
-                  </div>
 
-                  <button
-                    type="submit"
-                    className="btn btn-themed btn-md"
-                    disabled={this.state.loading ? 'disabled' : null}
-                  >
-                    {t('order.status.pay')}
-                    {this.state.loading ? (
-                      <i
-                        className="fab fa-spinner fa-spin"
-                        style={{ marginLeft: '10px' }}
-                      />
-                    ) : null}
-                  </button>
-                </form>
+                      <div className="row">
+                        <div className="col-xs-6">
+                          <div className="form-group label-floating">
+                            <input
+                              type="text"
+                              name="expiry"
+                              className="form-control"
+                              placeholder={'order.fiat.expirationformat'}
+                              onChange={this.handleInputChange}
+                              value={this.state.expiry}
+                              required
+                            />
+                            <span className="material-input" />
+                            <span className="material-icons form-control-feedback">clear</span>
+                          </div>
+                        </div>
+
+                        <div className="col-xs-6">
+                          <div className="form-group label-floating">
+                            <input
+                              type="number"
+                              name="cvc"
+                              className="form-control"
+                              placeholder="CVC"
+                              onChange={this.handleInputChange}
+                              value={this.state.cvc}
+                              required
+                            />
+                            <span className="material-input" />
+                            <span className="material-icons form-control-feedback">clear</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button type="submit" className="btn btn-themed btn-md" disabled={this.state.loading ? 'disabled' : null}>
+                        {t('order.status.pay')}
+                        {this.state.loading ? <i className="fab fa-spinner fa-spin" style={{ marginLeft: '10px' }} /> : null}
+                      </button>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </Modal>
-    )}
-    </I18n>
+          </Modal>
+        )}
+      </I18n>
     );
   }
 }

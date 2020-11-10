@@ -6,6 +6,10 @@ import { Helmet } from 'react-helmet';
 import styled from '@emotion/styled';
 import OrderPreReleased from '../../OrderPreReleased/OrderPreReleased';
 import OrderFailed from '../../OrderFailure/OrderFailure';
+import APM from './APM';
+import config from 'Config';
+
+const { APM_SUPPORTED_CURRENCIES } = config;
 
 const PaymentNewTabText = styled.h4`
   text-align: center;
@@ -182,6 +186,7 @@ class OrderInitial extends Component {
                         <i className="fas fa-credit-card" aria-hidden="true" style={{ position: 'relative', left: -13 }} />
                         {t('order.fiat.status.pay')}
                       </a>
+                      {APM_SUPPORTED_CURRENCIES.includes(props.order.pair.quote.code) ? <APM order={props.order} /> : null}
                     </div>
 
                     <div className={`col-xs-12 col-ms-6 col-sm-6 col-md-6 ${styles.cards}`}>
