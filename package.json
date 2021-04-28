@@ -195,6 +195,6 @@
     "extends": "react-app"
   },
   "engines": {
-    "node": "10.x"
+    "node": "12.x"
   }
 }
